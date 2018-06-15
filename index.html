@@ -350,7 +350,7 @@
                 
               
 
-              <time title="创建时间：2018-06-15 23:27:53 / 修改时间：23:53:56" itemprop="dateCreated datePublished" datetime="2018-06-15T23:27:53+08:00">2018-06-15</time>
+              <time title="创建时间：2018-06-15 23:27:53 / 修改时间：23:57:40" itemprop="dateCreated datePublished" datetime="2018-06-15T23:27:53+08:00">2018-06-15</time>
             
 
             
@@ -407,16 +407,14 @@
 
       
         
-          
-            <h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">opkg update</span><br><span class="line">opkg install ppp-mod-pptp kmod-nf-nathelper-extra</span><br></pre></td></tr></table></figure>
-<h1 id="编辑配置文件"><a href="#编辑配置文件" class="headerlink" title="编辑配置文件"></a>编辑配置文件</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/config/network</span><br><span class="line">config 'interface' 'vpn'</span><br><span class="line">        option 'ifname'    'pptp-vpn'  </span><br><span class="line">        option 'proto'     'pptp'</span><br><span class="line">        option 'username'  'vpnusername'</span><br><span class="line">        option 'password'  'vpnpassword'</span><br><span class="line">        option 'server'    'vpn.example.org or ipaddress'</span><br><span class="line">        option 'buffering' '1'</span><br></pre></td></tr></table></figure>
-<p>注：</p>
-<p><code>vpnuesrname</code>为pptp用户名</p>
-<p><code>vpnpassword</code>为用户密码</p>
-<p><code>vpn.example.org or ipaddress</code>pptp服务器地址</p>
-<h1 id="网页设置"><a href="#网页设置" class="headerlink" title="网页设置"></a>网页设置</h1><p>完成以上动作后重启路由器，重启完成后登陆到路由器内，在<code>network</code>-&gt;<code>Interface</code>中会多了一个VPN接口，现在可以直接在LUCI中进行配置了</p>
-
-          
+          <h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">opkg update</span><br><span class="line">opkg install ppp-mod-pptp kmod-nf-nathelper-extra</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/15/openWRT配置PPTP客户端/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

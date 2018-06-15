@@ -108,18 +108,18 @@
 
 
 
-  <meta name="description" content="下载12opkg updateopkg install ppp-mod-pptp kmod-nf-nathelper-extra 编辑配置文件12345678vim /etc/config/networkconfig &apos;interface&apos; &apos;vpn&apos;        option &apos;ifname&apos;    &apos;pptp-vpn&apos;          option &apos;proto&apos;     &apos;pptp&apos;">
+  <meta name="description" content="下载12opkg updateopkg install ppp-mod-pptp kmod-nf-nathelper-extra">
 <meta name="keywords" content="Linux,VPN">
 <meta property="og:type" content="article">
 <meta property="og:title" content="openWRT配置PPTP客户端">
 <meta property="og:url" content="http://yoursite.com/2018/06/15/openWRT配置PPTP客户端/index.html">
 <meta property="og:site_name" content="狗娃子的博客">
-<meta property="og:description" content="下载12opkg updateopkg install ppp-mod-pptp kmod-nf-nathelper-extra 编辑配置文件12345678vim /etc/config/networkconfig &apos;interface&apos; &apos;vpn&apos;        option &apos;ifname&apos;    &apos;pptp-vpn&apos;          option &apos;proto&apos;     &apos;pptp&apos;">
+<meta property="og:description" content="下载12opkg updateopkg install ppp-mod-pptp kmod-nf-nathelper-extra">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-15T15:53:56.776Z">
+<meta property="og:updated_time" content="2018-06-15T15:57:40.969Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="openWRT配置PPTP客户端">
-<meta name="twitter:description" content="下载12opkg updateopkg install ppp-mod-pptp kmod-nf-nathelper-extra 编辑配置文件12345678vim /etc/config/networkconfig &apos;interface&apos; &apos;vpn&apos;        option &apos;ifname&apos;    &apos;pptp-vpn&apos;          option &apos;proto&apos;     &apos;pptp&apos;">
+<meta name="twitter:description" content="下载12opkg updateopkg install ppp-mod-pptp kmod-nf-nathelper-extra">
 
 
 
@@ -347,7 +347,7 @@
                 
               
 
-              <time title="创建时间：2018-06-15 23:27:53 / 修改时间：23:53:56" itemprop="dateCreated datePublished" datetime="2018-06-15T23:27:53+08:00">2018-06-15</time>
+              <time title="创建时间：2018-06-15 23:27:53 / 修改时间：23:57:40" itemprop="dateCreated datePublished" datetime="2018-06-15T23:27:53+08:00">2018-06-15</time>
             
 
             
@@ -404,6 +404,7 @@
 
       
         <h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">opkg update</span><br><span class="line">opkg install ppp-mod-pptp kmod-nf-nathelper-extra</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h1 id="编辑配置文件"><a href="#编辑配置文件" class="headerlink" title="编辑配置文件"></a>编辑配置文件</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/config/network</span><br><span class="line">config 'interface' 'vpn'</span><br><span class="line">        option 'ifname'    'pptp-vpn'  </span><br><span class="line">        option 'proto'     'pptp'</span><br><span class="line">        option 'username'  'vpnusername'</span><br><span class="line">        option 'password'  'vpnpassword'</span><br><span class="line">        option 'server'    'vpn.example.org or ipaddress'</span><br><span class="line">        option 'buffering' '1'</span><br></pre></td></tr></table></figure>
 <p>注：</p>
 <p><code>vpnuesrname</code>为pptp用户名</p>
