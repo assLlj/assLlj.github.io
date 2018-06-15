@@ -304,7 +304,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/14/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/15/openWRT配置PPTP客户端/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Doguy">
@@ -323,8 +323,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/06/14/hello-world/" itemprop="url">
-                  Hello World
+                <a class="post-title-link" href="/2018/06/15/openWRT配置PPTP客户端/" itemprop="url">
+                  openWRT配置PPTP客户端
                 </a>
               
             
@@ -350,12 +350,34 @@
                 
               
 
-              <time title="创建时间：2018-06-14 15:30:07" itemprop="dateCreated datePublished" datetime="2018-06-14T15:30:07+08:00">2018-06-14</time>
+              <time title="创建时间：2018-06-15 23:27:53 / 修改时间：23:53:56" itemprop="dateCreated datePublished" datetime="2018-06-15T23:27:53+08:00">2018-06-15</time>
             
 
+            
+              
+
+              
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/技术闲记/" itemprop="url" rel="index"><span itemprop="name">技术闲记</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -386,15 +408,13 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">opkg update</span><br><span class="line">opkg install ppp-mod-pptp kmod-nf-nathelper-extra</span><br></pre></td></tr></table></figure>
+<h1 id="编辑配置文件"><a href="#编辑配置文件" class="headerlink" title="编辑配置文件"></a>编辑配置文件</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/config/network</span><br><span class="line">config 'interface' 'vpn'</span><br><span class="line">        option 'ifname'    'pptp-vpn'  </span><br><span class="line">        option 'proto'     'pptp'</span><br><span class="line">        option 'username'  'vpnusername'</span><br><span class="line">        option 'password'  'vpnpassword'</span><br><span class="line">        option 'server'    'vpn.example.org or ipaddress'</span><br><span class="line">        option 'buffering' '1'</span><br></pre></td></tr></table></figure>
+<p>注：</p>
+<p><code>vpnuesrname</code>为pptp用户名</p>
+<p><code>vpnpassword</code>为用户密码</p>
+<p><code>vpn.example.org or ipaddress</code>pptp服务器地址</p>
+<h1 id="网页设置"><a href="#网页设置" class="headerlink" title="网页设置"></a>网页设置</h1><p>完成以上动作后重启路由器，重启完成后登陆到路由器内，在<code>network</code>-&gt;<code>Interface</code>中会多了一个VPN接口，现在可以直接在LUCI中进行配置了</p>
 
           
         
@@ -444,12 +464,7 @@
         </div>
         
           
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+   <div class="sidebar-toggle"> <div class="sidebar-toggle-line-wrap"> <span class="sidebar-toggle-line sidebar-toggle-line-first"></span> <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span> <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
   </div>
 
@@ -472,7 +487,7 @@
               <p class="site-author-name" itemprop="name">Doguy</p>
               <p class="site-description motion-element" itemprop="description">庐山烟雨浙江潮，未到千般恨不消。及至到来无一事，庐山烟雨浙江潮。</p>
           </div>
-
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=300 height=110 src="//music.163.com/outchain/player?type=0&id=2270576428&auto=0&height=90"></iframe>
           
             <nav class="site-state motion-element">
               
@@ -487,7 +502,35 @@
               
 
               
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
             </nav>
           
@@ -534,6 +577,7 @@
       
 
     </div>
+
   </aside>
 
 
