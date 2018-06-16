@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="狗娃子的博客">
 <meta property="og:description" content="‘%’符号有两个含义–取模运算（“Modulo Operation”）和取余运算（“Complementation ”）。两个概念有重叠的部分但又不完全一致。主要的区别在于对负整数进行除法运算时操作不同">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-16T14:20:42.581Z">
+<meta property="og:updated_time" content="2018-06-16T16:58:02.595Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="详细分析C语言取余符号">
 <meta name="twitter:description" content="‘%’符号有两个含义–取模运算（“Modulo Operation”）和取余运算（“Complementation ”）。两个概念有重叠的部分但又不完全一致。主要的区别在于对负整数进行除法运算时操作不同">
@@ -346,12 +346,24 @@
                 
               
 
-              <time title="创建时间：2018-06-16 22:15:36 / 修改时间：22:20:42" itemprop="dateCreated datePublished" datetime="2018-06-16T22:15:36+08:00">2018-06-16</time>
+              <time title="创建时间：2018-06-16 22:15:36" itemprop="dateCreated datePublished" datetime="2018-06-16T22:15:36+08:00">2018-06-16</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-06-17 00:58:02" itemprop="dateModified" datetime="2018-06-17T00:58:02+08:00">2018-06-17</time>
               
             
           </span>
@@ -432,8 +444,10 @@
 </tbody>
 </table>
 <h1 id="计算方法"><a href="#计算方法" class="headerlink" title="计算方法"></a>计算方法</h1><blockquote>
-<p>对于整数a, b(b!=0),计算r = a%b有两个步骤;\<br>1.<strong><code>c = a/b</code></strong>\<br>2.<strong><code>r = a - c*b</code></strong>\</p>
+<p>对于整数a, b(b!=0),计算r = a%b有两个步骤;</p>
 </blockquote>
+<p>1.<strong><code>c = a/b</code></strong></p>
+<p>2.<strong><code>r = a - c*b</code></strong></p>
 <p>求模运算和求余运算在第一步不同: 取余运算在取c的值时，向0 方向舍入(fix()函数)；而取模运算在计算c的值时，向负无穷方向舍入(floor()函数).</p>
 <table>
 <thead>
@@ -565,6 +579,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/06/17/Github-Hexo搭建个人博客/" rel="prev" title="Github+Hexo搭建个人博客">
+                Github+Hexo搭建个人博客 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -636,7 +654,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -670,7 +688,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
