@@ -16,7 +16,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2018/10/30/vim搭配LSP-000/0001.png">
 <meta property="og:image" content="http://yoursite.com/2018/10/30/vim搭配LSP-000/0000.png">
-<meta property="og:updated_time" content="2018-10-30T11:18:43.819Z">
+<meta property="og:updated_time" content="2018-10-30T11:27:19.745Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vim搭配LSP-00">
 <meta name="twitter:description" content="LSP 是一套通信协议，遵从 LSP 规范的客户端（各种编辑器/IDE）可以通过众多 LSP 服务端按协议标准进行通信，由客户端完成用户界面相关的事情，由服务端提编程语言相关的：补全，定义引用查找，诊断，帮助文档，重构等服务。">
@@ -154,29 +154,23 @@
   <div class="content" itemprop="articleBody">
     <p><a href="https://langserver.org/" target="_blank" rel="noopener">LSP</a> 是一套通信协议，遵从 LSP 规范的客户端（各种编辑器/IDE）可以通过众多 LSP 服务端按协议标准进行通信，由客户端完成用户界面相关的事情，由服务端提编程语言相关的：补全，定义引用查找，诊断，帮助文档，重构等服务。<a id="more"></a></p>
 <h1 id="客户端安装"><a href="#客户端安装" class="headerlink" title="客户端安装"></a>客户端安装</h1><p><img src="./0001.png" alt="图片"><br> LSP官网给出了目前可用的客户端实现，我们看到vim的客户端有三个，这里我选择了star数最高的<code>ale</code><br> 在<code>.vimrc</code>中添加  </p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Plugin 'w0rp/ale'</span><br></pre></td></tr></table></figure>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Plugin 'w0rp/ale'</span><br></pre></td></tr></table></figure>
 <p> 然后vim执行</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">PluginInstall</span><br></pre></td></tr></table></figure>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PluginInstall</span><br></pre></td></tr></table></figure>
 <h1 id="服务端安装"><a href="#服务端安装" class="headerlink" title="服务端安装"></a>服务端安装</h1><p><img src="./0000.png" alt="图片">  </p>
 <p>我选择的是<a href="https://github.com/cquery-project/cquery" target="_blank" rel="noopener">cquery</a>  </p>
 <p>根据官网的步骤编译</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">git clone https://github.com/cquery-project/cquery.git --recursive</span><br><span class="line">cd cquery</span><br><span class="line">git submodule update --init</span><br><span class="line">mkdir build &amp;&amp; cd build</span><br><span class="line">cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=release -DCMAKE_EXPORT_COMPILE_COMMANDS=YES</span><br><span class="line">cmake --build .</span><br><span class="line">cmake --build . --target install</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/cquery-project/cquery.git --recursive</span><br><span class="line">cd cquery</span><br><span class="line">git submodule update --init</span><br><span class="line">mkdir build &amp;&amp; cd build</span><br><span class="line">cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=release -DCMAKE_EXPORT_COMPILE_COMMANDS=YES</span><br><span class="line">cmake --build .</span><br><span class="line">cmake --build . --target install</span><br></pre></td></tr></table></figure>
 <p>不过执行<code>cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=release -DCMAKE_EXPORT_COMPILE_COMMANDS=YES</code>时报错：  </p>
 <blockquote>
 <p>error while loading shared libraries: libtinfo.so.5: cannot open shared object file: No such file or directory</p>
 </blockquote>
 <p>执行</p>
-<blockquote>
-<p>$ ls -l /usr/bin | grep libtinfo<br>-rw-r–r–   1 root root       24 10月  4 01:40 libtinfo.so<br>lrwxrwxrwx   1 root root       16 10月  4 01:40 libtinfo.so.6 -&gt; libncursesw.so.6</p>
-</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ls -l /usr/bin | grep libtinfo  </span><br><span class="line">-rw-r--r--   1 root root       24 10月  4 01:40 libtinfo.so  </span><br><span class="line">lrwxrwxrwx   1 root root       16 10月  4 01:40 libtinfo.so.6 -&gt; libncursesw.so.6</span><br></pre></td></tr></table></figure>
 <p>解决方案</p>
-<blockquote>
-<p>$sudo pacman -S ncurses5-compat-libs</p>
-</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> sudo pacman -S ncurses5-compat-libs</span><br></pre></td></tr></table></figure>
 <p>然后执行</p>
-<blockquote>
-<p>cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=release -DCMAKE_EXPORT_COMPILE_COMMANDS=YES -DSYSTEM_CLANG=ON</p>
-</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=release -DCMAKE_EXPORT_COMPILE_COMMANDS=YES -DSYSTEM_CLANG=ON</span><br></pre></td></tr></table></figure>
 <p>参数<code>-DSYSTEM_CLANG=ON</code>的意思是使用系统的clang，尽管这是作者不推荐的。</p>
 <p>在主目录添加<code>.cquery</code></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">%</span>clang</span><br><span class="line"><span class="meta">%</span>c -std=gnu11</span><br><span class="line"><span class="meta">%</span>cpp -std=gnu++14</span><br><span class="line">-pthread</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> Includes</span><br><span class="line">-I/work/cquery/third_party</span><br><span class="line">-I/work/cquery/another_third_party</span><br><span class="line"><span class="meta">#</span> -I space_is_not_allowed</span><br></pre></td></tr></table></figure>
