@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.wxg.world/"/>
-  <updated>2018-11-06T12:54:02.077Z</updated>
+  <updated>2019-07-08T15:13:45.681Z</updated>
   <id>http://www.wxg.world/</id>
   
   <author>
@@ -17,24 +17,16 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>问题</title>
-    <link href="http://www.wxg.world/2017/11/06/%E9%97%AE%E9%A2%98/"/>
-    <id>http://www.wxg.world/2017/11/06/问题/</id>
-    <published>2017-11-06T11:48:50.000Z</published>
-    <updated>2018-11-06T12:54:02.077Z</updated>
-    
-    <content type="html"><![CDATA[<p>记录我遇到的各种小问题和解决方法<br><a id="more"></a></p><h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p><a href="#Ubuntu卡屏">Ubuntu卡登录界面</a></p><h2 id="Ubuntu卡屏"><a href="#Ubuntu卡屏" class="headerlink" title="Ubuntu卡屏"></a>Ubuntu卡屏</h2><p>环境</p><blockquote><p>系统：Ubuntu 16.04<br>配置：NVIDIA+Intel 双显卡</p></blockquote><p>问题描述</p><blockquote><p>系统安装完成之后进入登录界面，卡住，鼠标不能动，tty可以进</p></blockquote><p>解决方法<br>显卡驱动的问题，最简单的方法就是禁用独显</p><ol><li>删除旧的驱动</li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>sudo apt purge nvidia*</span><br></pre></td></tr></table></figure><ol start="2"><li>禁用NVIDIA驱动</li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>sudo vim /etc/modprobe.d/blacklist-nouveau.conf</span><br><span class="line">添加以下内容：</span><br><span class="line">blacklist nouveau</span><br><span class="line">options nouveau modeset=0</span><br></pre></td></tr></table></figure><ol start="3"><li>更新</li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>sudo update-initramfs -u</span><br></pre></td></tr></table></figure>]]></content>
+    <title>我的vim配置(持续更新</title>
+    <link href="http://www.wxg.world/2019/07/08/%E6%88%91%E7%9A%84vim%E9%85%8D%E7%BD%AE-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/"/>
+    <id>http://www.wxg.world/2019/07/08/我的vim配置-持续更新/</id>
+    <published>2019-07-08T15:12:15.000Z</published>
+    <updated>2019-07-08T15:13:45.681Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;记录我遇到的各种小问题和解决方法&lt;br&gt;
-    
     </summary>
     
-      <category term="瞎折腾" scheme="http://www.wxg.world/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/"/>
-    
-    
-      <category term="Linux" scheme="http://www.wxg.world/tags/Linux/"/>
     
   </entry>
   
