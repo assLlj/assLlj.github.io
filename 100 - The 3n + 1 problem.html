@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>100 - The 3n + 1 problem</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+<div id="Code"><h1 id="Code" class="header"><a href="#Code">Code</a></h1></div>
+<pre>
+#include&lt;stdio.h&gt;
+
+int f(unsigned int x);
+
+int main() {
+    unsigned int  i, j, a, b;
+    while (scanf("%d%d", &amp;i, &amp;j) != EOF) {
+        a = i;
+        b = j;
+        if (i &gt; j) {
+            int t = i;
+            i = j;
+            j = t;
+        }
+        int k, MaxCount = 0;
+        for ( k = i; k &lt;= j; k++) {
+            int t = f(k);
+            if (t &gt; MaxCount)
+                MaxCount = t;
+        }
+        printf("%d %d %d\n", a, b, MaxCount);
+    }
+    return 0;
+}
+
+int f(unsigned int x) {
+    int count = 1;
+    while (x != 1) {
+        if (0 == x%2)
+            x /= 2;
+        else
+            x = 3*x +1;
+        count++;
+    }
+    return count;
+}
+</pre>
+<div id="Code-注意事项"><h2 id="注意事项" class="header"><a href="#Code-注意事项">注意事项</a></h2></div>
+<ol>
+<li>
+第一次提交没注意Uva的编译参数,比如gcc 就是
+
+</ol>
+<blockquote>
+<span id="Code-注意事项-gcc -lm -lcrypt -O2 -pipe -ansi -DONLINE_JUDGE"></span><strong id="gcc -lm -lcrypt -O2 -pipe -ansi -DONLINE_JUDGE">gcc -lm -lcrypt -O2 -pipe -ansi -DONLINE_JUDGE</strong> 
+</blockquote>
+<blockquote>
+因为有 <em>-ansi</em> 这个参数，所以无法使用C89以后的特性
+</blockquote>
+
+<ol>
+<li>
+i有可能比j大，所以需要判断，但是不能直接交换，因为题目要求最后按照原来的顺序输出i,j
+
+</ol>
+
+</body>
+</html>
