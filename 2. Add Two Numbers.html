@@ -2,13 +2,14 @@
 <html>
 <head>
 <link rel="Stylesheet" type="text/css" href="style.css">
-<title>c</title>
+<title>2. Add Two Numbers</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
    
 <div id="Code"><h1 id="Code" class="header"><a href="#Code">Code</a></h1></div>
 
+<div id="Code-C"><h2 id="C" class="header"><a href="#Code-C">C</a></h2></div>
 <pre>
 struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2){
     struct ListNode * N = malloc(sizeof(struct ListNode));
@@ -47,7 +48,8 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2){
 }
 </pre>
   
-<div id="Code-注意事项"><h2 id="注意事项" class="header"><a href="#Code-注意事项">注意事项</a></h2></div>
+<div id="Code-C-注意事项"><h3 id="注意事项" class="header"><a href="#Code-C-注意事项">注意事项</a></h3></div>
+
 <ul>
 <li>
 malloc申请内存后注意给next指针赋值NULL
@@ -56,6 +58,7 @@ malloc申请内存后注意给next指针赋值NULL
 注意特殊情况：最后的结果有进位，即l1-&gt;next == NULL 且 l2-&gt;next == NULL, 但是c == 1 的时候
 
 </ul>
+<hr />
 
 </body>
 </html>

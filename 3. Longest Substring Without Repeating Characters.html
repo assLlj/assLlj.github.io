@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>3. Longest Substring Without Repeating Characters</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+   
+<div id="3. Longest Substring Without Repeating Characters"><h1 id="3. Longest Substring Without Repeating Characters" class="header"><a href="#3. Longest Substring Without Repeating Characters">3. Longest Substring Without Repeating Characters</a></h1></div>
+
+<div id="3. Longest Substring Without Repeating Characters-C"><h2 id="C" class="header"><a href="#3. Longest Substring Without Repeating Characters-C">C</a></h2></div>
+<pre>
+int lengthOfLongestSubstring(char * s){
+    int dict[200] = {0};
+    int result = 0;
+    int i = 0, j = 0;
+    while (s[i]) {
+        memset(dict, 0, 200*sizeof(int));
+        int count = 0;
+        j = i;
+
+        while (s[j]) {
+            if (!dict[s[j]-' ']) {
+                count++;
+                dict[s[j]-' '] = 1;
+            } else {
+                break;
+            }
+            j++;
+        }
+
+        if (count &gt; result)
+            result = count;
+        i++;
+    }
+    return result;
+}
+</pre>
+
+</body>
+</html>
