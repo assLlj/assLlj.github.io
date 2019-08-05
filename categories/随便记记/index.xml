@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 狗娃子的博客</title>
-    <link>https://assllj.github.io/post/</link>
-    <description>Recent content in Posts on 狗娃子的博客</description>
+    <title>随便记记 on 狗娃子的博客</title>
+    <link>https://assllj.github.io/categories/%E9%9A%8F%E4%BE%BF%E8%AE%B0%E8%AE%B0/</link>
+    <description>Recent content in 随便记记 on 狗娃子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 05 Aug 2019 18:30:16 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 16 Jun 2018 22:23:54 +0800</lastBuildDate>
     
-	<atom:link href="https://assllj.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://assllj.github.io/categories/%E9%9A%8F%E4%BE%BF%E8%AE%B0%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Test</title>
-      <link>https://assllj.github.io/post/test/</link>
-      <pubDate>Mon, 05 Aug 2019 18:30:16 +0800</pubDate>
-      
-      <guid>https://assllj.github.io/post/test/</guid>
-      <description>测试 测试 测试</description>
-    </item>
     
     <item>
       <title>&#39;%&#39;符号的含义</title>
