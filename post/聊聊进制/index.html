@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2018-08-07T00:51:54&#43;08:00" />
 <meta itemprop="dateModified" content="2018-08-07T00:51:54&#43;08:00" />
-<meta itemprop="wordCount" content="1440">
+<meta itemprop="wordCount" content="1441">
 
 
 
@@ -127,7 +127,7 @@
         <div class="post-category">
             <a href="/categories/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/"> 随便写写 </a>
             </div>
-          <span class="more-meta"> 约 1440 字 </span>
+          <span class="more-meta"> 约 1441 字 </span>
           <span class="more-meta"> 预计阅读 3 分钟 </span>
         
       </div>
@@ -178,11 +178,35 @@
 
 <p>下面是一些例子:</p>
 
-<p>|N|D|计算方法|
-|:-:|:-|:-|
-|2|(101.101)<sub>2</sub>|(101.101)<sub>2</sub> = 1×2<sup>2</sup>+0×2<sup>1</sup>+1×2<sup>0</sup>+1×2<sup>-1</sup>+0×2<sup>-2</sup>+1×2<sup>-3</sup> = (5.625)<sub>10</sub>|
-|8|(123.12)<sub>8</sub>|(123.12)<sub>8</sub> = 1×8<sup>2</sup>+2×8<sup>1</sup>+3×8<sup>0</sup>+1×8<sup>-1</sup>+2×8<sup>-2</sup> = (83.15625)<sub>10</sub>|
-|16|(abc.1)<sub>16</sub>|(abc.1)<sub>16</sub> = 10×16<sup>2</sup>+11×16<sup>1</sup>+12×16<sup>0</sup> = (2748.0625)<sub>10</sub></p>
+<table>
+<thead>
+<tr>
+<th align="center">N</th>
+<th align="right">D</th>
+<th align="center">计算方法</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">2</td>
+<td align="right">(101.101)<sub>2</sub></td>
+<td align="center">(101.101)<sub>2</sub> = 1×2<sup>2</sup>+0×2<sup>1</sup>+1×2<sup>0</sup>+1×2<sup>-1</sup>+0×2<sup>-2</sup>+1×2<sup>-3</sup> = (5.625)<sub>10</sub></td>
+</tr>
+
+<tr>
+<td align="center">8</td>
+<td align="right">(123.12)<sub>8</sub></td>
+<td align="center">(123.12)<sub>8</sub> = 1×8<sup>2</sup>+2×8<sup>1</sup>+3×8<sup>0</sup>+1×8<sup>-1</sup>+2×8<sup>-2</sup> = (83.15625)<sub>10</sub></td>
+</tr>
+
+<tr>
+<td align="center">16</td>
+<td align="right">(abc.1)<sub>16</sub></td>
+<td align="center">(abc.1)<sub>16</sub> = 10×16<sup>2</sup>+11×16<sup>1</sup>+12×16<sup>0</sup> = (2748.0625)<sub>10</sub></td>
+</tr>
+</tbody>
+</table>
 
 <h1 id="进制的转换">进制的转换</h1>
 
@@ -203,9 +227,12 @@
 
 <p>原理：</p>
 
-<p>设一个十进制整数为(S)<sub>10</sub>，对应的二进制整数为(则K<sub>n</sub>K<sub>n-1</sub>&hellip;K<sub>0</sub>)<sub>2</sub>,：<br />
-&gt;(S)<sub>10</sub> = (K<sub>n</sub>2<sup>n</sup> + K<sub>n-1</sub>2<sup>n-1</sup> + &hellip; + K<sub>1</sub>2<sup>1</sup> + K<sub>0</sub>2<sup>0</sup>)<br />
+<p>设一个十进制整数为(S)<sub>10</sub>，对应的二进制整数为(则K<sub>n</sub>K<sub>n-1</sub>&hellip;K<sub>0</sub>)<sub>2</sub>,：</p>
+
+<blockquote>
+<p>(S)<sub>10</sub> = (K<sub>n</sub>2<sup>n</sup> + K<sub>n-1</sub>2<sup>n-1</sup> + &hellip; + K<sub>1</sub>2<sup>1</sup> + K<sub>0</sub>2<sup>0</sup>)<br />
 &emsp;&emsp;&nbsp;&nbsp;=2(K<sub>n</sub>2<sup>n-1</sup> + K<sub>n-1</sub>2<sup>n-2</sup> + &hellip; + K<sub>1</sub>)<sub>2</sub> + K<sub>0</sub></p>
+</blockquote>
 
 <p>我们能看到，当我们将(S)<sub>10</sub>除以2，则商为K<sub>n</sub>2<sup>n-1</sup>+K<sub>n-1</sub>2<sup>n-2</sup>+&hellip;+K<sub>1</sub>，余数为K<sub>0</sub>。
 所以我们继续下去，就能不断的得到余数为K<sub>1</sub>，&hellip;，K<sub>n-1</sub>，K<sub>n</sub>,然后我们就能得到二进制数(K<sub>n</sub>K<sub>n-1</sub>&hellip;K<sub>0</sub>)<sub>2</sub>。</p>
