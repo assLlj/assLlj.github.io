@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2018-08-07T00:51:54&#43;08:00" />
 <meta itemprop="dateModified" content="2018-08-07T00:51:54&#43;08:00" />
-<meta itemprop="wordCount" content="1441">
+<meta itemprop="wordCount" content="1426">
 
 
 
@@ -127,7 +127,7 @@
         <div class="post-category">
             <a href="/categories/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/"> 随便写写 </a>
             </div>
-          <span class="more-meta"> 约 1441 字 </span>
+          <span class="more-meta"> 约 1426 字 </span>
           <span class="more-meta"> 预计阅读 3 分钟 </span>
         
       </div>
@@ -169,10 +169,13 @@
 <p>D = &Sigma;K<sub>i</sub>×10<sup>i</sup></p>
 </blockquote>
 
-<p>其中K<sub>i</sub>是第i位的系数，K$\in$[0, 9], 设D整数位有m位，小数部分有n位，则i$\in$[-n, m-1], 整数部分最高位为m-1, 最低位0,小数部分最高位-1，最低位-n。</p>
+<p>其中K<sub>i</sub>是第i位的系数，K $\in$[0, 9], 设D整数位有m位，小数部分有n位，则i$\in$[-n, m-1], 整数部分最高位为m-1, 最低位0,小数部分最高位-1，最低位-n。</p>
 
-<p>当我们推广到一个任意进制（N进制）数字D:
-&gt;D = &Sigma;K<sub>i</sub>×N<sup>i</sup></p>
+<p>当我们推广到一个任意进制（N进制）数字D:</p>
+
+<blockquote>
+<p>D = &Sigma;K<sub>i</sub>×N<sup>i</sup></p>
+</blockquote>
 
 <p>其中N为基数，K<sup>i</sup>为第i位的系数，N<sup>i</sup>称为第i位的权，i的计数方法如上；</p>
 
@@ -221,9 +224,6 @@
 <h3 id="整数部分">整数部分</h3>
 
 <p>具体做法是：用2整除十进制整数，可以得到一个商和余数；再用2去除商，又会得到一个商和余数，如此进行，直到商为0时为止，然后把先得到的余数作为二进制数的低位有效位，后得到的余数作为二进制数的高位有效位，依次排列起来。</p>
-
-<p>例如56的转换：
-<img src="../images/56.png" alt="" /></p>
 
 <p>原理：</p>
 
@@ -413,6 +413,14 @@ int main() {
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 
 
 
