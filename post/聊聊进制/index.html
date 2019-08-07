@@ -163,8 +163,11 @@
 <p>12345 = 1×10<sup>4</sup> + 2×10<sup>3</sup> + 3×10<sup>2</sup> + 4×10<sup>1</sup> + 5×10<sup>0</sup></p>
 </blockquote>
 
-<p>那么推广到任意一个十进制数字D：<br />
-&gt;D = &Sigma;K<sub>i</sub>×10<sup>i</sup></p>
+<p>那么推广到任意一个十进制数字D：</p>
+
+<blockquote>
+<p>D = &Sigma;K<sub>i</sub>×10<sup>i</sup></p>
+</blockquote>
 
 <p>其中K<sub>i</sub>是第i位的系数，K$\in$[0, 9], 设D整数位有m位，小数部分有n位，则i$\in$[-n, m-1], 整数部分最高位为m-1, 最低位0,小数部分最高位-1，最低位-n。</p>
 
@@ -173,8 +176,9 @@
 
 <p>其中N为基数，K<sup>i</sup>为第i位的系数，N<sup>i</sup>称为第i位的权，i的计数方法如上；</p>
 
-<p>下面是一些例子:
-|N|D|计算方法|
+<p>下面是一些例子:</p>
+
+<p>|N|D|计算方法|
 |:-:|:-|:-|
 |2|(101.101)<sub>2</sub>|(101.101)<sub>2</sub> = 1×2<sup>2</sup>+0×2<sup>1</sup>+1×2<sup>0</sup>+1×2<sup>-1</sup>+0×2<sup>-2</sup>+1×2<sup>-3</sup> = (5.625)<sub>10</sub>|
 |8|(123.12)<sub>8</sub>|(123.12)<sub>8</sub> = 1×8<sup>2</sup>+2×8<sup>1</sup>+3×8<sup>0</sup>+1×8<sup>-1</sup>+2×8<sup>-2</sup> = (83.15625)<sub>10</sub>|
@@ -211,17 +215,23 @@
 <p>小数部分采用的方法是<code>乘2取整，顺序排列</code><br />
 具体做法是：用2乘十进制小数，可以得到积，将积的整数部分取出，再用2乘余下的小数部分，又得到一个积，再将积的整数部分取出，如此进行，直到积中的小数部分为零，此时0或1为二进制的最后一位。或者达到所要求的精度为止。</p>
 
-<p>例如:
-&gt;0.625 = (0.101)<sub>2</sub><br />
+<p>例如:</p>
+
+<blockquote>
+<p>0.625 = (0.101)<sub>2</sub><br />
 0.625*2 = 1.25======取出整数部分1<br />
 0.25*2 = 0.5========取出整数部分0<br />
 0.5*2 = 1==========取出整数部分1</p>
+</blockquote>
 
 <p>原理:<br />
-设一个十进制纯小数为(S)<sub>10</sub>, 对应的二进制小数为(K<sub>n</sub>K<sub>n-1</sub>&hellip;K<sub>0</sub>)<sub>2</sub>, 即
-&gt;(S)<sub>10</sub> = (K<sub>n</sub>2<sup>-1</sup> + K<sub>n-1</sub>2<sup>-2</sup> + &hellip; + K<sub>1</sub>2<sup>-(n-1)</sup> + K<sub>0</sub>2<sup>-n</sup>)<br />
+设一个十进制纯小数为(S)<sub>10</sub>, 对应的二进制小数为(K<sub>n</sub>K<sub>n-1</sub>&hellip;K<sub>0</sub>)<sub>2</sub>, 即</p>
+
+<blockquote>
+<p>(S)<sub>10</sub> = (K<sub>n</sub>2<sup>-1</sup> + K<sub>n-1</sub>2<sup>-2</sup> + &hellip; + K<sub>1</sub>2<sup>-(n-1)</sup> + K<sub>0</sub>2<sup>-n</sup>)<br />
 &emsp;&emsp;&emsp; = 2<sup>-1</sup>(K<sub>n</sub> + K<sub>n-1</sub>2<sup>-1</sup> + &hellip; + K<sub>1</sub>2<sup>-n</sup> + K<sub>0</sub>2<sup>-n+1</sup>)<br />
 2*(S)<sub>10</sub> = K<sub>n</sub> + 2<sup>-1</sup>(K<sub>n-1</sub> + K<sub>n-2</sub>2<sup>-1</sup> + &hellip; + K<sub>0</sub>2<sup>-n</sup>)</p>
+</blockquote>
 
 <p>如上，我们讲(S)<sub>10</sub>乘2，K<sub>n</sub>变成了整数部分，所以我们取整数部分刚好取到了K<sub>n</sub>，依次下去，便得到结果。</p>
 
