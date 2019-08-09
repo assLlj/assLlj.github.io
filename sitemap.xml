@@ -2,7 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://assllj.github.io/categories/</loc>
+    <lastmod>2019-08-09T12:58:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://assllj.github.io/post/</loc>
+    <lastmod>2019-08-09T12:58:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://assllj.github.io/tags/</loc>
+    <lastmod>2019-08-09T12:58:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://assllj.github.io/tags/linux/</loc>
+    <lastmod>2019-08-09T12:58:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://assllj.github.io/tags/vim/</loc>
+    <lastmod>2019-08-09T12:58:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://assllj.github.io/tags/xorg/</loc>
     <lastmod>2019-08-09T12:58:19+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -21,21 +51,14 @@
   </url>
   
   <url>
-    <loc>https://assllj.github.io/post/test/</loc>
-    <lastmod>2019-08-05T18:30:16+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://assllj.github.io/categories/</loc>
-    <lastmod>2018-08-07T00:51:54+08:00</lastmod>
+    <loc>https://assllj.github.io/tags/%E9%94%AE%E7%9B%98/</loc>
+    <lastmod>2019-08-09T12:58:19+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://assllj.github.io/tags/</loc>
-    <lastmod>2018-08-07T00:51:54+08:00</lastmod>
+    <loc>https://assllj.github.io/categories/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/</loc>
+    <lastmod>2019-08-09T12:58:19+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -60,12 +83,6 @@
   
   <url>
     <loc>https://assllj.github.io/tags/%E8%BF%9B%E5%88%B6/</loc>
-    <lastmod>2018-08-07T00:51:54+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://assllj.github.io/categories/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/</loc>
     <lastmod>2018-08-07T00:51:54+08:00</lastmod>
     <priority>0</priority>
   </url>

@@ -6,10 +6,19 @@
     <description>Recent content in 随便写写 on 狗娃子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 07 Aug 2018 00:51:54 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 09 Aug 2019 12:58:19 +0800</lastBuildDate>
     
 	<atom:link href="https://assllj.github.io/categories/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>交换Esc和Caps Lock</title>
+      <link>https://assllj.github.io/post/%E4%BA%A4%E6%8D%A2esc%E5%92%8Ccaps_lock/</link>
+      <pubDate>Fri, 09 Aug 2019 12:58:19 +0800</pubDate>
+      
+      <guid>https://assllj.github.io/post/%E4%BA%A4%E6%8D%A2esc%E5%92%8Ccaps_lock/</guid>
+      <description>&lt;p&gt;不管是不是vim党，Esc的使用频率都远远高于Caps Lock键，但是Esc键太远，反而Caps Lock键占着非常棒的位置，这谁能忍？所以我们可以交换这两个键。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>聊聊进制</title>
