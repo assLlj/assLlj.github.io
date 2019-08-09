@@ -3,7 +3,20 @@
   
   <url>
     <loc>https://assllj.github.io/post/</loc>
-    <lastmod>2019-08-05T18:30:16+08:00</lastmod>
+    <lastmod>2019-08-09T12:58:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://assllj.github.io/post/%E4%BA%A4%E6%8D%A2esc%E5%92%8Ccaps_lock/</loc>
+    <lastmod>2019-08-09T12:58:19+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://assllj.github.io/</loc>
+    <lastmod>2019-08-09T12:58:19+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -12,12 +25,6 @@
     <lastmod>2019-08-05T18:30:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://assllj.github.io/</loc>
-    <lastmod>2019-08-05T18:30:16+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
