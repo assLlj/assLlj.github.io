@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>交换Esc和Caps Lock - 狗娃子的博客</title>
+  <title>i3wm中使用特定模式打开程序 - 狗娃子的博客</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,8 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="狗娃子" /><meta name="description" content="不管是不是vim党，Esc的使用频率都远远高于Caps Lock键，但是Esc键太远，反而Caps Lock键占着非常棒的位置，这谁能忍？所以我们可以交换这两个键。
-" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="狗娃子" /><meta name="description" content="特定模式打开程序 有时候我们不想某些程序按照平铺方式打开，比如说telegram、网易云音乐，我们希望打开这些应用的时候直接使用悬浮模式(fl" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -27,7 +26,7 @@
 <meta name="generator" content="Hugo 0.58.1 with even 4.0.0" />
 
 
-<link rel="canonical" href="https://assllj.github.io/post/%E4%BA%A4%E6%8D%A2esc%E5%92%8Ccaps_lock/" />
+<link rel="canonical" href="https://assllj.github.io/post/arch%E4%BD%BF%E7%94%A8i3wm/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,26 +38,26 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="交换Esc和Caps Lock" />
-<meta property="og:description" content="不管是不是vim党，Esc的使用频率都远远高于Caps Lock键，但是Esc键太远，反而Caps Lock键占着非常棒的位置，这谁能忍？所以我们可以交换这两个键。" />
+<meta property="og:title" content="i3wm中使用特定模式打开程序" />
+<meta property="og:description" content="特定模式打开程序 有时候我们不想某些程序按照平铺方式打开，比如说telegram、网易云音乐，我们希望打开这些应用的时候直接使用悬浮模式(fl" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://assllj.github.io/post/%E4%BA%A4%E6%8D%A2esc%E5%92%8Ccaps_lock/" />
-<meta property="article:published_time" content="2019-08-09T12:58:19+08:00" />
-<meta property="article:modified_time" content="2019-08-09T12:58:19+08:00" />
-<meta itemprop="name" content="交换Esc和Caps Lock">
-<meta itemprop="description" content="不管是不是vim党，Esc的使用频率都远远高于Caps Lock键，但是Esc键太远，反而Caps Lock键占着非常棒的位置，这谁能忍？所以我们可以交换这两个键。">
+<meta property="og:url" content="https://assllj.github.io/post/arch%E4%BD%BF%E7%94%A8i3wm/" />
+<meta property="article:published_time" content="2019-09-09T22:44:51+08:00" />
+<meta property="article:modified_time" content="2019-09-09T22:44:51+08:00" />
+<meta itemprop="name" content="i3wm中使用特定模式打开程序">
+<meta itemprop="description" content="特定模式打开程序 有时候我们不想某些程序按照平铺方式打开，比如说telegram、网易云音乐，我们希望打开这些应用的时候直接使用悬浮模式(fl">
 
 
-<meta itemprop="datePublished" content="2019-08-09T12:58:19&#43;08:00" />
-<meta itemprop="dateModified" content="2019-08-09T12:58:19&#43;08:00" />
-<meta itemprop="wordCount" content="404">
+<meta itemprop="datePublished" content="2019-09-09T22:44:51&#43;08:00" />
+<meta itemprop="dateModified" content="2019-09-09T22:44:51&#43;08:00" />
+<meta itemprop="wordCount" content="561">
 
 
 
-<meta itemprop="keywords" content="vim,linux,键盘,xorg," />
+<meta itemprop="keywords" content="arch,linux,i3wm," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="交换Esc和Caps Lock"/>
-<meta name="twitter:description" content="不管是不是vim党，Esc的使用频率都远远高于Caps Lock键，但是Esc键太远，反而Caps Lock键占着非常棒的位置，这谁能忍？所以我们可以交换这两个键。"/>
+<meta name="twitter:title" content="i3wm中使用特定模式打开程序"/>
+<meta name="twitter:description" content="特定模式打开程序 有时候我们不想某些程序按照平铺方式打开，比如说telegram、网易云音乐，我们希望打开这些应用的时候直接使用悬浮模式(fl"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -121,15 +120,15 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">交换Esc和Caps Lock</h1>
+      <h1 class="post-title">i3wm中使用特定模式打开程序</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2019-08-09 </span>
+        <span class="post-time"> 2019-09-09 </span>
         <div class="post-category">
             <a href="/categories/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/"> 随便写写 </a>
             </div>
-          <span class="more-meta"> 约 404 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+          <span class="more-meta"> 约 561 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
     </header>
@@ -139,14 +138,11 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#环境">环境</a></li>
-<li><a href="#各种方案">各种方案</a>
+<li>
 <ul>
-<li><a href="#xmodmap">xmodmap</a></li>
-<li><a href="#利用-xkb-https-wiki-archlinux-org-index-php-x-keyboard-extension">利用<a href="https://wiki.archlinux.org/index.php/X_keyboard_extension">xkb</a></a></li>
-<li><a href="#更改-xorg的键盘配置-https-www-cnblogs-com-lepecoder-p-swap-esc-and-caps-html">更改<a href="https://www.cnblogs.com/lepeCoder/p/swap_ESC_and_Caps.html">xorg的键盘配置</a></a>
+<li>
 <ul>
-<li><a href="#参考">参考</a></li>
+<li><a href="#特定模式打开程序">特定模式打开程序</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -154,64 +150,125 @@
   </div>
 </div>
     <div class="post-content">
-      <p>不管是不是vim党，Esc的使用频率都远远高于Caps Lock键，但是Esc键太远，反而Caps Lock键占着非常棒的位置，这谁能忍？所以我们可以交换这两个键。</p>
+      
 
-<h1 id="环境">环境</h1>
+<h3 id="特定模式打开程序">特定模式打开程序</h3>
 
-<p>archlinux + xorg + dde</p>
+<p>有时候我们不想某些程序按照平铺方式打开，比如说telegram、网易云音乐，我们希望打开这些应用的时候直接使用悬浮模式(floating)，这时候就需要使用<code>for_window</code>命令。</p>
 
-<h1 id="各种方案">各种方案</h1>
+<p>在官方的<code>userguide</code>中是这么描述说的：</p>
 
-<h2 id="xmodmap">xmodmap</h2>
+<p>With the for_window directive, you can let i3 execute any command when it encounters a specific window. This can be used to set windows to floating or to change their border style, for example.</p>
 
-<ol>
-<li>首先安装<code>xmodmap</code>,在arch上包名是<code>xorg-modmap</code></li>
-
-<li><p>在你的HOME目录下新建一个文件，例如<code>.Xmodmap</code>， 写入以下内容:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">remove Lock = Caps_Lock
-keysym Escape = Caps_Lock
-keysym Caps_Lock = Escape
-add Lock = Caps_Lock</pre></td></tr></table>
-</div>
-</div></li>
-
-<li><p>然后在你的<code>.xprofile</code>加上这一行</p>
+<p>Syntax:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
 </span></pre></td>
 <td class="lntd">
-<pre class="chroma">xmodmap ~/.Xmodmap</pre></td></tr></table>
+<pre class="chroma">for_window &lt;criteria&gt; &lt;command&gt;</pre></td></tr></table>
 </div>
-</div></li>
-</ol>
+</div>
+<p>Examples:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"># enable floating mode for all XTerm windows
+for_window [class=&#34;XTerm&#34;] floating enable
 
-<p>然后注销或者source一下就好了，不过这种方案在锁屏之后就会失效。</p>
+# Make all urxvts use a 1-pixel border:
+for_window [class=&#34;urxvt&#34;] border pixel 1
 
-<h2 id="利用-xkb-https-wiki-archlinux-org-index-php-x-keyboard-extension">利用<a href="https://wiki.archlinux.org/index.php/X_keyboard_extension">xkb</a></h2>
+# A less useful, but rather funny example:
+# makes the window floating as soon as I change
+# directory to ~/work
+for_window [title=&#34;x200: ~/work&#34;] floating enable</pre></td></tr></table>
+</div>
+</div>
+<p>更多细节可以查看 <a href="https://i3wm.org/docs/userguide.html#for_window">for_window</a></p>
 
-<p>我是修改了<code>/usr/share/X11/xkb/keycodes/evdev</code>文件，将Esc和Caps Lock键的keycode互换了，不过和上面方案一样，锁屏或注销之后就不行了</p>
+<p>比如说我们想让telegram打开的时候直接是悬浮模式(floating),我们可以在配置文件(~/.config/i3/config)中加上这么一句：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">for_window [class=&#34;TelegramDesktop&#34;instance=&#34;telegram-desktop&#34;] floating enable</pre></td></tr></table>
+</div>
+</div>
+<p>class表示窗口类，instance表示窗口实例，如果不清楚的话，可以先打开程序，然后在终端输入</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ xprop</pre></td></tr></table>
+</div>
+</div>
+<p>然后选中那个程序，终端就会输出这个窗口的信息，以telegram为例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">_NET_WM_ICON_NAME(UTF8_STRING) = 
+XdndAware(ATOM) = BITMAP
+WM_NAME(STRING) = &#34;Telegram (13550)&#34;
+_NET_WM_NAME(UTF8_STRING) = &#34;Telegram (13550)&#34;
+_MOTIF_WM_HINTS(_MOTIF_WM_HINTS) = 0x3, 0x3e, 0x7e, 0x0, 0x0
+_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL
+_XEMBED_INFO(_XEMBED_INFO) = 0x0, 0x1
+WM_CLIENT_LEADER(WINDOW): window id # 0x1800008
+WM_HINTS(WM_HINTS):
+		Client accepts input or input focus: True
+		window id # of group leader: 0x1800008
+WM_CLIENT_MACHINE(STRING) = &#34;wxg&#34;
+_NET_WM_PID(CARDINAL) = 4153
+_NET_WM_SYNC_REQUEST_COUNTER(CARDINAL) = 25165831
+WM_CLASS(STRING) = &#34;telegram-desktop&#34;, &#34;TelegramDesktop&#34;
+WM_PROTOCOLS(ATOM): protocols  WM_DELETE_WINDOW, WM_TAKE_FOCUS, _NET_WM_PING, _NET_WM_SYNC_REQUEST
+WM_NORMAL_HINTS(WM_SIZE_HINTS):
+		user specified location: 1429, 167
+		user specified size: 380 by 767
+		program specified minimum size: 380 by 480
+		window gravity: Static</pre></td></tr></table>
+</div>
+</div>
+<p>找到WM_CLASS(STRING) = &ldquo;telegram-desktop&rdquo;, &ldquo;TelegramDesktop&rdquo;</p>
 
-<h2 id="更改-xorg的键盘配置-https-www-cnblogs-com-lepecoder-p-swap-esc-and-caps-html">更改<a href="https://www.cnblogs.com/lepeCoder/p/swap_ESC_and_Caps.html">xorg的键盘配置</a></h2>
+<p>第一个代表实例(instance), 第二个代表类(class)</p>
 
-<p>在<code>/etc/X11/xorg.conf.d/00-keyboard.conf</code>增加<code>Option &quot;XkbOptions&quot; &quot;caps:swapescape&quot;</code></p>
-
-<p>这个方案目前未发现任何问题</p>
-
-<h3 id="参考">参考</h3>
-
-<ol>
-<li><a href="https://www.cnblogs.com/lepeCoder/p/swap_ESC_and_Caps.html">https://www.cnblogs.com/lepeCoder/p/swap_ESC_and_Caps.html</a></li>
-<li><a href="https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration">https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration</a></li>
-</ol>
     </div>
 
     <div class="post-copyright">
@@ -222,7 +279,7 @@ add Lock = Caps_Lock</pre></td></tr></table>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2019-08-09
+        2019-09-09
         
     </span>
   </p>
@@ -245,19 +302,14 @@ add Lock = Caps_Lock</pre></td></tr></table>
   </div>
 </div><footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/vim/">vim</a>
+          <a href="/tags/arch/">arch</a>
           <a href="/tags/linux/">linux</a>
-          <a href="/tags/%E9%94%AE%E7%9B%98/">键盘</a>
-          <a href="/tags/xorg/">xorg</a>
+          <a href="/tags/i3wm/">i3wm</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/arch%E4%BD%BF%E7%94%A8i3wm/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">i3wm中使用特定模式打开程序</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        <a class="next" href="/post/%E8%81%8A%E8%81%8A%E8%BF%9B%E5%88%B6/">
-            <span class="next-text nav-default">聊聊进制</span>
+        
+        <a class="next" href="/post/%E4%BA%A4%E6%8D%A2esc%E5%92%8Ccaps_lock/">
+            <span class="next-text nav-default">交换Esc和Caps Lock</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>i3wm on 狗娃子的博客</title>
+    <link>https://assllj.github.io/tags/i3wm/</link>
+    <description>Recent content in i3wm on 狗娃子的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 09 Sep 2019 22:44:51 +0800</lastBuildDate>
+    
+	<atom:link href="https://assllj.github.io/tags/i3wm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>i3wm中使用特定模式打开程序</title>
+      <link>https://assllj.github.io/post/arch%E4%BD%BF%E7%94%A8i3wm/</link>
+      <pubDate>Mon, 09 Sep 2019 22:44:51 +0800</pubDate>
+      
+      <guid>https://assllj.github.io/post/arch%E4%BD%BF%E7%94%A8i3wm/</guid>
+      <description>特定模式打开程序 有时候我们不想某些程序按照平铺方式打开，比如说telegram、网易云音乐，我们希望打开这些应用的时候直接使用悬浮模式(fl</description>
+    </item>
+    
+  </channel>
+</rss>
