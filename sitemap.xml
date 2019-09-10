@@ -2,14 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://assllj.github.io/tags/arch/</loc>
-    <lastmod>2019-09-09T22:44:51+08:00</lastmod>
+    <loc>https://assllj.github.io/categories/</loc>
+    <lastmod>2019-09-10T22:44:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://assllj.github.io/categories/</loc>
+    <loc>https://assllj.github.io/post/</loc>
+    <lastmod>2019-09-10T22:44:10+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://assllj.github.io/tags/</loc>
+    <lastmod>2019-09-10T22:44:10+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://assllj.github.io/categories/%E5%88%B7%E9%A2%98/</loc>
+    <lastmod>2019-09-10T22:44:10+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://assllj.github.io/post/%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2019-09-10T22:44:10+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://assllj.github.io/</loc>
+    <lastmod>2019-09-10T22:44:10+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://assllj.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2019-09-10T22:44:10+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://assllj.github.io/tags/arch/</loc>
     <lastmod>2019-09-09T22:44:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -31,27 +73,6 @@
   
   <url>
     <loc>https://assllj.github.io/tags/linux/</loc>
-    <lastmod>2019-09-09T22:44:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://assllj.github.io/post/</loc>
-    <lastmod>2019-09-09T22:44:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://assllj.github.io/tags/</loc>
-    <lastmod>2019-09-09T22:44:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://assllj.github.io/</loc>
     <lastmod>2019-09-09T22:44:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
