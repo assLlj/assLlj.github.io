@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2019-09-10T22:44:10&#43;08:00" />
 <meta itemprop="dateModified" content="2019-09-10T22:44:10&#43;08:00" />
-<meta itemprop="wordCount" content="1425">
+<meta itemprop="wordCount" content="1864">
 
 
 
@@ -127,8 +127,8 @@
         <div class="post-category">
             <a href="/categories/%E5%88%B7%E9%A2%98/"> 刷题 </a>
             </div>
-          <span class="more-meta"> 约 1425 字 </span>
-          <span class="more-meta"> 预计阅读 3 分钟 </span>
+          <span class="more-meta"> 约 1864 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
         
       </div>
     </header>
@@ -155,6 +155,18 @@
 <li><a href="#样例说明">样例说明</a></li>
 <li><a href="#分析">分析</a></li>
 <li><a href="#代码">代码</a></li>
+</ul></li>
+<li><a href="#201409">201409</a>
+<ul>
+<li><a href="#问题描述-1">问题描述</a></li>
+<li><a href="#输入格式-1">输入格式</a></li>
+<li><a href="#输出格式-1">输出格式</a></li>
+<li><a href="#样例输入-1">样例输入</a></li>
+<li><a href="#样例输出-1">样例输出</a></li>
+<li><a href="#样例说明-1">样例说明</a></li>
+<li><a href="#评测用例规模与约定">评测用例规模与约定</a></li>
+<li><a href="#分析-1">分析</a></li>
+<li><a href="#代码-1">代码</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -354,6 +366,117 @@ int main(int argc, char *argv[])
             printf(&#34;IGNORED\n&#34;);
         }
     }
+    return 0;
+}</pre></td></tr></table>
+</div>
+</div>
+<p></details></p>
+
+<h2 id="201409">201409</h2>
+
+<p><details>
+<summary>相邻数对</summary></p>
+
+<h3 id="问题描述-1">问题描述</h3>
+
+<blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;给定n个不同的整数，问这些数中有多少对整数，它们的值正好相差1。</p>
+</blockquote>
+
+<h3 id="输入格式-1">输入格式</h3>
+
+<blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;输入的第一行包含一个整数n，表示给定整数的个数。
+&nbsp;&nbsp;&nbsp;&nbsp;第二行包含所给定的n个整数。</p>
+</blockquote>
+
+<h3 id="输出格式-1">输出格式</h3>
+
+<blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;输出一个整数，表示值正好相差1的数对的个数。</p>
+</blockquote>
+
+<h3 id="样例输入-1">样例输入</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">6
+10 2 6 3 7 8</pre></td></tr></table>
+</div>
+</div>
+<h3 id="样例输出-1">样例输出</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">3</pre></td></tr></table>
+</div>
+</div>
+<h3 id="样例说明-1">样例说明</h3>
+
+<blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;值正好相差1的数对包括(2, 3), (6, 7), (7, 8)。</p>
+</blockquote>
+
+<h3 id="评测用例规模与约定">评测用例规模与约定</h3>
+
+<blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;1&lt;=n&lt;=1000，给定的整数为不超过10000的非负整数。</p>
+</blockquote>
+
+<h3 id="分析-1">分析</h3>
+
+<p>排序然后遍历判断</p>
+
+<h3 id="代码-1">代码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+    int n, result = 0;
+    int arr[1000];
+    cin &gt;&gt; n;
+    for (int i = 0; i &lt; n; i++) {
+        cin &gt;&gt; arr[i];
+    }
+    sort(arr, arr+n);
+    for (int i = 0; i &lt; n; i++) {
+        if (1 == arr[i+1] - arr[i])
+            result++;
+    }
+    cout &lt;&lt; result;
     return 0;
 }</pre></td></tr></table>
 </div>
