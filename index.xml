@@ -6,10 +6,19 @@
     <description>Recent content on 狗娃子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 13 Sep 2019 20:35:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 13 Sep 2019 22:22:18 +0800</lastBuildDate>
     
 	<atom:link href="https://assllj.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>201403 1</title>
+      <link>https://assllj.github.io/ccf/201403-1/</link>
+      <pubDate>Fri, 13 Sep 2019 22:22:18 +0800</pubDate>
+      
+      <guid>https://assllj.github.io/ccf/201403-1/</guid>
+      <description>相反数 题目 问题描述 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;有 N 个非零且各不相同的整数。请你编一个程序求出它们中有多少对相反数(a 和 -a</description>
+    </item>
     
     <item>
       <title>201312 3</title>
