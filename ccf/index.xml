@@ -6,10 +6,37 @@
     <description>Recent content in Ccfs on 狗娃子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 13 Sep 2019 18:31:04 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 13 Sep 2019 20:35:00 +0800</lastBuildDate>
     
 	<atom:link href="https://assllj.github.io/ccf/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>201312 3</title>
+      <link>https://assllj.github.io/ccf/201312-3/</link>
+      <pubDate>Fri, 13 Sep 2019 20:35:00 +0800</pubDate>
+      
+      <guid>https://assllj.github.io/ccf/201312-3/</guid>
+      <description>最大的矩形 题目 问题描述 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在横轴上放了n个相邻的矩形，每个矩形的宽度是1，而第i（1 ≤ i ≤ n）个</description>
+    </item>
+    
+    <item>
+      <title>201312 2</title>
+      <link>https://assllj.github.io/ccf/201312-2/</link>
+      <pubDate>Fri, 13 Sep 2019 20:28:36 +0800</pubDate>
+      
+      <guid>https://assllj.github.io/ccf/201312-2/</guid>
+      <description>ISBN号码 题目 问题描述 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;每一本正式出版的图书都有一个ISBN号码与之对应，ISBN码包括9位</description>
+    </item>
+    
+    <item>
+      <title>201312 1</title>
+      <link>https://assllj.github.io/ccf/201312-1/</link>
+      <pubDate>Fri, 13 Sep 2019 20:23:34 +0800</pubDate>
+      
+      <guid>https://assllj.github.io/ccf/201312-1/</guid>
+      <description>出现次数最多的数 题目 问题描述 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;给定n个正整数，找出它们中出现次数最多的数。如果这样的数有多个，</description>
+    </item>
     
     <item>
       <title>201409 2</title>
