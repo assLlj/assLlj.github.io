@@ -5,7 +5,8 @@
     <link>https://assllj.github.io/</link>
     <description>Recent content on 狗娃子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Fri, 13 Sep 2019 22:22:18 +0800</lastBuildDate>
     
 	<atom:link href="https://assllj.github.io/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +18,12 @@
       <pubDate>Fri, 13 Sep 2019 22:22:18 +0800</pubDate>
       
       <guid>https://assllj.github.io/ccf/201403-1/</guid>
-      <description>相反数 题目 问题描述 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;有 N 个非零且各不相同的整数。请你编一个程序求出它们中有多少对相反数(a 和 -a</description>
+      <description> 相反数 题目 问题描述  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;有 N 个非零且各不相同的整数。请你编一个程序求出它们中有多少对相反数(a 和 -a 为一对相反数)。
+ 输入格式  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;第一行包含一个正整数 N。(1 ≤ N ≤ 500)。
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;第二行为 N 个用单个空格隔开的非零整数,每个数的绝对值不超过1000,保证这些整数各不相同。
+ 输出格式  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;只输出一个整数,即这 N 个数中包含多少对相反数。
+ 样例输入 5 1 2 3 -1 -2  样例输出 2  分析 取绝对值，然后排序
+代码 #include &amp;lt;iostream&amp;gt; #include &amp;lt;algorithm&amp;gt; using namespace std; int main(int argc, char *argv[]) { int n; int arr[500]; int result = 0; cin &amp;gt;&amp;gt; n; for (int i = 0; i &amp;lt; n; i++) { cin &amp;gt;&amp;gt; arr[i]; if (arr[i] &amp;lt; 0) { arr[i] = -arr[i]; } } sort(arr, arr+n); for (int i = 0; i &amp;lt; n;) { if (arr[i] == arr[i+1]) { result++; i = i+2; } else { i++; } } printf(&amp;quot;%d\n&amp;quot;, result); return 0; }  </description>
     </item>
     
     <item>
@@ -26,7 +32,13 @@
       <pubDate>Fri, 13 Sep 2019 20:35:00 +0800</pubDate>
       
       <guid>https://assllj.github.io/ccf/201312-3/</guid>
-      <description>最大的矩形 题目 问题描述 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在横轴上放了n个相邻的矩形，每个矩形的宽度是1，而第i（1 ≤ i ≤ n）个</description>
+      <description> 最大的矩形 题目 问题描述  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在横轴上放了n个相邻的矩形，每个矩形的宽度是1，而第i（1 ≤ i ≤ n）个矩形的高度是hi。这n个矩形构成了一个直方图。例如，下图中六个矩形的高度就分别是3, 1, 6, 5, 2, 3。
+  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;请找出能放在给定直方图里面积最大的矩形，它的边要与坐标轴平行。对于上面给出的例子，最大矩形如下图所示的阴影部分，面积是10。
+ 问题描述  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;第一行包含一个整数n，即矩形的数量(1 ≤ n ≤ 1000)。
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;第二行包含n 个整数h1, h2, … , hn，相邻的数之间由空格分隔。(1 ≤ hi ≤ 10000)。hi是第i个矩形的高度。
+ 输出格式  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;输出一行，包含一个整数，即给定直方图内的最大矩形的面积。
+ 样例输入 6 3 1 6 5 2 3  样例输出 10  分析 遍历，判断每一个矩形左右高度不小于它的相连的矩形的数量，构成的矩形的面积就等于数量乘以它的高度
+代码 #include &amp;lt;stdio.h&amp;gt; int arr[10000]; int main(int argc, char *argv[]) { int n, i, j, result = 0; scanf(&amp;quot;%d&amp;quot;, &amp;amp;n); for (i = 0; i &amp;lt; n; i++) { scanf(&amp;quot;%d&amp;quot;, &amp;amp;arr[i]); } for (i = 0; i &amp;lt; n; i++) { int V = 0; for (j = i; j &amp;gt;=0; j--) { if (arr[j] &amp;gt;= arr[i]) { V += arr[i]; } else { break; } } for (j = i+1; j &amp;lt; n; j++) { if (arr[j] &amp;gt;= arr[i]) { V += arr[i]; } else { break; } } if (V &amp;gt; result) { result = V; } } printf(&amp;quot;%d\n&amp;quot;, result); return 0; }  </description>
     </item>
     
     <item>
@@ -35,7 +47,13 @@
       <pubDate>Fri, 13 Sep 2019 20:28:36 +0800</pubDate>
       
       <guid>https://assllj.github.io/ccf/201312-2/</guid>
-      <description>ISBN号码 题目 问题描述 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;每一本正式出版的图书都有一个ISBN号码与之对应，ISBN码包括9位</description>
+      <description>ISBN号码 题目 问题描述  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;每一本正式出版的图书都有一个ISBN号码与之对应，ISBN码包括9位数字、1位识别码和3位分隔符，其规定格式如“x-xxx-xxxxx-x”，其中符号“-”是分隔符（键盘上的减号），最后一位是识别码，例如0-670-82162-4就是一个标准的ISBN码。ISBN码的首位数字表示书籍的出版语言，例如0代表英语；第一个分隔符“-”之后的三位数字代表出版社，例如670代表维京出版社；第二个分隔之后的五位数字代表该书在出版社的编号；最后一位为识别码。
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;识别码的计算方法如下：
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;首位数字乘以1加上次位数字乘以2……以此类推，用所得的结果mod 11，所得的余数即为识别码，如果余数为10，则识别码为大写字母X。例如ISBN号码0-670-82162-4中的识别码4是这样得到的：对067082162这9个数字，从左至右，分别乘以1，2，…，9，再求和，即0×1+6×2+……+2×9=158，然后取158 mod 11的结果4作为识别码。
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;编写程序判断输入的ISBN号码中识别码是否正确，如果正确，则仅输出“Right”；如果错误，则输出是正确的ISBN号码。
+ 输入格式  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;输入只有一行，是一个字符序列，表示一本书的ISBN号码（保证输入符合ISBN号码的格式要求）。
+ 输出格式  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;输出一行，假如输入的ISBN号码的识别码正确，那么输出“Right”，否则，按照规定的格式，输出正确的ISBN号码（包括分隔符“-”）。
+ 样例输入 0-670-82162-4  样例输出 Right  样例输入 0-670-82162-0  样例输出 0-670-82162-4  分析 代码 #include&amp;lt;stdio.h&amp;gt; int main(int argc, char *argv[]) { char s[13]; int i = 0, r = 0, j = 1, sum = 0; scanf(&amp;quot;%s&amp;quot;, s); for (i = 0; i &amp;lt; 12; i++) { if (s[i] !</description>
     </item>
     
     <item>
@@ -44,7 +62,12 @@
       <pubDate>Fri, 13 Sep 2019 20:23:34 +0800</pubDate>
       
       <guid>https://assllj.github.io/ccf/201312-1/</guid>
-      <description>出现次数最多的数 题目 问题描述 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;给定n个正整数，找出它们中出现次数最多的数。如果这样的数有多个，</description>
+      <description>出现次数最多的数 题目 问题描述  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;给定n个正整数，找出它们中出现次数最多的数。如果这样的数有多个，请输出其中最小的一个。
+ 输入格式  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;输入的第一行只有一个正整数n(1 ≤ n ≤ 1000)，表示数字的个数。
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;输入的第二行有n个整数s1, s2, …, sn (1 ≤ si ≤ 10000, 1 ≤ i ≤ n)。相邻的数用空格分隔。
+ 输出格式  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。
+ 样例输出 输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。  样例输出 10  分析 排序，然后遍历
+代码 #include&amp;lt;iostream&amp;gt; #include&amp;lt;algorithm&amp;gt; using namespace std; int arr[1000]; int main(int argc, char *argv[]) { int n; //result 出现次数最高的数字 //previous 上一个重复的数字 //r_count result出现的次数 //c_count 当前数字出现的次数 int result = 0, previous = 0, r_count = 0, c_count = 0; cin &amp;gt;&amp;gt; n; for (int i = 0; i &amp;lt; n; i++) { cin &amp;gt;&amp;gt; arr[i]; } sort(arr, arr+n); result = previous = arr[0]; r_count = 1; c_count = 1; for (int i = 1; i &amp;lt; n; i++) { if (arr[i] !</description>
     </item>
     
     <item>
@@ -53,7 +76,15 @@
       <pubDate>Fri, 13 Sep 2019 18:31:04 +0800</pubDate>
       
       <guid>https://assllj.github.io/ccf/201409-2/</guid>
-      <description>画图 题目 问题描述 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在一个定义了直角坐标系的纸上，画一个(x1,y1)到(x2,y2)的矩形指将</description>
+      <description> 画图 题目 问题描述  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在一个定义了直角坐标系的纸上，画一个(x1,y1)到(x2,y2)的矩形指将横坐标范围从x1到x2，纵坐标范围从y1到y2之间的区域涂上颜色。
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;下图给出了一个画了两个矩形的例子。第一个矩形是(1,1) 到(4, 4)，用绿色和紫色表示。第二个矩形是(2, 3)到(6, 5)，用蓝色和紫色表示。图中，一共有15个单位的面积被涂上颜色，其中紫色部分被涂了两次，但在计算面积时只计算一次。在实际的涂色过程中，所有的矩形都涂成统一的颜色，图中显示不同颜色仅为说明方便。
+  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;给出所有要画的矩形，请问总共有多少个单位的面积被涂上颜色。
+ 输入格式  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;输入的第一行包含一个整数n，表示要画的矩形的个数。
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;接下来n行，每行4个非负整数，分别表示要画的矩形的左下角的横坐标与纵坐标，以及右上角的横坐标与纵坐标。
+ 输出格式  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;输出一个整数，表示有多少个单位的面积被涂上颜色。
+ 样例输入 2 1 1 4 4 2 3 6 5  样例输出 15  评测用例规模与约定  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;1&amp;lt;=n&amp;lt;=100，0&amp;lt;=横坐标、纵坐标&amp;lt;=100。
+ 分析 暴力模拟，对每一个矩形我们计算出它的面积，然后遍历每个小正方形，如果之前已经算过了，就再减去，每个小正方形用其左下角坐标唯一表示，即bool[x][y]表示左下角坐标为(x, y)的小正方形是否已经计算过
+代码 #include &amp;lt;iostream&amp;gt; #include &amp;lt;cstring&amp;gt; using namespace std; int main(int argc, char *argv[]) { int n, x1, y1, x2, y2, result = 0; bool arr[101][101]; cin &amp;gt;&amp;gt; n; memset(arr, false, sizeof(arr)); for (int i = 0; i &amp;lt; n; i++) { cin &amp;gt;&amp;gt; x1 &amp;gt;&amp;gt; y1 &amp;gt;&amp;gt; x2 &amp;gt;&amp;gt; y2; result += (x2 -x1) * (y2 - y1); for (int j = x1; j &amp;lt; x2; j++) for (int k = y1; k &amp;lt; y2; k++) { if (arr[j][k]) { result--; } arr[j][k] = true; } } cout &amp;lt;&amp;lt; result &amp;lt;&amp;lt; endl; return 0; }  </description>
     </item>
     
     <item>
@@ -62,7 +93,7 @@
       <pubDate>Fri, 13 Sep 2019 18:20:49 +0800</pubDate>
       
       <guid>https://assllj.github.io/ccf/201903-1/</guid>
-      <description>小中大 题目 分析 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 #include&amp;lt;stdio.h&amp;gt; int arr[100000]; int main(int argc, char *argv[]) { int n; int i; int max, min, med; scanf(&amp;#34;%d&amp;#34;, &amp;amp;n); for (i = 0; i &amp;lt; n; i++)</description>
+      <description>小中大 题目 分析 代码 #include&amp;lt;stdio.h&amp;gt; int arr[100000]; int main(int argc, char *argv[]) { int n; int i; int max, min, med; scanf(&amp;quot;%d&amp;quot;, &amp;amp;n); for (i = 0; i &amp;lt; n; i++) { scanf(&amp;quot;%d&amp;quot;, &amp;amp;arr[i]); } if (arr[0] &amp;gt;= arr[n-1]) { max = arr[0]; min = arr[n-1]; } else { max = arr[n-1]; min = arr[0]; } if (0 != n%2) { med = arr[n/2]; printf(&amp;quot;%d %d %d\n&amp;quot;, max, med, min); } else { int tem = arr[n/2] + arr[n/2-1]; if (0 == tem%2) { med = tem/2; printf(&amp;quot;%d %d %d\n&amp;quot;, max, med, min); } else { printf(&amp;quot;%d %.</description>
     </item>
     
     <item>
@@ -71,7 +102,14 @@
       <pubDate>Fri, 13 Sep 2019 13:58:41 +0800</pubDate>
       
       <guid>https://assllj.github.io/ccf/201409-1/</guid>
-      <description>相邻数对 题目 问题描述 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;给定n个不同的整数，问这些数中有多少对整数，它们的值正好相差1。 输入格式</description>
+      <description> 相邻数对 题目 问题描述  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;给定n个不同的整数，问这些数中有多少对整数，它们的值正好相差1。
+ 输入格式  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;输入的第一行包含一个整数n，表示给定整数的个数。
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;第二行包含所给定的n个整数。
+ 输出格式  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;输出一个整数，表示值正好相差1的数对的个数。
+ 样例输入 6 10 2 6 3 7 8  样例输出 3  样例说明  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;值正好相差1的数对包括(2, 3), (6, 7), (7, 8)。
+ 评测用例规模与约定  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;1&amp;lt;=n&amp;lt;=1000，给定的整数为不超过10000的非负整数。
+ 分析 排序然后遍历判断
+代码 #include &amp;lt;iostream&amp;gt; #include &amp;lt;algorithm&amp;gt; using namespace std; int main(int argc, char *argv[]) { int n, result = 0; int arr[1000]; cin &amp;gt;&amp;gt; n; for (int i = 0; i &amp;lt; n; i++) { cin &amp;gt;&amp;gt; arr[i]; } sort(arr, arr+n); for (int i = 0; i &amp;lt; n; i++) { if (1 == arr[i+1] - arr[i]) result++; } cout &amp;lt;&amp;lt; result; return 0; }  </description>
     </item>
     
     <item>
@@ -89,7 +127,15 @@
       <pubDate>Tue, 10 Sep 2019 22:20:54 +0800</pubDate>
       
       <guid>https://assllj.github.io/ccf/201403-2/</guid>
-      <description>窗口 题目 问题描述 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 在某图形操作系统中,有 N 个窗口,每个窗口都是一个两边与坐标轴分别平行的矩形区域。窗口的边界上的点也属于该窗口。窗口之间有层</description>
+      <description>窗口 题目 问题描述  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 在某图形操作系统中,有 N 个窗口,每个窗口都是一个两边与坐标轴分别平行的矩形区域。窗口的边界上的点也属于该窗口。窗口之间有层次的区别,在多于一个窗口重叠的区域里,只会显示位于顶层的窗口里的内容。
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;当你点击屏幕上一个点的时候,你就选择了处于被点击位置的最顶层窗口,并且这个窗口就会被移到所有窗口的最顶层,而剩余的窗口的层次顺序不变。如果你点击的位置不属于任何窗口,则系统会忽略你这次点击。
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;现在我们希望你写一个程序模拟点击窗口的过程
+ 输入格式  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;输入的第一行有两个正整数,即 N 和 M。(1 ≤ N ≤ 10,1 ≤ M ≤ 10)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;接下来 N 行按照从最下层到最顶层的顺序给出 N 个窗口的位置。 每行包含四个非负整数 x1, y1, x2, y2,表示该窗口的一对顶点坐标分别为 (x1, y1) 和 (x2, y2)。保证 x1 &amp;lt; x2,y1 &amp;lt; y2。
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;接下来 M 行每行包含两个非负整数 x, y,表示一次鼠标点击的坐标。
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;题目中涉及到的所有点和矩形的顶点的 x, y 坐标分别不超过 2559和1439。
+ 输出格式  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;输出包括 M 行,每一行表示一次鼠标点击的结果。如果该次鼠标点击选择了一个窗口,则输出这个窗口的编号(窗口按照输入中的顺序从 1 编号到 N);如果没有,则输出&amp;rdquo;IGNORED&amp;rdquo;(不含双引号)。
+ 样例输入 3 4 0 0 4 4 1 1 5 5 2 2 6 6 1 1 0 0 4 4 0 5  样例输出 2 1 1 IGNORED  样例说明  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;第一次点击的位置同时属于第 1 和第 2 个窗口,但是由于第 2 个窗口在上面,它被选择并且被置于顶层。</description>
     </item>
     
     <item>
@@ -98,44 +144,7 @@
       <pubDate>Mon, 09 Sep 2019 22:44:51 +0800</pubDate>
       
       <guid>https://assllj.github.io/post/arch%E4%BD%BF%E7%94%A8i3wm/</guid>
-      <description>特定模式打开程序 有时候我们不想某些程序按照平铺方式打开，比如说telegram、网易云音乐，我们希望打开这些应用的时候直接使用悬浮模式(fl</description>
-    </item>
-    
-    <item>
-      <title>交换Esc和Caps Lock</title>
-      <link>https://assllj.github.io/post/%E4%BA%A4%E6%8D%A2esc%E5%92%8Ccaps_lock/</link>
-      <pubDate>Fri, 09 Aug 2019 12:58:19 +0800</pubDate>
-      
-      <guid>https://assllj.github.io/post/%E4%BA%A4%E6%8D%A2esc%E5%92%8Ccaps_lock/</guid>
-      <description>&lt;p&gt;不管是不是vim党，Esc的使用频率都远远高于Caps Lock键，但是Esc键太远，反而Caps Lock键占着非常棒的位置，这谁能忍？所以我们可以交换这两个键。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>聊聊进制</title>
-      <link>https://assllj.github.io/post/%E8%81%8A%E8%81%8A%E8%BF%9B%E5%88%B6/</link>
-      <pubDate>Tue, 07 Aug 2018 00:51:54 +0800</pubDate>
-      
-      <guid>https://assllj.github.io/post/%E8%81%8A%E8%81%8A%E8%BF%9B%E5%88%B6/</guid>
-      <description>进制的表示 首先我们来看看十进制，例如12345，这个数的大小是怎么计算的呢？很简单，我们都知道 12345 = 1×104 + 2×103 + 3×102 + 4×1</description>
-    </item>
-    
-    <item>
-      <title>&#39;%&#39;符号的含义</title>
-      <link>https://assllj.github.io/post/%E7%AC%A6%E5%8F%B7%E7%9A%84%E5%90%AB%E4%B9%89/</link>
-      <pubDate>Sat, 16 Jun 2018 22:23:54 +0800</pubDate>
-      
-      <guid>https://assllj.github.io/post/%E7%AC%A6%E5%8F%B7%E7%9A%84%E5%90%AB%E4%B9%89/</guid>
-      <description>&lt;p&gt;&amp;rsquo;%&amp;lsquo;符号有两个含义&amp;ndash;取模运算（“Modulo Operation”）和取余运算（“Complementation ”）。两个概念有重叠的部分但又不完全一致。主要的区别在于对负整数进行除法运算时操作不同&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://assllj.github.io/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://assllj.github.io/about/</guid>
-      <description>男
-Arch user、vim user</description>
+      <description>&lt;p&gt;有时候我们不想某些程序按照平铺方式打开，比如说telegram、网易云音乐，我们希望打开这些应用的时候直接使用悬浮模式(floating)，这时候就需要使用&lt;code&gt;for_window&lt;/code&gt;命令。&lt;/p&gt;</description>
     </item>
     
   </channel>

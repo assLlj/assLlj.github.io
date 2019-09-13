@@ -5,7 +5,8 @@
     <link>https://assllj.github.io/tags/linux/</link>
     <description>Recent content in linux on 狗娃子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Mon, 09 Sep 2019 22:44:51 +0800</lastBuildDate>
     
 	<atom:link href="https://assllj.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +18,7 @@
       <pubDate>Mon, 09 Sep 2019 22:44:51 +0800</pubDate>
       
       <guid>https://assllj.github.io/post/arch%E4%BD%BF%E7%94%A8i3wm/</guid>
-      <description>特定模式打开程序 有时候我们不想某些程序按照平铺方式打开，比如说telegram、网易云音乐，我们希望打开这些应用的时候直接使用悬浮模式(fl</description>
+      <description>&lt;p&gt;有时候我们不想某些程序按照平铺方式打开，比如说telegram、网易云音乐，我们希望打开这些应用的时候直接使用悬浮模式(floating)，这时候就需要使用&lt;code&gt;for_window&lt;/code&gt;命令。&lt;/p&gt;</description>
     </item>
     
     <item>
