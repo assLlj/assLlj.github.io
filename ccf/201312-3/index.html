@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en-us">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="theme-color" content="#494f5c">
-	<meta name="msapplication-TileColor" content="#494f5c">
-<meta itemprop="name" content="201312 3">
-<meta itemprop="description" content=" 最大的矩形 题目 问题描述  &nbsp;&nbsp;&nbsp;&nbsp;在横轴上放了n个相邻的矩形，每个矩形的宽度是1，而第i（1 ≤ i ≤ n）个矩形的高度是hi。这n个矩形构成了一个直方图。例如，下图中六个矩形的高度就分别是3, 1, 6, 5, 2, 3。
+<html lang="zh-cn">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.58.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="author" content="狗娃子">
+<meta name="keywords" content="">
+<meta name="description" content=" 最大的矩形 题目 问题描述  &nbsp;&nbsp;&nbsp;&nbsp;在横轴上放了n个相邻的矩形，每个矩形的宽度是1，而第i（1 ≤ i ≤ n）个矩形的高度是hi。这n个矩形构成了一个直方图。例如，下图中六个矩形的高度就分别是3, 1, 6, 5, 2, 3。
   &nbsp;&nbsp;&nbsp;&nbsp;请找出能放在给定直方图里面积最大的矩形，它的边要与坐标轴平行。对于上面给出的例子，最大矩形如下图所示的阴影部分，面积是10。
  问题描述  &nbsp;&nbsp;&nbsp;&nbsp;第一行包含一个整数n，即矩形的数量(1 ≤ n ≤ 1000)。
 &nbsp;&nbsp;&nbsp;&nbsp;第二行包含n 个整数h1, h2, … , hn，相邻的数之间由空格分隔。(1 ≤ hi ≤ 10000)。hi是第i个矩形的高度。
@@ -17,91 +17,253 @@
 代码 #include &lt;stdio.h&gt; int arr[10000]; int main(int argc, char *argv[]) { int n, i, j, result = 0; scanf(&quot;%d&quot;, &amp;n); for (i = 0; i &lt; n; i&#43;&#43;) { scanf(&quot;%d&quot;, &amp;arr[i]); } for (i = 0; i &lt; n; i&#43;&#43;) { int V = 0; for (j = i; j &gt;=0; j--) { if (arr[j] &gt;= arr[i]) { V &#43;= arr[i]; } else { break; } } for (j = i&#43;1; j &lt; n; j&#43;&#43;) { if (arr[j] &gt;= arr[i]) { V &#43;= arr[i]; } else { break; } } if (V &gt; result) { result = V; } } printf(&quot;%d\n&quot;, result); return 0; }  ">
 
 
-<meta itemprop="datePublished" content="2019-09-13T20:35:00&#43;08:00" />
-<meta itemprop="dateModified" content="2019-09-13T20:35:00&#43;08:00" />
-<meta itemprop="wordCount" content="149">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta property="og:title" content="201312 3" />
 <meta property="og:description" content=" 最大的矩形 题目 问题描述  &nbsp;&nbsp;&nbsp;&nbsp;在横轴上放了n个相邻的矩形，每个矩形的宽度是1，而第i（1 ≤ i ≤ n）个矩形的高度是hi。这n个矩形构成了一个直方图。例如，下图中六个矩形的高度就分别是3, 1, 6, 5, 2, 3。
   &nbsp;&nbsp;&nbsp;&nbsp;请找出能放在给定直方图里面积最大的矩形，它的边要与坐标轴平行。对于上面给出的例子，最大矩形如下图所示的阴影部分，面积是10。
  问题描述  &nbsp;&nbsp;&nbsp;&nbsp;第一行包含一个整数n，即矩形的数量(1 ≤ n ≤ 1000)。
 &nbsp;&nbsp;&nbsp;&nbsp;第二行包含n 个整数h1, h2, … , hn，相邻的数之间由空格分隔。(1 ≤ hi ≤ 10000)。hi是第i个矩形的高度。
  输出格式  &nbsp;&nbsp;&nbsp;&nbsp;输出一行，包含一个整数，即给定直方图内的最大矩形的面积。
  样例输入 6 3 1 6 5 2 3  样例输出 10  分析 遍历，判断每一个矩形左右高度不小于它的相连的矩形的数量，构成的矩形的面积就等于数量乘以它的高度
-代码 #include &lt;stdio.h&gt; int arr[10000]; int main(int argc, char *argv[]) { int n, i, j, result = 0; scanf(&quot;%d&quot;, &amp;n); for (i = 0; i &lt; n; i&#43;&#43;) { scanf(&quot;%d&quot;, &amp;arr[i]); } for (i = 0; i &lt; n; i&#43;&#43;) { int V = 0; for (j = i; j &gt;=0; j--) { if (arr[j] &gt;= arr[i]) { V &#43;= arr[i]; } else { break; } } for (j = i&#43;1; j &lt; n; j&#43;&#43;) { if (arr[j] &gt;= arr[i]) { V &#43;= arr[i]; } else { break; } } if (V &gt; result) { result = V; } } printf(&quot;%d\n&quot;, result); return 0; }  " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://assllj.github.io/ccf/201312-3/" />
-<meta property="article:published_time" content="2019-09-13T20:35:00+08:00" />
-<meta property="article:modified_time" content="2019-09-13T20:35:00+08:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="201312 3"/>
+代码 #include &lt;stdio.h&gt; int arr[10000]; int main(int argc, char *argv[]) { int n, i, j, result = 0; scanf(&quot;%d&quot;, &amp;n); for (i = 0; i &lt; n; i&#43;&#43;) { scanf(&quot;%d&quot;, &amp;arr[i]); } for (i = 0; i &lt; n; i&#43;&#43;) { int V = 0; for (j = i; j &gt;=0; j--) { if (arr[j] &gt;= arr[i]) { V &#43;= arr[i]; } else { break; } } for (j = i&#43;1; j &lt; n; j&#43;&#43;) { if (arr[j] &gt;= arr[i]) { V &#43;= arr[i]; } else { break; } } if (V &gt; result) { result = V; } } printf(&quot;%d\n&quot;, result); return 0; }  ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="201312 3">
+<meta name="twitter:title" content="201312 3">
+<meta property="og:url" content="https://assllj.github.io/ccf/201312-3/">
+<meta property="twitter:url" content="https://assllj.github.io/ccf/201312-3/">
+<meta property="og:site_name" content="狗娃子的博客">
+<meta property="og:description" content=" 最大的矩形 题目 问题描述  &nbsp;&nbsp;&nbsp;&nbsp;在横轴上放了n个相邻的矩形，每个矩形的宽度是1，而第i（1 ≤ i ≤ n）个矩形的高度是hi。这n个矩形构成了一个直方图。例如，下图中六个矩形的高度就分别是3, 1, 6, 5, 2, 3。
+  &nbsp;&nbsp;&nbsp;&nbsp;请找出能放在给定直方图里面积最大的矩形，它的边要与坐标轴平行。对于上面给出的例子，最大矩形如下图所示的阴影部分，面积是10。
+ 问题描述  &nbsp;&nbsp;&nbsp;&nbsp;第一行包含一个整数n，即矩形的数量(1 ≤ n ≤ 1000)。
+&nbsp;&nbsp;&nbsp;&nbsp;第二行包含n 个整数h1, h2, … , hn，相邻的数之间由空格分隔。(1 ≤ hi ≤ 10000)。hi是第i个矩形的高度。
+ 输出格式  &nbsp;&nbsp;&nbsp;&nbsp;输出一行，包含一个整数，即给定直方图内的最大矩形的面积。
+ 样例输入 6 3 1 6 5 2 3  样例输出 10  分析 遍历，判断每一个矩形左右高度不小于它的相连的矩形的数量，构成的矩形的面积就等于数量乘以它的高度
+代码 #include &lt;stdio.h&gt; int arr[10000]; int main(int argc, char *argv[]) { int n, i, j, result = 0; scanf(&quot;%d&quot;, &amp;n); for (i = 0; i &lt; n; i&#43;&#43;) { scanf(&quot;%d&quot;, &amp;arr[i]); } for (i = 0; i &lt; n; i&#43;&#43;) { int V = 0; for (j = i; j &gt;=0; j--) { if (arr[j] &gt;= arr[i]) { V &#43;= arr[i]; } else { break; } } for (j = i&#43;1; j &lt; n; j&#43;&#43;) { if (arr[j] &gt;= arr[i]) { V &#43;= arr[i]; } else { break; } } if (V &gt; result) { result = V; } } printf(&quot;%d\n&quot;, result); return 0; }  ">
 <meta name="twitter:description" content=" 最大的矩形 题目 问题描述  &nbsp;&nbsp;&nbsp;&nbsp;在横轴上放了n个相邻的矩形，每个矩形的宽度是1，而第i（1 ≤ i ≤ n）个矩形的高度是hi。这n个矩形构成了一个直方图。例如，下图中六个矩形的高度就分别是3, 1, 6, 5, 2, 3。
   &nbsp;&nbsp;&nbsp;&nbsp;请找出能放在给定直方图里面积最大的矩形，它的边要与坐标轴平行。对于上面给出的例子，最大矩形如下图所示的阴影部分，面积是10。
  问题描述  &nbsp;&nbsp;&nbsp;&nbsp;第一行包含一个整数n，即矩形的数量(1 ≤ n ≤ 1000)。
 &nbsp;&nbsp;&nbsp;&nbsp;第二行包含n 个整数h1, h2, … , hn，相邻的数之间由空格分隔。(1 ≤ hi ≤ 10000)。hi是第i个矩形的高度。
  输出格式  &nbsp;&nbsp;&nbsp;&nbsp;输出一行，包含一个整数，即给定直方图内的最大矩形的面积。
  样例输入 6 3 1 6 5 2 3  样例输出 10  分析 遍历，判断每一个矩形左右高度不小于它的相连的矩形的数量，构成的矩形的面积就等于数量乘以它的高度
-代码 #include &lt;stdio.h&gt; int arr[10000]; int main(int argc, char *argv[]) { int n, i, j, result = 0; scanf(&quot;%d&quot;, &amp;n); for (i = 0; i &lt; n; i&#43;&#43;) { scanf(&quot;%d&quot;, &amp;arr[i]); } for (i = 0; i &lt; n; i&#43;&#43;) { int V = 0; for (j = i; j &gt;=0; j--) { if (arr[j] &gt;= arr[i]) { V &#43;= arr[i]; } else { break; } } for (j = i&#43;1; j &lt; n; j&#43;&#43;) { if (arr[j] &gt;= arr[i]) { V &#43;= arr[i]; } else { break; } } if (V &gt; result) { result = V; } } printf(&quot;%d\n&quot;, result); return 0; }  "/>
+代码 #include &lt;stdio.h&gt; int arr[10000]; int main(int argc, char *argv[]) { int n, i, j, result = 0; scanf(&quot;%d&quot;, &amp;n); for (i = 0; i &lt; n; i&#43;&#43;) { scanf(&quot;%d&quot;, &amp;arr[i]); } for (i = 0; i &lt; n; i&#43;&#43;) { int V = 0; for (j = i; j &gt;=0; j--) { if (arr[j] &gt;= arr[i]) { V &#43;= arr[i]; } else { break; } } for (j = i&#43;1; j &lt; n; j&#43;&#43;) { if (arr[j] &gt;= arr[i]) { V &#43;= arr[i]; } else { break; } } if (V &gt; result) { result = V; } } printf(&quot;%d\n&quot;, result); return 0; }  ">
+<meta property="og:locale" content="zh-cn">
 
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
-	<link rel="shortcut icon" href="/favicon.ico">
-
-	<title>201312 3</title>
-	<link rel="stylesheet" href="https://assllj.github.io/css/style.min.5ee5e7976cd09872c64e40a582206543f6aa38c69a8c43898aadc70040344b92.css" integrity="sha256-XuXnl2zQmHLGTkClgiBlQ/aqOMaajEOJiq3HAEA0S5I=" crossorigin="anonymous">
-	
-</head>
-
-<body id="page">
-	
-	<header id="site-header" class="animated slideInUp faster">
-		<div class="hdr-wrapper section-inner">
-			<div class="hdr-left">
-				<div class="site-branding">
-					<a href="https://assllj.github.io">狗娃子的博客</a>
-				</div>
-				<nav class="site-nav hide-in-mobile">
-					
-				<a href="https://assllj.github.io/brush_problem/">刷题</a>
-				<a href="https://assllj.github.io/post/">归档</a>
-				<a href="https://assllj.github.io/tags/">标签</a>
-				<a href="https://assllj.github.io/categories/">分类</a>
-				<a href="https://assllj.github.io/about/">关于</a>
-
-				</nav>
-			</div>
-			<div class="hdr-right hdr-icons">
-				<span class="hdr-social hide-in-mobile"><a href="https://github.com/assLlj" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a><a href="mailto:assheadlld@gmail.com" target="_blank" rel="noopener me" title="Email"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
-			</div>
-		</div>
-	</header>
-	<div id="mobile-menu" class="animated fast">
-		<ul>
-			<li><a href="https://assllj.github.io/brush_problem/">刷题</a></li>
-			<li><a href="https://assllj.github.io/post/">归档</a></li>
-			<li><a href="https://assllj.github.io/tags/">标签</a></li>
-			<li><a href="https://assllj.github.io/categories/">分类</a></li>
-			<li><a href="https://assllj.github.io/about/">关于</a></li>
-		</ul>
-	</div>
+  
+    <meta property="article:published_time" content="2019-09-13T20:35:00">
+  
+  
+    <meta property="article:modified_time" content="2019-09-13T20:35:00">
+  
+  
+  
+  
 
 
-	<main class="site-main section-inner thin animated fadeIn faster">
-		<h1>201312 3</h1>
-		<div class="content">
-			
+<meta name="twitter:card" content="summary">
 
-<h1 id="最大的矩形">最大的矩形<a href="#最大的矩形" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h1>
 
-<h2 id="题目">题目<a href="#题目" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 
-<h4 id="问题描述">问题描述<a href="#问题描述" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://assllj.github.io/images/xiaohei.jpg">
+  <meta property="twitter:image" content="https://assllj.github.io/images/xiaohei.jpg">
+
+
+    <title>201312 3</title>
+
+    <link rel="icon" href="https://assllj.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://assllj.github.io/ccf/201312-3/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://assllj.github.io/css/style-cqsemfsodkeevklmshhgm3k4opko6zujxzeerysd1pmal0bcnvkhagei87h2.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="2">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://assllj.github.io/">狗娃子的博客</a>
+  </div>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="2">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://assllj.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://assllj.github.io/images/xiaohei.jpg" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">狗娃子</h4>
+        
+          <h5 class="sidebar-profile-bio">庐山烟雨浙江潮，未到千般恨不消。及至到来无一事，庐山烟雨浙江潮。</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://assllj.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://assllj.github.io/brush_problem">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">刷题</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://assllj.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://assllj.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://assllj.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://assllj.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/assLlj" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/636472/kakawait" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+      
+      <span class="sidebar-button-desc">Stack Overflow</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://assllj.github.io/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="2"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      201312 3
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-09-13T20:35:00&#43;08:00">
+        
+  九月 13, 2019
+
+      </time>
+    
+    
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              
+
+<h1 id="最大的矩形">最大的矩形</h1>
+
+<h2 id="题目">题目</h2>
+
+<h4 id="问题描述">问题描述</h4>
 
 <blockquote>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;在横轴上放了n个相邻的矩形，每个矩形的宽度是1，而第i（1 ≤ i ≤ n）个矩形的高度是hi。这n个矩形构成了一个直方图。例如，下图中六个矩形的高度就分别是3, 1, 6, 5, 2, 3。</p>
@@ -115,35 +277,35 @@
 
 <p><img src="./2.png" alt="" /></p>
 
-<h4 id="问题描述-1">问题描述<a href="#问题描述-1" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="问题描述-1">问题描述</h4>
 
 <blockquote>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;第一行包含一个整数n，即矩形的数量(1 ≤ n ≤ 1000)。<br />
 &nbsp;&nbsp;&nbsp;&nbsp;第二行包含n 个整数h1, h2, … , hn，相邻的数之间由空格分隔。(1 ≤ hi ≤ 10000)。hi是第i个矩形的高度。</p>
 </blockquote>
 
-<h4 id="输出格式">输出格式<a href="#输出格式" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="输出格式">输出格式</h4>
 
 <blockquote>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;输出一行，包含一个整数，即给定直方图内的最大矩形的面积。</p>
 </blockquote>
 
-<h4 id="样例输入">样例输入<a href="#样例输入" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="样例输入">样例输入</h4>
 
 <pre><code>6
 3 1 6 5 2 3
 </code></pre>
 
-<h4 id="样例输出">样例输出<a href="#样例输出" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+<h4 id="样例输出">样例输出</h4>
 
 <pre><code>10
 </code></pre>
 
-<h2 id="分析">分析<a href="#分析" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h2 id="分析">分析</h2>
 
 <p>遍历，判断每一个矩形左右高度不小于它的相连的矩形的数量，构成的矩形的面积就等于数量乘以它的高度</p>
 
-<h2 id="代码">代码<a href="#代码" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h2 id="代码">代码</h2>
 
 <pre><code>#include &lt;stdio.h&gt;
 
@@ -181,21 +343,257 @@ int main(int argc, char *argv[])
 }
 </code></pre>
 
-		</div>
-	</main>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://assllj.github.io/ccf/201403-1/" data-tooltip="201403 1">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://assllj.github.io/ccf/201312-2/" data-tooltip="201312 2">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
 
-	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
-		<p>&copy; 2019 <a href="https://assllj.github.io">狗娃子</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
-		<p>
-			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://assllj.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
-		</p>
-	</footer>
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+    <script src="https://utteranc.es/client.js"
+        repo="https://github.com/assLlj/comments"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+  <span class="copyrights">
+    &copy; 2019 狗娃子. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="2">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://assllj.github.io/ccf/201403-1/" data-tooltip="201403 1">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://assllj.github.io/ccf/201312-2/" data-tooltip="201312 2">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="2">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://assllj.github.io/images/xiaohei.jpg" alt="作者的图片" />
+    
+    <h4 id="about-card-name">狗娃子</h4>
+    
+      <div id="about-card-bio">庐山烟雨浙江潮，未到千般恨不消。及至到来无一事，庐山烟雨浙江潮。</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        斐波那契程序员
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://assllj.github.io/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://assllj.github.io/js/script-ituqnjgqrv4mworu1rpybubiwikujz9928wzzsbnp5ughpwrj98ulo4glk.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/assllj.github.io\/ccf\/201312-3\/';
+          
+            this.page.identifier = '\/ccf\/201312-3\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
 
 
 
-	<script src="https://assllj.github.io/js/bundle.min.4a9a0ac3d2217822c7865b4161e6c2a71de1d70492264337755427898dd718f6.js" integrity="sha256-SpoKw9IheCLHhltBYebCpx3h1wSSJkM3dVQniY3XGPY=" crossorigin="anonymous"></script>
-	
 
-</body>
-
+    
+  </body>
 </html>
+

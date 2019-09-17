@@ -5,8 +5,7 @@
     <link>https://assllj.github.io/</link>
     <description>Recent content on 狗娃子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <language>zh-cn</language>
     <lastBuildDate>Fri, 13 Sep 2019 22:22:18 +0800</lastBuildDate>
     
 	<atom:link href="https://assllj.github.io/index.xml" rel="self" type="application/rss+xml" />
@@ -122,7 +121,7 @@
     </item>
     
     <item>
-      <title>窗口</title>
+      <title>201403 2</title>
       <link>https://assllj.github.io/ccf/201403-2/</link>
       <pubDate>Tue, 10 Sep 2019 22:20:54 +0800</pubDate>
       
@@ -140,11 +139,30 @@
     
     <item>
       <title>i3wm中使用特定模式打开程序</title>
-      <link>https://assllj.github.io/post/arch%E4%BD%BF%E7%94%A8i3wm/</link>
+      <link>https://assllj.github.io/2019/09/i3wm%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%89%B9%E5%AE%9A%E6%A8%A1%E5%BC%8F%E6%89%93%E5%BC%80%E7%A8%8B%E5%BA%8F/</link>
       <pubDate>Mon, 09 Sep 2019 22:44:51 +0800</pubDate>
       
-      <guid>https://assllj.github.io/post/arch%E4%BD%BF%E7%94%A8i3wm/</guid>
+      <guid>https://assllj.github.io/2019/09/i3wm%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%89%B9%E5%AE%9A%E6%A8%A1%E5%BC%8F%E6%89%93%E5%BC%80%E7%A8%8B%E5%BA%8F/</guid>
       <description>&lt;p&gt;有时候我们不想某些程序按照平铺方式打开，比如说telegram、网易云音乐，我们希望打开这些应用的时候直接使用悬浮模式(floating)，这时候就需要使用&lt;code&gt;for_window&lt;/code&gt;命令。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>交换Esc和Caps Lock</title>
+      <link>https://assllj.github.io/2019/08/%E4%BA%A4%E6%8D%A2esc%E5%92%8Ccaps-lock/</link>
+      <pubDate>Fri, 09 Aug 2019 12:58:19 +0800</pubDate>
+      
+      <guid>https://assllj.github.io/2019/08/%E4%BA%A4%E6%8D%A2esc%E5%92%8Ccaps-lock/</guid>
+      <description>&lt;p&gt;不管是不是vim党，Esc的使用频率都远远高于Caps Lock键，但是Esc键太远，反而Caps Lock键占着非常棒的位置，这谁能忍？所以我们可以交换这两个键。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://assllj.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://assllj.github.io/about/</guid>
+      <description>男
+Arch user、vim user</description>
     </item>
     
   </channel>

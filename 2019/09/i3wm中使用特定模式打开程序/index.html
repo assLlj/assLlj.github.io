@@ -8,48 +8,40 @@
 <meta name="generator" content="Hugo 0.58.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="狗娃子">
 <meta name="keywords" content="">
-<meta name="description" content="出现次数最多的数 题目 问题描述  &nbsp;&nbsp;&nbsp;&nbsp;给定n个正整数，找出它们中出现次数最多的数。如果这样的数有多个，请输出其中最小的一个。
- 输入格式  &nbsp;&nbsp;&nbsp;&nbsp;输入的第一行只有一个正整数n(1 ≤ n ≤ 1000)，表示数字的个数。
-&nbsp;&nbsp;&nbsp;&nbsp;输入的第二行有n个整数s1, s2, …, sn (1 ≤ si ≤ 10000, 1 ≤ i ≤ n)。相邻的数用空格分隔。
- 输出格式  &nbsp;&nbsp;&nbsp;&nbsp;输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。
- 样例输出 输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。  样例输出 10  分析 排序，然后遍历
-代码 #include&lt;iostream&gt; #include&lt;algorithm&gt; using namespace std; int arr[1000]; int main(int argc, char *argv[]) { int n; //result 出现次数最高的数字 //previous 上一个重复的数字 //r_count result出现的次数 //c_count 当前数字出现的次数 int result = 0, previous = 0, r_count = 0, c_count = 0; cin &gt;&gt; n; for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; arr[i]; } sort(arr, arr&#43;n); result = previous = arr[0]; r_count = 1; c_count = 1; for (int i = 1; i &lt; n; i&#43;&#43;) { if (arr[i] !">
+<meta name="description" content="有时候我们不想某些程序按照平铺方式打开，比如说telegram、网易云音乐，我们希望打开这些应用的时候直接使用悬浮模式(floating)，这时候就需要使用for_window命令。">
 
 
-<meta property="og:description" content="出现次数最多的数 题目 问题描述  &nbsp;&nbsp;&nbsp;&nbsp;给定n个正整数，找出它们中出现次数最多的数。如果这样的数有多个，请输出其中最小的一个。
- 输入格式  &nbsp;&nbsp;&nbsp;&nbsp;输入的第一行只有一个正整数n(1 ≤ n ≤ 1000)，表示数字的个数。
-&nbsp;&nbsp;&nbsp;&nbsp;输入的第二行有n个整数s1, s2, …, sn (1 ≤ si ≤ 10000, 1 ≤ i ≤ n)。相邻的数用空格分隔。
- 输出格式  &nbsp;&nbsp;&nbsp;&nbsp;输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。
- 样例输出 输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。  样例输出 10  分析 排序，然后遍历
-代码 #include&lt;iostream&gt; #include&lt;algorithm&gt; using namespace std; int arr[1000]; int main(int argc, char *argv[]) { int n; //result 出现次数最高的数字 //previous 上一个重复的数字 //r_count result出现的次数 //c_count 当前数字出现的次数 int result = 0, previous = 0, r_count = 0, c_count = 0; cin &gt;&gt; n; for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; arr[i]; } sort(arr, arr&#43;n); result = previous = arr[0]; r_count = 1; c_count = 1; for (int i = 1; i &lt; n; i&#43;&#43;) { if (arr[i] !">
+<meta property="og:description" content="有时候我们不想某些程序按照平铺方式打开，比如说telegram、网易云音乐，我们希望打开这些应用的时候直接使用悬浮模式(floating)，这时候就需要使用for_window命令。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="201312 1">
-<meta name="twitter:title" content="201312 1">
-<meta property="og:url" content="https://assllj.github.io/ccf/201312-1/">
-<meta property="twitter:url" content="https://assllj.github.io/ccf/201312-1/">
+<meta property="og:title" content="i3wm中使用特定模式打开程序">
+<meta name="twitter:title" content="i3wm中使用特定模式打开程序">
+<meta property="og:url" content="https://assllj.github.io/2019/09/i3wm%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%89%B9%E5%AE%9A%E6%A8%A1%E5%BC%8F%E6%89%93%E5%BC%80%E7%A8%8B%E5%BA%8F/">
+<meta property="twitter:url" content="https://assllj.github.io/2019/09/i3wm%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%89%B9%E5%AE%9A%E6%A8%A1%E5%BC%8F%E6%89%93%E5%BC%80%E7%A8%8B%E5%BA%8F/">
 <meta property="og:site_name" content="狗娃子的博客">
-<meta property="og:description" content="出现次数最多的数 题目 问题描述  &nbsp;&nbsp;&nbsp;&nbsp;给定n个正整数，找出它们中出现次数最多的数。如果这样的数有多个，请输出其中最小的一个。
- 输入格式  &nbsp;&nbsp;&nbsp;&nbsp;输入的第一行只有一个正整数n(1 ≤ n ≤ 1000)，表示数字的个数。
-&nbsp;&nbsp;&nbsp;&nbsp;输入的第二行有n个整数s1, s2, …, sn (1 ≤ si ≤ 10000, 1 ≤ i ≤ n)。相邻的数用空格分隔。
- 输出格式  &nbsp;&nbsp;&nbsp;&nbsp;输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。
- 样例输出 输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。  样例输出 10  分析 排序，然后遍历
-代码 #include&lt;iostream&gt; #include&lt;algorithm&gt; using namespace std; int arr[1000]; int main(int argc, char *argv[]) { int n; //result 出现次数最高的数字 //previous 上一个重复的数字 //r_count result出现的次数 //c_count 当前数字出现的次数 int result = 0, previous = 0, r_count = 0, c_count = 0; cin &gt;&gt; n; for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; arr[i]; } sort(arr, arr&#43;n); result = previous = arr[0]; r_count = 1; c_count = 1; for (int i = 1; i &lt; n; i&#43;&#43;) { if (arr[i] !">
-<meta name="twitter:description" content="出现次数最多的数 题目 问题描述  &nbsp;&nbsp;&nbsp;&nbsp;给定n个正整数，找出它们中出现次数最多的数。如果这样的数有多个，请输出其中最小的一个。
- 输入格式  &nbsp;&nbsp;&nbsp;&nbsp;输入的第一行只有一个正整数n(1 ≤ n ≤ 1000)，表示数字的个数。
-&nbsp;&nbsp;&nbsp;&nbsp;输入的第二行有n个整数s1, s2, …, sn (1 ≤ si ≤ 10000, 1 ≤ i ≤ n)。相邻的数用空格分隔。
- 输出格式  &nbsp;&nbsp;&nbsp;&nbsp;输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。
- 样例输出 输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。  样例输出 10  分析 排序，然后遍历
-代码 #include&lt;iostream&gt; #include&lt;algorithm&gt; using namespace std; int arr[1000]; int main(int argc, char *argv[]) { int n; //result 出现次数最高的数字 //previous 上一个重复的数字 //r_count result出现的次数 //c_count 当前数字出现的次数 int result = 0, previous = 0, r_count = 0, c_count = 0; cin &gt;&gt; n; for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; arr[i]; } sort(arr, arr&#43;n); result = previous = arr[0]; r_count = 1; c_count = 1; for (int i = 1; i &lt; n; i&#43;&#43;) { if (arr[i] !">
+<meta property="og:description" content="有时候我们不想某些程序按照平铺方式打开，比如说telegram、网易云音乐，我们希望打开这些应用的时候直接使用悬浮模式(floating)，这时候就需要使用for_window命令。">
+<meta name="twitter:description" content="有时候我们不想某些程序按照平铺方式打开，比如说telegram、网易云音乐，我们希望打开这些应用的时候直接使用悬浮模式(floating)，这时候就需要使用for_window命令。">
 <meta property="og:locale" content="zh-cn">
 
   
-    <meta property="article:published_time" content="2019-09-13T20:23:34">
+    <meta property="article:published_time" content="2019-09-09T22:44:51">
   
   
-    <meta property="article:modified_time" content="2019-09-13T20:23:34">
+    <meta property="article:modified_time" content="2019-09-09T22:44:51">
   
   
   
+    
+      <meta property="article:section" content="随便写写">
+    
+  
+  
+    
+      <meta property="article:tag" content="arch">
+    
+      <meta property="article:tag" content="linux">
+    
+      <meta property="article:tag" content="i3wm">
+    
   
 
 
@@ -69,14 +61,14 @@
   <meta property="twitter:image" content="https://assllj.github.io/images/xiaohei.jpg">
 
 
-    <title>201312 1</title>
+    <title>i3wm中使用特定模式打开程序</title>
 
     <link rel="icon" href="https://assllj.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://assllj.github.io/ccf/201312-1/">
+    <link rel="canonical" href="https://assllj.github.io/2019/09/i3wm%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%89%B9%E5%AE%9A%E6%A8%A1%E5%BC%8F%E6%89%93%E5%BC%80%E7%A8%8B%E5%BA%8F/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -96,7 +88,7 @@
 
   <body>
     <div id="blog">
-      <header id="header" data-behavior="2">
+      <header id="header" data-behavior="5">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
     <a class="header-title-link" href="https://assllj.github.io/">狗娃子的博客</a>
@@ -104,7 +96,7 @@
   
 </header>
 
-      <nav id="sidebar" data-behavior="2">
+      <nav id="sidebar" data-behavior="5">
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
@@ -224,7 +216,7 @@
 
       
 
-      <div id="main" data-behavior="2"
+      <div id="main" data-behavior="5"
         class="
                hasCoverMetaIn
                ">
@@ -234,116 +226,118 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      201312 1
+      i3wm中使用特定模式打开程序
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2019-09-13T20:23:34&#43;08:00">
+      <time itemprop="datePublished" datetime="2019-09-09T22:44:51&#43;08:00">
         
-  九月 13, 2019
+  九月 9, 2019
 
       </time>
     
     
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://assllj.github.io/categories/%e9%9a%8f%e4%be%bf%e5%86%99%e5%86%99">随便写写</a>
+    
+  
+
   </div>
 
 </div>
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              
+              <p>有时候我们不想某些程序按照平铺方式打开，比如说telegram、网易云音乐，我们希望打开这些应用的时候直接使用悬浮模式(floating)，这时候就需要使用<code>for_window</code>命令。</p>
 
-<h1 id="出现次数最多的数">出现次数最多的数</h1>
+<p>在官方的<code>userguide</code>中是这么描述说的：</p>
 
-<h2 id="题目">题目</h2>
+<p>With the for_window directive, you can let i3 execute any command when it encounters a specific window. This can be used to set windows to floating or to change their border style, for example.</p>
 
-<h4 id="问题描述">问题描述</h4>
+<p>Syntax:</p>
 
-<blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;给定n个正整数，找出它们中出现次数最多的数。如果这样的数有多个，请输出其中最小的一个。</p>
-</blockquote>
-
-<h4 id="输入格式">输入格式</h4>
-
-<blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;输入的第一行只有一个正整数n(1 ≤ n ≤ 1000)，表示数字的个数。<br />
-&nbsp;&nbsp;&nbsp;&nbsp;输入的第二行有n个整数s1, s2, …, sn (1 ≤ si ≤ 10000, 1 ≤ i ≤ n)。相邻的数用空格分隔。</p>
-</blockquote>
-
-<h4 id="输出格式">输出格式</h4>
-
-<blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。</p>
-</blockquote>
-
-<h4 id="样例输出">样例输出</h4>
-
-<pre><code>输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。
+<pre><code>for_window &lt;criteria&gt; &lt;command&gt;
 </code></pre>
 
-<h4 id="样例输出-1">样例输出</h4>
+<p>Examples:</p>
 
-<pre><code>10
+<pre><code># enable floating mode for all XTerm windows
+for_window [class=&quot;XTerm&quot;] floating enable
+
+# Make all urxvts use a 1-pixel border:
+for_window [class=&quot;urxvt&quot;] border pixel 1
+
+# A less useful, but rather funny example:
+# makes the window floating as soon as I change
+# directory to ~/work
+for_window [title=&quot;x200: ~/work&quot;] floating enable
 </code></pre>
 
-<h2 id="分析">分析</h2>
+<p>更多细节可以查看 <a href="https://i3wm.org/docs/userguide.html#for_window">for_window</a></p>
 
-<p>排序，然后遍历</p>
+<p>比如说我们想让telegram打开的时候直接是悬浮模式(floating),我们可以在配置文件(~/.config/i3/config)中加上这么一句：</p>
 
-<h2 id="代码">代码</h2>
-
-<pre><code>#include&lt;iostream&gt;
-#include&lt;algorithm&gt;
-
-using namespace std;
-
-int arr[1000];
-
-int main(int argc, char *argv[])
-{
-    int n;
-    
-    //result 出现次数最高的数字
-    //previous 上一个重复的数字
-    //r_count result出现的次数
-    //c_count 当前数字出现的次数
-    int result = 0, previous = 0, r_count = 0, c_count = 0;
-
-    cin &gt;&gt; n;
-    for (int i = 0; i &lt; n; i++) {
-        cin &gt;&gt; arr[i];
-    }
-
-    sort(arr, arr+n);
-
-    result = previous = arr[0];
-    r_count = 1;
-    c_count = 1;
-    for (int i = 1; i &lt; n; i++) {
-        if (arr[i] != previous) {
-            c_count = 1;
-            previous = arr[i];
-        } else {
-            c_count++;
-        }
-        if (c_count &gt; r_count) {
-            result = arr[i];
-            r_count = c_count;
-        }
-    }
-    printf(&quot;%d\n&quot;, result);
-
-    return 0;
-}
+<pre><code>for_window [class=&quot;TelegramDesktop&quot;instance=&quot;telegram-desktop&quot;] floating enable
 </code></pre>
 
+<p>class表示窗口类，instance表示窗口实例，如果不清楚的话，可以先打开程序，然后在终端输入</p>
+
+<pre><code>$ xprop
+</code></pre>
+
+<p>然后选中那个程序，终端就会输出这个窗口的信息，以telegram为例：</p>
+
+<pre><code>_NET_WM_ICON_NAME(UTF8_STRING) = 
+XdndAware(ATOM) = BITMAP
+WM_NAME(STRING) = &quot;Telegram (13550)&quot;
+_NET_WM_NAME(UTF8_STRING) = &quot;Telegram (13550)&quot;
+_MOTIF_WM_HINTS(_MOTIF_WM_HINTS) = 0x3, 0x3e, 0x7e, 0x0, 0x0
+_NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL
+_XEMBED_INFO(_XEMBED_INFO) = 0x0, 0x1
+WM_CLIENT_LEADER(WINDOW): window id # 0x1800008
+WM_HINTS(WM_HINTS):
+		Client accepts input or input focus: True
+		window id # of group leader: 0x1800008
+WM_CLIENT_MACHINE(STRING) = &quot;wxg&quot;
+_NET_WM_PID(CARDINAL) = 4153
+_NET_WM_SYNC_REQUEST_COUNTER(CARDINAL) = 25165831
+WM_CLASS(STRING) = &quot;telegram-desktop&quot;, &quot;TelegramDesktop&quot;
+WM_PROTOCOLS(ATOM): protocols  WM_DELETE_WINDOW, WM_TAKE_FOCUS, _NET_WM_PING, _NET_WM_SYNC_REQUEST
+WM_NORMAL_HINTS(WM_SIZE_HINTS):
+		user specified location: 1429, 167
+		user specified size: 380 by 767
+		program specified minimum size: 380 by 480
+		window gravity: Static
+
+</code></pre>
+
+<p>找到WM_CLASS(STRING) = &ldquo;telegram-desktop&rdquo;, &ldquo;TelegramDesktop&rdquo;</p>
+
+<p>第一个代表实例(instance), 第二个代表类(class)</p>
               
             </div>
           </div>
           <div id="post-footer" class="post-footer main-content-wrap">
             
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://assllj.github.io/tags/arch/">arch</a>
+
+  <a class="tag tag--primary tag--small" href="https://assllj.github.io/tags/linux/">linux</a>
+
+  <a class="tag tag--primary tag--small" href="https://assllj.github.io/tags/i3wm/">i3wm</a>
+
+                  </div>
+                
               
             
             <div class="post-actions-wrap">
@@ -353,7 +347,7 @@ int main(int argc, char *argv[])
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://assllj.github.io/ccf/201312-2/" data-tooltip="201312 2">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -361,7 +355,7 @@ int main(int argc, char *argv[])
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://assllj.github.io/ccf/201409-2/" data-tooltip="201409 2">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://assllj.github.io/2019/08/%E4%BA%A4%E6%8D%A2esc%E5%92%8Ccaps-lock/" data-tooltip="交换Esc和Caps Lock">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -420,7 +414,7 @@ int main(int argc, char *argv[])
 </footer>
 
       </div>
-      <div id="bottom-bar" class="post-bottom-bar" data-behavior="2">
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
         <div class="post-actions-wrap">
   
       <nav >
@@ -428,7 +422,7 @@ int main(int argc, char *argv[])
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://assllj.github.io/ccf/201312-2/" data-tooltip="201312 2">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -436,7 +430,7 @@ int main(int argc, char *argv[])
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://assllj.github.io/ccf/201409-2/" data-tooltip="201409 2">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://assllj.github.io/2019/08/%E4%BA%A4%E6%8D%A2esc%E5%92%8Ccaps-lock/" data-tooltip="交换Esc和Caps Lock">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -473,7 +467,7 @@ int main(int argc, char *argv[])
 </div>
 
       </div>
-      <div id="share-options-bar" class="share-options-bar" data-behavior="2">
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
   <i id="btn-close-shareoptions" class="fa fa-close"></i>
   <ul class="share-options">
     
@@ -564,9 +558,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/assllj.github.io\/ccf\/201312-1\/';
+          this.page.url = 'https:\/\/assllj.github.io\/2019\/09\/i3wm%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%89%B9%E5%AE%9A%E6%A8%A1%E5%BC%8F%E6%89%93%E5%BC%80%E7%A8%8B%E5%BA%8F\/';
           
-            this.page.identifier = '\/ccf\/201312-1\/'
+            this.page.identifier = '\/2019\/09\/i3wm%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%89%B9%E5%AE%9A%E6%A8%A1%E5%BC%8F%E6%89%93%E5%BC%80%E7%A8%8B%E5%BA%8F\/'
           
         };
         (function() {

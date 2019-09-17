@@ -5,8 +5,7 @@
     <link>https://assllj.github.io/tags/%E9%94%AE%E7%9B%98/</link>
     <description>Recent content in 键盘 on 狗娃子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <language>zh-cn</language>
     <lastBuildDate>Fri, 09 Aug 2019 12:58:19 +0800</lastBuildDate>
     
 	<atom:link href="https://assllj.github.io/tags/%E9%94%AE%E7%9B%98/index.xml" rel="self" type="application/rss+xml" />
@@ -14,10 +13,10 @@
     
     <item>
       <title>交换Esc和Caps Lock</title>
-      <link>https://assllj.github.io/post/%E4%BA%A4%E6%8D%A2esc%E5%92%8Ccaps_lock/</link>
+      <link>https://assllj.github.io/2019/08/%E4%BA%A4%E6%8D%A2esc%E5%92%8Ccaps-lock/</link>
       <pubDate>Fri, 09 Aug 2019 12:58:19 +0800</pubDate>
       
-      <guid>https://assllj.github.io/post/%E4%BA%A4%E6%8D%A2esc%E5%92%8Ccaps_lock/</guid>
+      <guid>https://assllj.github.io/2019/08/%E4%BA%A4%E6%8D%A2esc%E5%92%8Ccaps-lock/</guid>
       <description>&lt;p&gt;不管是不是vim党，Esc的使用频率都远远高于Caps Lock键，但是Esc键太远，反而Caps Lock键占着非常棒的位置，这谁能忍？所以我们可以交换这两个键。&lt;/p&gt;</description>
     </item>
     

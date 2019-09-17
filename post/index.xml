@@ -5,8 +5,7 @@
     <link>https://assllj.github.io/post/</link>
     <description>Recent content in Posts on 狗娃子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <language>zh-cn</language>
     <lastBuildDate>Mon, 09 Sep 2019 22:44:51 +0800</lastBuildDate>
     
 	<atom:link href="https://assllj.github.io/post/index.xml" rel="self" type="application/rss+xml" />
@@ -14,47 +13,20 @@
     
     <item>
       <title>i3wm中使用特定模式打开程序</title>
-      <link>https://assllj.github.io/post/arch%E4%BD%BF%E7%94%A8i3wm/</link>
+      <link>https://assllj.github.io/2019/09/i3wm%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%89%B9%E5%AE%9A%E6%A8%A1%E5%BC%8F%E6%89%93%E5%BC%80%E7%A8%8B%E5%BA%8F/</link>
       <pubDate>Mon, 09 Sep 2019 22:44:51 +0800</pubDate>
       
-      <guid>https://assllj.github.io/post/arch%E4%BD%BF%E7%94%A8i3wm/</guid>
+      <guid>https://assllj.github.io/2019/09/i3wm%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%89%B9%E5%AE%9A%E6%A8%A1%E5%BC%8F%E6%89%93%E5%BC%80%E7%A8%8B%E5%BA%8F/</guid>
       <description>&lt;p&gt;有时候我们不想某些程序按照平铺方式打开，比如说telegram、网易云音乐，我们希望打开这些应用的时候直接使用悬浮模式(floating)，这时候就需要使用&lt;code&gt;for_window&lt;/code&gt;命令。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>交换Esc和Caps Lock</title>
-      <link>https://assllj.github.io/post/%E4%BA%A4%E6%8D%A2esc%E5%92%8Ccaps_lock/</link>
+      <link>https://assllj.github.io/2019/08/%E4%BA%A4%E6%8D%A2esc%E5%92%8Ccaps-lock/</link>
       <pubDate>Fri, 09 Aug 2019 12:58:19 +0800</pubDate>
       
-      <guid>https://assllj.github.io/post/%E4%BA%A4%E6%8D%A2esc%E5%92%8Ccaps_lock/</guid>
+      <guid>https://assllj.github.io/2019/08/%E4%BA%A4%E6%8D%A2esc%E5%92%8Ccaps-lock/</guid>
       <description>&lt;p&gt;不管是不是vim党，Esc的使用频率都远远高于Caps Lock键，但是Esc键太远，反而Caps Lock键占着非常棒的位置，这谁能忍？所以我们可以交换这两个键。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>聊聊进制</title>
-      <link>https://assllj.github.io/post/%E8%81%8A%E8%81%8A%E8%BF%9B%E5%88%B6/</link>
-      <pubDate>Tue, 07 Aug 2018 00:51:54 +0800</pubDate>
-      
-      <guid>https://assllj.github.io/post/%E8%81%8A%E8%81%8A%E8%BF%9B%E5%88%B6/</guid>
-      <description>进制的表示 首先我们来看看十进制，例如12345，这个数的大小是怎么计算的呢？很简单，我们都知道
- 12345 = 1×104 + 2×103 + 3×102 + 4×101 + 5×100
- 那么推广到任意一个十进制数字D：
- D = &amp;Sigma;Ki×10i
- 其中Ki是第i位的系数，K $\in$[0, 9], 设D整数位有m位，小数部分有n位，则i$\in$[-n, m-1], 整数部分最高位为m-1, 最低位0,小数部分最高位-1，最低位-n。
-当我们推广到一个任意进制（N进制）数字D:
- D = &amp;Sigma;Ki×Ni
- 其中N为基数，Ki为第i位的系数，Ni称为第i位的权，i的计数方法如上；
-下面是一些例子:
-   N D 计算方法     2 (101.101)2 (101.101)2 = 1×22+0×21+1×20+1×2-1+0×2-2+1×2-3 = (5.625)10   8 (123.12)8 (123.12)8 = 1×82+2×81+3×80+1×8-1+2×8-2 = (83.15625)10   16 (abc.1)16 (abc.1)16 = 10×162+11×161+12×160 = (2748.</description>
-    </item>
-    
-    <item>
-      <title>&#39;%&#39;符号的含义</title>
-      <link>https://assllj.github.io/post/%E7%AC%A6%E5%8F%B7%E7%9A%84%E5%90%AB%E4%B9%89/</link>
-      <pubDate>Sat, 16 Jun 2018 22:23:54 +0800</pubDate>
-      
-      <guid>https://assllj.github.io/post/%E7%AC%A6%E5%8F%B7%E7%9A%84%E5%90%AB%E4%B9%89/</guid>
-      <description>&lt;p&gt;&amp;rsquo;%&amp;lsquo;符号有两个含义&amp;ndash;取模运算（“Modulo Operation”）和取余运算（“Complementation ”）。两个概念有重叠的部分但又不完全一致。主要的区别在于对负整数进行除法运算时操作不同&lt;/p&gt;</description>
     </item>
     
   </channel>
