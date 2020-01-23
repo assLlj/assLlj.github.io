@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.58.2 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.62.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="狗娃子">
 <meta name="keywords" content="">
 <meta name="description" content="小中大 题目 分析 代码 #include&lt;stdio.h&gt; int arr[100000]; int main(int argc, char *argv[]) { int n; int i; int max, min, med; scanf(&quot;%d&quot;, &amp;n); for (i = 0; i &lt; n; i&#43;&#43;) { scanf(&quot;%d&quot;, &amp;arr[i]); } if (arr[0] &gt;= arr[n-1]) { max = arr[0]; min = arr[n-1]; } else { max = arr[n-1]; min = arr[0]; } if (0 != n%2) { med = arr[n/2]; printf(&quot;%d %d %d\n&quot;, max, med, min); } else { int tem = arr[n/2] &#43; arr[n/2-1]; if (0 == tem%2) { med = tem/2; printf(&quot;%d %d %d\n&quot;, max, med, min); } else { printf(&quot;%d %.">
@@ -233,18 +233,11 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              
-
-<h1 id="小中大">小中大</h1>
-
+              <h1 id="小中大">小中大</h1>
 <h2 id="题目">题目</h2>
-
-<p><img src="./1.png" alt="题目" title="题目" /></p>
-
+<p><img src="./1.png" alt="题目" title="题目"></p>
 <h2 id="分析">分析</h2>
-
 <h2 id="代码">代码</h2>
-
 <pre><code>#include&lt;stdio.h&gt;
 
 int arr[100000];
@@ -280,7 +273,6 @@ int main(int argc, char *argv[])
     return 0;
 }
 </code></pre>
-
               
             </div>
           </div>
@@ -357,7 +349,7 @@ int main(int argc, char *argv[])
         async>
 </script>
   <span class="copyrights">
-    &copy; 2019 狗娃子. All Rights Reserved
+    &copy; 2020 狗娃子. All Rights Reserved
   </span>
 </footer>
 

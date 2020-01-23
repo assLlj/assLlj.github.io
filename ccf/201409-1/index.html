@@ -5,49 +5,49 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.58.2 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.62.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="狗娃子">
 <meta name="keywords" content="">
-<meta name="description" content=" 相邻数对 题目 问题描述  &nbsp;&nbsp;&nbsp;&nbsp;给定n个不同的整数，问这些数中有多少对整数，它们的值正好相差1。
- 输入格式  &nbsp;&nbsp;&nbsp;&nbsp;输入的第一行包含一个整数n，表示给定整数的个数。
-&nbsp;&nbsp;&nbsp;&nbsp;第二行包含所给定的n个整数。
- 输出格式  &nbsp;&nbsp;&nbsp;&nbsp;输出一个整数，表示值正好相差1的数对的个数。
- 样例输入 6 10 2 6 3 7 8  样例输出 3  样例说明  &nbsp;&nbsp;&nbsp;&nbsp;值正好相差1的数对包括(2, 3), (6, 7), (7, 8)。
- 评测用例规模与约定  &nbsp;&nbsp;&nbsp;&nbsp;1&lt;=n&lt;=1000，给定的整数为不超过10000的非负整数。
+<meta name="description" content="相邻数对 题目 问题描述   给定n个不同的整数，问这些数中有多少对整数，它们的值正好相差1。
+ 输入格式   输入的第一行包含一个整数n，表示给定整数的个数。
+第二行包含所给定的n个整数。
+ 输出格式   输出一个整数，表示值正好相差1的数对的个数。
+ 样例输入 6 10 2 6 3 7 8 样例输出 3 样例说明   值正好相差1的数对包括(2, 3), (6, 7), (7, 8)。
+ 评测用例规模与约定   1&lt;=n&lt;=1000，给定的整数为不超过10000的非负整数。
  分析 排序然后遍历判断
-代码 #include &lt;iostream&gt; #include &lt;algorithm&gt; using namespace std; int main(int argc, char *argv[]) { int n, result = 0; int arr[1000]; cin &gt;&gt; n; for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; arr[i]; } sort(arr, arr&#43;n); for (int i = 0; i &lt; n; i&#43;&#43;) { if (1 == arr[i&#43;1] - arr[i]) result&#43;&#43;; } cout &lt;&lt; result; return 0; }  ">
+代码 #include &lt;iostream&gt; #include &lt;algorithm&gt; using namespace std; int main(int argc, char *argv[]) { int n, result = 0; int arr[1000]; cin &gt;&gt; n; for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; arr[i]; } sort(arr, arr&#43;n); for (int i = 0; i &lt; n; i&#43;&#43;) { if (1 == arr[i&#43;1] - arr[i]) result&#43;&#43;; } cout &lt;&lt; result; return 0; } ">
 
 
-<meta property="og:description" content=" 相邻数对 题目 问题描述  &nbsp;&nbsp;&nbsp;&nbsp;给定n个不同的整数，问这些数中有多少对整数，它们的值正好相差1。
- 输入格式  &nbsp;&nbsp;&nbsp;&nbsp;输入的第一行包含一个整数n，表示给定整数的个数。
-&nbsp;&nbsp;&nbsp;&nbsp;第二行包含所给定的n个整数。
- 输出格式  &nbsp;&nbsp;&nbsp;&nbsp;输出一个整数，表示值正好相差1的数对的个数。
- 样例输入 6 10 2 6 3 7 8  样例输出 3  样例说明  &nbsp;&nbsp;&nbsp;&nbsp;值正好相差1的数对包括(2, 3), (6, 7), (7, 8)。
- 评测用例规模与约定  &nbsp;&nbsp;&nbsp;&nbsp;1&lt;=n&lt;=1000，给定的整数为不超过10000的非负整数。
+<meta property="og:description" content="相邻数对 题目 问题描述   给定n个不同的整数，问这些数中有多少对整数，它们的值正好相差1。
+ 输入格式   输入的第一行包含一个整数n，表示给定整数的个数。
+第二行包含所给定的n个整数。
+ 输出格式   输出一个整数，表示值正好相差1的数对的个数。
+ 样例输入 6 10 2 6 3 7 8 样例输出 3 样例说明   值正好相差1的数对包括(2, 3), (6, 7), (7, 8)。
+ 评测用例规模与约定   1&lt;=n&lt;=1000，给定的整数为不超过10000的非负整数。
  分析 排序然后遍历判断
-代码 #include &lt;iostream&gt; #include &lt;algorithm&gt; using namespace std; int main(int argc, char *argv[]) { int n, result = 0; int arr[1000]; cin &gt;&gt; n; for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; arr[i]; } sort(arr, arr&#43;n); for (int i = 0; i &lt; n; i&#43;&#43;) { if (1 == arr[i&#43;1] - arr[i]) result&#43;&#43;; } cout &lt;&lt; result; return 0; }  ">
+代码 #include &lt;iostream&gt; #include &lt;algorithm&gt; using namespace std; int main(int argc, char *argv[]) { int n, result = 0; int arr[1000]; cin &gt;&gt; n; for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; arr[i]; } sort(arr, arr&#43;n); for (int i = 0; i &lt; n; i&#43;&#43;) { if (1 == arr[i&#43;1] - arr[i]) result&#43;&#43;; } cout &lt;&lt; result; return 0; } ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="201409 1">
 <meta name="twitter:title" content="201409 1">
 <meta property="og:url" content="https://assllj.github.io/ccf/201409-1/">
 <meta property="twitter:url" content="https://assllj.github.io/ccf/201409-1/">
 <meta property="og:site_name" content="狗娃子的博客">
-<meta property="og:description" content=" 相邻数对 题目 问题描述  &nbsp;&nbsp;&nbsp;&nbsp;给定n个不同的整数，问这些数中有多少对整数，它们的值正好相差1。
- 输入格式  &nbsp;&nbsp;&nbsp;&nbsp;输入的第一行包含一个整数n，表示给定整数的个数。
-&nbsp;&nbsp;&nbsp;&nbsp;第二行包含所给定的n个整数。
- 输出格式  &nbsp;&nbsp;&nbsp;&nbsp;输出一个整数，表示值正好相差1的数对的个数。
- 样例输入 6 10 2 6 3 7 8  样例输出 3  样例说明  &nbsp;&nbsp;&nbsp;&nbsp;值正好相差1的数对包括(2, 3), (6, 7), (7, 8)。
- 评测用例规模与约定  &nbsp;&nbsp;&nbsp;&nbsp;1&lt;=n&lt;=1000，给定的整数为不超过10000的非负整数。
+<meta property="og:description" content="相邻数对 题目 问题描述   给定n个不同的整数，问这些数中有多少对整数，它们的值正好相差1。
+ 输入格式   输入的第一行包含一个整数n，表示给定整数的个数。
+第二行包含所给定的n个整数。
+ 输出格式   输出一个整数，表示值正好相差1的数对的个数。
+ 样例输入 6 10 2 6 3 7 8 样例输出 3 样例说明   值正好相差1的数对包括(2, 3), (6, 7), (7, 8)。
+ 评测用例规模与约定   1&lt;=n&lt;=1000，给定的整数为不超过10000的非负整数。
  分析 排序然后遍历判断
-代码 #include &lt;iostream&gt; #include &lt;algorithm&gt; using namespace std; int main(int argc, char *argv[]) { int n, result = 0; int arr[1000]; cin &gt;&gt; n; for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; arr[i]; } sort(arr, arr&#43;n); for (int i = 0; i &lt; n; i&#43;&#43;) { if (1 == arr[i&#43;1] - arr[i]) result&#43;&#43;; } cout &lt;&lt; result; return 0; }  ">
-<meta name="twitter:description" content=" 相邻数对 题目 问题描述  &nbsp;&nbsp;&nbsp;&nbsp;给定n个不同的整数，问这些数中有多少对整数，它们的值正好相差1。
- 输入格式  &nbsp;&nbsp;&nbsp;&nbsp;输入的第一行包含一个整数n，表示给定整数的个数。
-&nbsp;&nbsp;&nbsp;&nbsp;第二行包含所给定的n个整数。
- 输出格式  &nbsp;&nbsp;&nbsp;&nbsp;输出一个整数，表示值正好相差1的数对的个数。
- 样例输入 6 10 2 6 3 7 8  样例输出 3  样例说明  &nbsp;&nbsp;&nbsp;&nbsp;值正好相差1的数对包括(2, 3), (6, 7), (7, 8)。
- 评测用例规模与约定  &nbsp;&nbsp;&nbsp;&nbsp;1&lt;=n&lt;=1000，给定的整数为不超过10000的非负整数。
+代码 #include &lt;iostream&gt; #include &lt;algorithm&gt; using namespace std; int main(int argc, char *argv[]) { int n, result = 0; int arr[1000]; cin &gt;&gt; n; for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; arr[i]; } sort(arr, arr&#43;n); for (int i = 0; i &lt; n; i&#43;&#43;) { if (1 == arr[i&#43;1] - arr[i]) result&#43;&#43;; } cout &lt;&lt; result; return 0; } ">
+<meta name="twitter:description" content="相邻数对 题目 问题描述   给定n个不同的整数，问这些数中有多少对整数，它们的值正好相差1。
+ 输入格式   输入的第一行包含一个整数n，表示给定整数的个数。
+第二行包含所给定的n个整数。
+ 输出格式   输出一个整数，表示值正好相差1的数对的个数。
+ 样例输入 6 10 2 6 3 7 8 样例输出 3 样例说明   值正好相差1的数对包括(2, 3), (6, 7), (7, 8)。
+ 评测用例规模与约定   1&lt;=n&lt;=1000，给定的整数为不超过10000的非负整数。
  分析 排序然后遍历判断
-代码 #include &lt;iostream&gt; #include &lt;algorithm&gt; using namespace std; int main(int argc, char *argv[]) { int n, result = 0; int arr[1000]; cin &gt;&gt; n; for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; arr[i]; } sort(arr, arr&#43;n); for (int i = 0; i &lt; n; i&#43;&#43;) { if (1 == arr[i&#43;1] - arr[i]) result&#43;&#43;; } cout &lt;&lt; result; return 0; }  ">
+代码 #include &lt;iostream&gt; #include &lt;algorithm&gt; using namespace std; int main(int argc, char *argv[]) { int n, result = 0; int arr[1000]; cin &gt;&gt; n; for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; arr[i]; } sort(arr, arr&#43;n); for (int i = 0; i &lt; n; i&#43;&#43;) { if (1 == arr[i&#43;1] - arr[i]) result&#43;&#43;; } cout &lt;&lt; result; return 0; } ">
 <meta property="og:locale" content="zh-cn">
 
   
@@ -261,60 +261,37 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              
-
-<h1 id="相邻数对">相邻数对</h1>
-
+              <h1 id="相邻数对">相邻数对</h1>
 <h2 id="题目">题目</h2>
-
 <h4 id="问题描述">问题描述</h4>
-
 <blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;给定n个不同的整数，问这些数中有多少对整数，它们的值正好相差1。</p>
+<p>    给定n个不同的整数，问这些数中有多少对整数，它们的值正好相差1。</p>
 </blockquote>
-
 <h4 id="输入格式">输入格式</h4>
-
 <blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;输入的第一行包含一个整数n，表示给定整数的个数。<br />
-&nbsp;&nbsp;&nbsp;&nbsp;第二行包含所给定的n个整数。</p>
+<p>    输入的第一行包含一个整数n，表示给定整数的个数。<br>
+    第二行包含所给定的n个整数。</p>
 </blockquote>
-
 <h4 id="输出格式">输出格式</h4>
-
 <blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;输出一个整数，表示值正好相差1的数对的个数。</p>
+<p>    输出一个整数，表示值正好相差1的数对的个数。</p>
 </blockquote>
-
 <h4 id="样例输入">样例输入</h4>
-
 <pre><code>6
 10 2 6 3 7 8
-</code></pre>
-
-<h4 id="样例输出">样例输出</h4>
-
+</code></pre><h4 id="样例输出">样例输出</h4>
 <pre><code>3
-</code></pre>
-
-<h4 id="样例说明">样例说明</h4>
-
+</code></pre><h4 id="样例说明">样例说明</h4>
 <blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;值正好相差1的数对包括(2, 3), (6, 7), (7, 8)。</p>
+<p>    值正好相差1的数对包括(2, 3), (6, 7), (7, 8)。</p>
 </blockquote>
-
 <h4 id="评测用例规模与约定">评测用例规模与约定</h4>
-
 <blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;1&lt;=n&lt;=1000，给定的整数为不超过10000的非负整数。</p>
+<p>    1&lt;=n&lt;=1000，给定的整数为不超过10000的非负整数。</p>
 </blockquote>
-
 <h2 id="分析">分析</h2>
-
 <p>排序然后遍历判断</p>
-
 <h2 id="代码">代码</h2>
-
 <pre><code>#include &lt;iostream&gt;
 #include &lt;algorithm&gt;
 
@@ -337,7 +314,6 @@ int main(int argc, char *argv[])
     return 0;
 }
 </code></pre>
-
               
             </div>
           </div>
@@ -414,7 +390,7 @@ int main(int argc, char *argv[])
         async>
 </script>
   <span class="copyrights">
-    &copy; 2019 狗娃子. All Rights Reserved
+    &copy; 2020 狗娃子. All Rights Reserved
   </span>
 </footer>
 

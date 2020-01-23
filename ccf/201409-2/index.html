@@ -5,53 +5,53 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.58.2 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.62.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="狗娃子">
 <meta name="keywords" content="">
-<meta name="description" content=" 画图 题目 问题描述  &nbsp;&nbsp;&nbsp;&nbsp;在一个定义了直角坐标系的纸上，画一个(x1,y1)到(x2,y2)的矩形指将横坐标范围从x1到x2，纵坐标范围从y1到y2之间的区域涂上颜色。
-&nbsp;&nbsp;&nbsp;&nbsp;下图给出了一个画了两个矩形的例子。第一个矩形是(1,1) 到(4, 4)，用绿色和紫色表示。第二个矩形是(2, 3)到(6, 5)，用蓝色和紫色表示。图中，一共有15个单位的面积被涂上颜色，其中紫色部分被涂了两次，但在计算面积时只计算一次。在实际的涂色过程中，所有的矩形都涂成统一的颜色，图中显示不同颜色仅为说明方便。
-  &nbsp;&nbsp;&nbsp;&nbsp;给出所有要画的矩形，请问总共有多少个单位的面积被涂上颜色。
- 输入格式  &nbsp;&nbsp;&nbsp;&nbsp;输入的第一行包含一个整数n，表示要画的矩形的个数。
-&nbsp;&nbsp;&nbsp;&nbsp;接下来n行，每行4个非负整数，分别表示要画的矩形的左下角的横坐标与纵坐标，以及右上角的横坐标与纵坐标。
- 输出格式  &nbsp;&nbsp;&nbsp;&nbsp;输出一个整数，表示有多少个单位的面积被涂上颜色。
- 样例输入 2 1 1 4 4 2 3 6 5  样例输出 15  评测用例规模与约定  &nbsp;&nbsp;&nbsp;&nbsp;1&lt;=n&lt;=100，0&lt;=横坐标、纵坐标&lt;=100。
+<meta name="description" content="画图 题目 问题描述   在一个定义了直角坐标系的纸上，画一个(x1,y1)到(x2,y2)的矩形指将横坐标范围从x1到x2，纵坐标范围从y1到y2之间的区域涂上颜色。
+下图给出了一个画了两个矩形的例子。第一个矩形是(1,1) 到(4, 4)，用绿色和紫色表示。第二个矩形是(2, 3)到(6, 5)，用蓝色和紫色表示。图中，一共有15个单位的面积被涂上颜色，其中紫色部分被涂了两次，但在计算面积时只计算一次。在实际的涂色过程中，所有的矩形都涂成统一的颜色，图中显示不同颜色仅为说明方便。
+   给出所有要画的矩形，请问总共有多少个单位的面积被涂上颜色。
+ 输入格式   输入的第一行包含一个整数n，表示要画的矩形的个数。
+接下来n行，每行4个非负整数，分别表示要画的矩形的左下角的横坐标与纵坐标，以及右上角的横坐标与纵坐标。
+ 输出格式   输出一个整数，表示有多少个单位的面积被涂上颜色。
+ 样例输入 2 1 1 4 4 2 3 6 5 样例输出 15 评测用例规模与约定   1&lt;=n&lt;=100，0&lt;=横坐标、纵坐标&lt;=100。
  分析 暴力模拟，对每一个矩形我们计算出它的面积，然后遍历每个小正方形，如果之前已经算过了，就再减去，每个小正方形用其左下角坐标唯一表示，即bool[x][y]表示左下角坐标为(x, y)的小正方形是否已经计算过
-代码 #include &lt;iostream&gt; #include &lt;cstring&gt; using namespace std; int main(int argc, char *argv[]) { int n, x1, y1, x2, y2, result = 0; bool arr[101][101]; cin &gt;&gt; n; memset(arr, false, sizeof(arr)); for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; x1 &gt;&gt; y1 &gt;&gt; x2 &gt;&gt; y2; result &#43;= (x2 -x1) * (y2 - y1); for (int j = x1; j &lt; x2; j&#43;&#43;) for (int k = y1; k &lt; y2; k&#43;&#43;) { if (arr[j][k]) { result--; } arr[j][k] = true; } } cout &lt;&lt; result &lt;&lt; endl; return 0; }  ">
+代码 #include &lt;iostream&gt; #include &lt;cstring&gt; using namespace std; int main(int argc, char *argv[]) { int n, x1, y1, x2, y2, result = 0; bool arr[101][101]; cin &gt;&gt; n; memset(arr, false, sizeof(arr)); for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; x1 &gt;&gt; y1 &gt;&gt; x2 &gt;&gt; y2; result &#43;= (x2 -x1) * (y2 - y1); for (int j = x1; j &lt; x2; j&#43;&#43;) for (int k = y1; k &lt; y2; k&#43;&#43;) { if (arr[j][k]) { result--; } arr[j][k] = true; } } cout &lt;&lt; result &lt;&lt; endl; return 0; } ">
 
 
-<meta property="og:description" content=" 画图 题目 问题描述  &nbsp;&nbsp;&nbsp;&nbsp;在一个定义了直角坐标系的纸上，画一个(x1,y1)到(x2,y2)的矩形指将横坐标范围从x1到x2，纵坐标范围从y1到y2之间的区域涂上颜色。
-&nbsp;&nbsp;&nbsp;&nbsp;下图给出了一个画了两个矩形的例子。第一个矩形是(1,1) 到(4, 4)，用绿色和紫色表示。第二个矩形是(2, 3)到(6, 5)，用蓝色和紫色表示。图中，一共有15个单位的面积被涂上颜色，其中紫色部分被涂了两次，但在计算面积时只计算一次。在实际的涂色过程中，所有的矩形都涂成统一的颜色，图中显示不同颜色仅为说明方便。
-  &nbsp;&nbsp;&nbsp;&nbsp;给出所有要画的矩形，请问总共有多少个单位的面积被涂上颜色。
- 输入格式  &nbsp;&nbsp;&nbsp;&nbsp;输入的第一行包含一个整数n，表示要画的矩形的个数。
-&nbsp;&nbsp;&nbsp;&nbsp;接下来n行，每行4个非负整数，分别表示要画的矩形的左下角的横坐标与纵坐标，以及右上角的横坐标与纵坐标。
- 输出格式  &nbsp;&nbsp;&nbsp;&nbsp;输出一个整数，表示有多少个单位的面积被涂上颜色。
- 样例输入 2 1 1 4 4 2 3 6 5  样例输出 15  评测用例规模与约定  &nbsp;&nbsp;&nbsp;&nbsp;1&lt;=n&lt;=100，0&lt;=横坐标、纵坐标&lt;=100。
+<meta property="og:description" content="画图 题目 问题描述   在一个定义了直角坐标系的纸上，画一个(x1,y1)到(x2,y2)的矩形指将横坐标范围从x1到x2，纵坐标范围从y1到y2之间的区域涂上颜色。
+下图给出了一个画了两个矩形的例子。第一个矩形是(1,1) 到(4, 4)，用绿色和紫色表示。第二个矩形是(2, 3)到(6, 5)，用蓝色和紫色表示。图中，一共有15个单位的面积被涂上颜色，其中紫色部分被涂了两次，但在计算面积时只计算一次。在实际的涂色过程中，所有的矩形都涂成统一的颜色，图中显示不同颜色仅为说明方便。
+   给出所有要画的矩形，请问总共有多少个单位的面积被涂上颜色。
+ 输入格式   输入的第一行包含一个整数n，表示要画的矩形的个数。
+接下来n行，每行4个非负整数，分别表示要画的矩形的左下角的横坐标与纵坐标，以及右上角的横坐标与纵坐标。
+ 输出格式   输出一个整数，表示有多少个单位的面积被涂上颜色。
+ 样例输入 2 1 1 4 4 2 3 6 5 样例输出 15 评测用例规模与约定   1&lt;=n&lt;=100，0&lt;=横坐标、纵坐标&lt;=100。
  分析 暴力模拟，对每一个矩形我们计算出它的面积，然后遍历每个小正方形，如果之前已经算过了，就再减去，每个小正方形用其左下角坐标唯一表示，即bool[x][y]表示左下角坐标为(x, y)的小正方形是否已经计算过
-代码 #include &lt;iostream&gt; #include &lt;cstring&gt; using namespace std; int main(int argc, char *argv[]) { int n, x1, y1, x2, y2, result = 0; bool arr[101][101]; cin &gt;&gt; n; memset(arr, false, sizeof(arr)); for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; x1 &gt;&gt; y1 &gt;&gt; x2 &gt;&gt; y2; result &#43;= (x2 -x1) * (y2 - y1); for (int j = x1; j &lt; x2; j&#43;&#43;) for (int k = y1; k &lt; y2; k&#43;&#43;) { if (arr[j][k]) { result--; } arr[j][k] = true; } } cout &lt;&lt; result &lt;&lt; endl; return 0; }  ">
+代码 #include &lt;iostream&gt; #include &lt;cstring&gt; using namespace std; int main(int argc, char *argv[]) { int n, x1, y1, x2, y2, result = 0; bool arr[101][101]; cin &gt;&gt; n; memset(arr, false, sizeof(arr)); for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; x1 &gt;&gt; y1 &gt;&gt; x2 &gt;&gt; y2; result &#43;= (x2 -x1) * (y2 - y1); for (int j = x1; j &lt; x2; j&#43;&#43;) for (int k = y1; k &lt; y2; k&#43;&#43;) { if (arr[j][k]) { result--; } arr[j][k] = true; } } cout &lt;&lt; result &lt;&lt; endl; return 0; } ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="201409 2">
 <meta name="twitter:title" content="201409 2">
 <meta property="og:url" content="https://assllj.github.io/ccf/201409-2/">
 <meta property="twitter:url" content="https://assllj.github.io/ccf/201409-2/">
 <meta property="og:site_name" content="狗娃子的博客">
-<meta property="og:description" content=" 画图 题目 问题描述  &nbsp;&nbsp;&nbsp;&nbsp;在一个定义了直角坐标系的纸上，画一个(x1,y1)到(x2,y2)的矩形指将横坐标范围从x1到x2，纵坐标范围从y1到y2之间的区域涂上颜色。
-&nbsp;&nbsp;&nbsp;&nbsp;下图给出了一个画了两个矩形的例子。第一个矩形是(1,1) 到(4, 4)，用绿色和紫色表示。第二个矩形是(2, 3)到(6, 5)，用蓝色和紫色表示。图中，一共有15个单位的面积被涂上颜色，其中紫色部分被涂了两次，但在计算面积时只计算一次。在实际的涂色过程中，所有的矩形都涂成统一的颜色，图中显示不同颜色仅为说明方便。
-  &nbsp;&nbsp;&nbsp;&nbsp;给出所有要画的矩形，请问总共有多少个单位的面积被涂上颜色。
- 输入格式  &nbsp;&nbsp;&nbsp;&nbsp;输入的第一行包含一个整数n，表示要画的矩形的个数。
-&nbsp;&nbsp;&nbsp;&nbsp;接下来n行，每行4个非负整数，分别表示要画的矩形的左下角的横坐标与纵坐标，以及右上角的横坐标与纵坐标。
- 输出格式  &nbsp;&nbsp;&nbsp;&nbsp;输出一个整数，表示有多少个单位的面积被涂上颜色。
- 样例输入 2 1 1 4 4 2 3 6 5  样例输出 15  评测用例规模与约定  &nbsp;&nbsp;&nbsp;&nbsp;1&lt;=n&lt;=100，0&lt;=横坐标、纵坐标&lt;=100。
+<meta property="og:description" content="画图 题目 问题描述   在一个定义了直角坐标系的纸上，画一个(x1,y1)到(x2,y2)的矩形指将横坐标范围从x1到x2，纵坐标范围从y1到y2之间的区域涂上颜色。
+下图给出了一个画了两个矩形的例子。第一个矩形是(1,1) 到(4, 4)，用绿色和紫色表示。第二个矩形是(2, 3)到(6, 5)，用蓝色和紫色表示。图中，一共有15个单位的面积被涂上颜色，其中紫色部分被涂了两次，但在计算面积时只计算一次。在实际的涂色过程中，所有的矩形都涂成统一的颜色，图中显示不同颜色仅为说明方便。
+   给出所有要画的矩形，请问总共有多少个单位的面积被涂上颜色。
+ 输入格式   输入的第一行包含一个整数n，表示要画的矩形的个数。
+接下来n行，每行4个非负整数，分别表示要画的矩形的左下角的横坐标与纵坐标，以及右上角的横坐标与纵坐标。
+ 输出格式   输出一个整数，表示有多少个单位的面积被涂上颜色。
+ 样例输入 2 1 1 4 4 2 3 6 5 样例输出 15 评测用例规模与约定   1&lt;=n&lt;=100，0&lt;=横坐标、纵坐标&lt;=100。
  分析 暴力模拟，对每一个矩形我们计算出它的面积，然后遍历每个小正方形，如果之前已经算过了，就再减去，每个小正方形用其左下角坐标唯一表示，即bool[x][y]表示左下角坐标为(x, y)的小正方形是否已经计算过
-代码 #include &lt;iostream&gt; #include &lt;cstring&gt; using namespace std; int main(int argc, char *argv[]) { int n, x1, y1, x2, y2, result = 0; bool arr[101][101]; cin &gt;&gt; n; memset(arr, false, sizeof(arr)); for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; x1 &gt;&gt; y1 &gt;&gt; x2 &gt;&gt; y2; result &#43;= (x2 -x1) * (y2 - y1); for (int j = x1; j &lt; x2; j&#43;&#43;) for (int k = y1; k &lt; y2; k&#43;&#43;) { if (arr[j][k]) { result--; } arr[j][k] = true; } } cout &lt;&lt; result &lt;&lt; endl; return 0; }  ">
-<meta name="twitter:description" content=" 画图 题目 问题描述  &nbsp;&nbsp;&nbsp;&nbsp;在一个定义了直角坐标系的纸上，画一个(x1,y1)到(x2,y2)的矩形指将横坐标范围从x1到x2，纵坐标范围从y1到y2之间的区域涂上颜色。
-&nbsp;&nbsp;&nbsp;&nbsp;下图给出了一个画了两个矩形的例子。第一个矩形是(1,1) 到(4, 4)，用绿色和紫色表示。第二个矩形是(2, 3)到(6, 5)，用蓝色和紫色表示。图中，一共有15个单位的面积被涂上颜色，其中紫色部分被涂了两次，但在计算面积时只计算一次。在实际的涂色过程中，所有的矩形都涂成统一的颜色，图中显示不同颜色仅为说明方便。
-  &nbsp;&nbsp;&nbsp;&nbsp;给出所有要画的矩形，请问总共有多少个单位的面积被涂上颜色。
- 输入格式  &nbsp;&nbsp;&nbsp;&nbsp;输入的第一行包含一个整数n，表示要画的矩形的个数。
-&nbsp;&nbsp;&nbsp;&nbsp;接下来n行，每行4个非负整数，分别表示要画的矩形的左下角的横坐标与纵坐标，以及右上角的横坐标与纵坐标。
- 输出格式  &nbsp;&nbsp;&nbsp;&nbsp;输出一个整数，表示有多少个单位的面积被涂上颜色。
- 样例输入 2 1 1 4 4 2 3 6 5  样例输出 15  评测用例规模与约定  &nbsp;&nbsp;&nbsp;&nbsp;1&lt;=n&lt;=100，0&lt;=横坐标、纵坐标&lt;=100。
+代码 #include &lt;iostream&gt; #include &lt;cstring&gt; using namespace std; int main(int argc, char *argv[]) { int n, x1, y1, x2, y2, result = 0; bool arr[101][101]; cin &gt;&gt; n; memset(arr, false, sizeof(arr)); for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; x1 &gt;&gt; y1 &gt;&gt; x2 &gt;&gt; y2; result &#43;= (x2 -x1) * (y2 - y1); for (int j = x1; j &lt; x2; j&#43;&#43;) for (int k = y1; k &lt; y2; k&#43;&#43;) { if (arr[j][k]) { result--; } arr[j][k] = true; } } cout &lt;&lt; result &lt;&lt; endl; return 0; } ">
+<meta name="twitter:description" content="画图 题目 问题描述   在一个定义了直角坐标系的纸上，画一个(x1,y1)到(x2,y2)的矩形指将横坐标范围从x1到x2，纵坐标范围从y1到y2之间的区域涂上颜色。
+下图给出了一个画了两个矩形的例子。第一个矩形是(1,1) 到(4, 4)，用绿色和紫色表示。第二个矩形是(2, 3)到(6, 5)，用蓝色和紫色表示。图中，一共有15个单位的面积被涂上颜色，其中紫色部分被涂了两次，但在计算面积时只计算一次。在实际的涂色过程中，所有的矩形都涂成统一的颜色，图中显示不同颜色仅为说明方便。
+   给出所有要画的矩形，请问总共有多少个单位的面积被涂上颜色。
+ 输入格式   输入的第一行包含一个整数n，表示要画的矩形的个数。
+接下来n行，每行4个非负整数，分别表示要画的矩形的左下角的横坐标与纵坐标，以及右上角的横坐标与纵坐标。
+ 输出格式   输出一个整数，表示有多少个单位的面积被涂上颜色。
+ 样例输入 2 1 1 4 4 2 3 6 5 样例输出 15 评测用例规模与约定   1&lt;=n&lt;=100，0&lt;=横坐标、纵坐标&lt;=100。
  分析 暴力模拟，对每一个矩形我们计算出它的面积，然后遍历每个小正方形，如果之前已经算过了，就再减去，每个小正方形用其左下角坐标唯一表示，即bool[x][y]表示左下角坐标为(x, y)的小正方形是否已经计算过
-代码 #include &lt;iostream&gt; #include &lt;cstring&gt; using namespace std; int main(int argc, char *argv[]) { int n, x1, y1, x2, y2, result = 0; bool arr[101][101]; cin &gt;&gt; n; memset(arr, false, sizeof(arr)); for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; x1 &gt;&gt; y1 &gt;&gt; x2 &gt;&gt; y2; result &#43;= (x2 -x1) * (y2 - y1); for (int j = x1; j &lt; x2; j&#43;&#43;) for (int k = y1; k &lt; y2; k&#43;&#43;) { if (arr[j][k]) { result--; } arr[j][k] = true; } } cout &lt;&lt; result &lt;&lt; endl; return 0; }  ">
+代码 #include &lt;iostream&gt; #include &lt;cstring&gt; using namespace std; int main(int argc, char *argv[]) { int n, x1, y1, x2, y2, result = 0; bool arr[101][101]; cin &gt;&gt; n; memset(arr, false, sizeof(arr)); for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; x1 &gt;&gt; y1 &gt;&gt; x2 &gt;&gt; y2; result &#43;= (x2 -x1) * (y2 - y1); for (int j = x1; j &lt; x2; j&#43;&#43;) for (int k = y1; k &lt; y2; k&#43;&#43;) { if (arr[j][k]) { result--; } arr[j][k] = true; } } cout &lt;&lt; result &lt;&lt; endl; return 0; } ">
 <meta property="og:locale" content="zh-cn">
 
   
@@ -265,62 +265,39 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              
-
-<h1 id="画图">画图</h1>
-
+              <h1 id="画图">画图</h1>
 <h2 id="题目">题目</h2>
-
 <h4 id="问题描述">问题描述</h4>
-
 <blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;在一个定义了直角坐标系的纸上，画一个(x1,y1)到(x2,y2)的矩形指将横坐标范围从x1到x2，纵坐标范围从y1到y2之间的区域涂上颜色。<br />
-&nbsp;&nbsp;&nbsp;&nbsp;下图给出了一个画了两个矩形的例子。第一个矩形是(1,1) 到(4, 4)，用绿色和紫色表示。第二个矩形是(2, 3)到(6, 5)，用蓝色和紫色表示。图中，一共有15个单位的面积被涂上颜色，其中紫色部分被涂了两次，但在计算面积时只计算一次。在实际的涂色过程中，所有的矩形都涂成统一的颜色，图中显示不同颜色仅为说明方便。</p>
+<p>    在一个定义了直角坐标系的纸上，画一个(x1,y1)到(x2,y2)的矩形指将横坐标范围从x1到x2，纵坐标范围从y1到y2之间的区域涂上颜色。<br>
+    下图给出了一个画了两个矩形的例子。第一个矩形是(1,1) 到(4, 4)，用绿色和紫色表示。第二个矩形是(2, 3)到(6, 5)，用蓝色和紫色表示。图中，一共有15个单位的面积被涂上颜色，其中紫色部分被涂了两次，但在计算面积时只计算一次。在实际的涂色过程中，所有的矩形都涂成统一的颜色，图中显示不同颜色仅为说明方便。</p>
 </blockquote>
-
-<p><img src="./1.png" alt="pic alt" /></p>
-
+<p><img src="./1.png" alt="pic alt"></p>
 <blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;给出所有要画的矩形，请问总共有多少个单位的面积被涂上颜色。</p>
+<p>    给出所有要画的矩形，请问总共有多少个单位的面积被涂上颜色。</p>
 </blockquote>
-
 <h4 id="输入格式">输入格式</h4>
-
 <blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;输入的第一行包含一个整数n，表示要画的矩形的个数。<br />
-&nbsp;&nbsp;&nbsp;&nbsp;接下来n行，每行4个非负整数，分别表示要画的矩形的左下角的横坐标与纵坐标，以及右上角的横坐标与纵坐标。</p>
+<p>    输入的第一行包含一个整数n，表示要画的矩形的个数。<br>
+    接下来n行，每行4个非负整数，分别表示要画的矩形的左下角的横坐标与纵坐标，以及右上角的横坐标与纵坐标。</p>
 </blockquote>
-
 <h4 id="输出格式">输出格式</h4>
-
 <blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;输出一个整数，表示有多少个单位的面积被涂上颜色。</p>
+<p>    输出一个整数，表示有多少个单位的面积被涂上颜色。</p>
 </blockquote>
-
 <h4 id="样例输入">样例输入</h4>
-
 <pre><code>2
 1 1 4 4
 2 3 6 5
-</code></pre>
-
-<h4 id="样例输出">样例输出</h4>
-
+</code></pre><h4 id="样例输出">样例输出</h4>
 <pre><code>15
-</code></pre>
-
-<h4 id="评测用例规模与约定">评测用例规模与约定</h4>
-
+</code></pre><h4 id="评测用例规模与约定">评测用例规模与约定</h4>
 <blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;1&lt;=n&lt;=100，0&lt;=横坐标、纵坐标&lt;=100。</p>
+<p>    1&lt;=n&lt;=100，0&lt;=横坐标、纵坐标&lt;=100。</p>
 </blockquote>
-
 <h2 id="分析">分析</h2>
-
 <p>暴力模拟，对每一个矩形我们计算出它的面积，然后遍历每个小正方形，如果之前已经算过了，就再减去，每个小正方形用其左下角坐标唯一表示，即bool[x][y]表示左下角坐标为(x, y)的小正方形是否已经计算过</p>
-
 <h2 id="代码">代码</h2>
-
 <pre><code>#include &lt;iostream&gt;
 #include &lt;cstring&gt;
 
@@ -348,7 +325,6 @@ int main(int argc, char *argv[])
 }
 
 </code></pre>
-
               
             </div>
           </div>
@@ -425,7 +401,7 @@ int main(int argc, char *argv[])
         async>
 </script>
   <span class="copyrights">
-    &copy; 2019 狗娃子. All Rights Reserved
+    &copy; 2020 狗娃子. All Rights Reserved
   </span>
 </footer>
 

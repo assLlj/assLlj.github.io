@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.58.2 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.62.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="狗娃子">
 <meta name="keywords" content="">
-<meta name="description" content="出现次数最多的数 题目 问题描述  &nbsp;&nbsp;&nbsp;&nbsp;给定n个正整数，找出它们中出现次数最多的数。如果这样的数有多个，请输出其中最小的一个。
- 输入格式  &nbsp;&nbsp;&nbsp;&nbsp;输入的第一行只有一个正整数n(1 ≤ n ≤ 1000)，表示数字的个数。
-&nbsp;&nbsp;&nbsp;&nbsp;输入的第二行有n个整数s1, s2, …, sn (1 ≤ si ≤ 10000, 1 ≤ i ≤ n)。相邻的数用空格分隔。
- 输出格式  &nbsp;&nbsp;&nbsp;&nbsp;输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。
- 样例输出 输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。  样例输出 10  分析 排序，然后遍历
+<meta name="description" content="出现次数最多的数 题目 问题描述   给定n个正整数，找出它们中出现次数最多的数。如果这样的数有多个，请输出其中最小的一个。
+ 输入格式   输入的第一行只有一个正整数n(1 ≤ n ≤ 1000)，表示数字的个数。
+输入的第二行有n个整数s1, s2, …, sn (1 ≤ si ≤ 10000, 1 ≤ i ≤ n)。相邻的数用空格分隔。
+ 输出格式   输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。
+ 样例输出 输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。 样例输出 10 分析 排序，然后遍历
 代码 #include&lt;iostream&gt; #include&lt;algorithm&gt; using namespace std; int arr[1000]; int main(int argc, char *argv[]) { int n; //result 出现次数最高的数字 //previous 上一个重复的数字 //r_count result出现的次数 //c_count 当前数字出现的次数 int result = 0, previous = 0, r_count = 0, c_count = 0; cin &gt;&gt; n; for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; arr[i]; } sort(arr, arr&#43;n); result = previous = arr[0]; r_count = 1; c_count = 1; for (int i = 1; i &lt; n; i&#43;&#43;) { if (arr[i] !">
 
 
-<meta property="og:description" content="出现次数最多的数 题目 问题描述  &nbsp;&nbsp;&nbsp;&nbsp;给定n个正整数，找出它们中出现次数最多的数。如果这样的数有多个，请输出其中最小的一个。
- 输入格式  &nbsp;&nbsp;&nbsp;&nbsp;输入的第一行只有一个正整数n(1 ≤ n ≤ 1000)，表示数字的个数。
-&nbsp;&nbsp;&nbsp;&nbsp;输入的第二行有n个整数s1, s2, …, sn (1 ≤ si ≤ 10000, 1 ≤ i ≤ n)。相邻的数用空格分隔。
- 输出格式  &nbsp;&nbsp;&nbsp;&nbsp;输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。
- 样例输出 输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。  样例输出 10  分析 排序，然后遍历
+<meta property="og:description" content="出现次数最多的数 题目 问题描述   给定n个正整数，找出它们中出现次数最多的数。如果这样的数有多个，请输出其中最小的一个。
+ 输入格式   输入的第一行只有一个正整数n(1 ≤ n ≤ 1000)，表示数字的个数。
+输入的第二行有n个整数s1, s2, …, sn (1 ≤ si ≤ 10000, 1 ≤ i ≤ n)。相邻的数用空格分隔。
+ 输出格式   输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。
+ 样例输出 输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。 样例输出 10 分析 排序，然后遍历
 代码 #include&lt;iostream&gt; #include&lt;algorithm&gt; using namespace std; int arr[1000]; int main(int argc, char *argv[]) { int n; //result 出现次数最高的数字 //previous 上一个重复的数字 //r_count result出现的次数 //c_count 当前数字出现的次数 int result = 0, previous = 0, r_count = 0, c_count = 0; cin &gt;&gt; n; for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; arr[i]; } sort(arr, arr&#43;n); result = previous = arr[0]; r_count = 1; c_count = 1; for (int i = 1; i &lt; n; i&#43;&#43;) { if (arr[i] !">
 <meta property="og:type" content="article">
 <meta property="og:title" content="201312 1">
@@ -28,17 +28,17 @@
 <meta property="og:url" content="https://assllj.github.io/ccf/201312-1/">
 <meta property="twitter:url" content="https://assllj.github.io/ccf/201312-1/">
 <meta property="og:site_name" content="狗娃子的博客">
-<meta property="og:description" content="出现次数最多的数 题目 问题描述  &nbsp;&nbsp;&nbsp;&nbsp;给定n个正整数，找出它们中出现次数最多的数。如果这样的数有多个，请输出其中最小的一个。
- 输入格式  &nbsp;&nbsp;&nbsp;&nbsp;输入的第一行只有一个正整数n(1 ≤ n ≤ 1000)，表示数字的个数。
-&nbsp;&nbsp;&nbsp;&nbsp;输入的第二行有n个整数s1, s2, …, sn (1 ≤ si ≤ 10000, 1 ≤ i ≤ n)。相邻的数用空格分隔。
- 输出格式  &nbsp;&nbsp;&nbsp;&nbsp;输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。
- 样例输出 输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。  样例输出 10  分析 排序，然后遍历
+<meta property="og:description" content="出现次数最多的数 题目 问题描述   给定n个正整数，找出它们中出现次数最多的数。如果这样的数有多个，请输出其中最小的一个。
+ 输入格式   输入的第一行只有一个正整数n(1 ≤ n ≤ 1000)，表示数字的个数。
+输入的第二行有n个整数s1, s2, …, sn (1 ≤ si ≤ 10000, 1 ≤ i ≤ n)。相邻的数用空格分隔。
+ 输出格式   输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。
+ 样例输出 输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。 样例输出 10 分析 排序，然后遍历
 代码 #include&lt;iostream&gt; #include&lt;algorithm&gt; using namespace std; int arr[1000]; int main(int argc, char *argv[]) { int n; //result 出现次数最高的数字 //previous 上一个重复的数字 //r_count result出现的次数 //c_count 当前数字出现的次数 int result = 0, previous = 0, r_count = 0, c_count = 0; cin &gt;&gt; n; for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; arr[i]; } sort(arr, arr&#43;n); result = previous = arr[0]; r_count = 1; c_count = 1; for (int i = 1; i &lt; n; i&#43;&#43;) { if (arr[i] !">
-<meta name="twitter:description" content="出现次数最多的数 题目 问题描述  &nbsp;&nbsp;&nbsp;&nbsp;给定n个正整数，找出它们中出现次数最多的数。如果这样的数有多个，请输出其中最小的一个。
- 输入格式  &nbsp;&nbsp;&nbsp;&nbsp;输入的第一行只有一个正整数n(1 ≤ n ≤ 1000)，表示数字的个数。
-&nbsp;&nbsp;&nbsp;&nbsp;输入的第二行有n个整数s1, s2, …, sn (1 ≤ si ≤ 10000, 1 ≤ i ≤ n)。相邻的数用空格分隔。
- 输出格式  &nbsp;&nbsp;&nbsp;&nbsp;输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。
- 样例输出 输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。  样例输出 10  分析 排序，然后遍历
+<meta name="twitter:description" content="出现次数最多的数 题目 问题描述   给定n个正整数，找出它们中出现次数最多的数。如果这样的数有多个，请输出其中最小的一个。
+ 输入格式   输入的第一行只有一个正整数n(1 ≤ n ≤ 1000)，表示数字的个数。
+输入的第二行有n个整数s1, s2, …, sn (1 ≤ si ≤ 10000, 1 ≤ i ≤ n)。相邻的数用空格分隔。
+ 输出格式   输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。
+ 样例输出 输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。 样例输出 10 分析 排序，然后遍历
 代码 #include&lt;iostream&gt; #include&lt;algorithm&gt; using namespace std; int arr[1000]; int main(int argc, char *argv[]) { int n; //result 出现次数最高的数字 //previous 上一个重复的数字 //r_count result出现的次数 //c_count 当前数字出现的次数 int result = 0, previous = 0, r_count = 0, c_count = 0; cin &gt;&gt; n; for (int i = 0; i &lt; n; i&#43;&#43;) { cin &gt;&gt; arr[i]; } sort(arr, arr&#43;n); result = previous = arr[0]; r_count = 1; c_count = 1; for (int i = 1; i &lt; n; i&#43;&#43;) { if (arr[i] !">
 <meta property="og:locale" content="zh-cn">
 
@@ -253,47 +253,28 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              
-
-<h1 id="出现次数最多的数">出现次数最多的数</h1>
-
+              <h1 id="出现次数最多的数">出现次数最多的数</h1>
 <h2 id="题目">题目</h2>
-
 <h4 id="问题描述">问题描述</h4>
-
 <blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;给定n个正整数，找出它们中出现次数最多的数。如果这样的数有多个，请输出其中最小的一个。</p>
+<p>    给定n个正整数，找出它们中出现次数最多的数。如果这样的数有多个，请输出其中最小的一个。</p>
 </blockquote>
-
 <h4 id="输入格式">输入格式</h4>
-
 <blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;输入的第一行只有一个正整数n(1 ≤ n ≤ 1000)，表示数字的个数。<br />
-&nbsp;&nbsp;&nbsp;&nbsp;输入的第二行有n个整数s1, s2, …, sn (1 ≤ si ≤ 10000, 1 ≤ i ≤ n)。相邻的数用空格分隔。</p>
+<p>    输入的第一行只有一个正整数n(1 ≤ n ≤ 1000)，表示数字的个数。<br>
+    输入的第二行有n个整数s1, s2, …, sn (1 ≤ si ≤ 10000, 1 ≤ i ≤ n)。相邻的数用空格分隔。</p>
 </blockquote>
-
 <h4 id="输出格式">输出格式</h4>
-
 <blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。</p>
+<p>    输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。</p>
 </blockquote>
-
 <h4 id="样例输出">样例输出</h4>
-
 <pre><code>输出这n个次数中出现次数最多的数。如果这样的数有多个，输出其中最小的一个。
-</code></pre>
-
-<h4 id="样例输出-1">样例输出</h4>
-
+</code></pre><h4 id="样例输出-1">样例输出</h4>
 <pre><code>10
-</code></pre>
-
-<h2 id="分析">分析</h2>
-
+</code></pre><h2 id="分析">分析</h2>
 <p>排序，然后遍历</p>
-
 <h2 id="代码">代码</h2>
-
 <pre><code>#include&lt;iostream&gt;
 #include&lt;algorithm&gt;
 
@@ -338,7 +319,6 @@ int main(int argc, char *argv[])
     return 0;
 }
 </code></pre>
-
               
             </div>
           </div>
@@ -415,7 +395,7 @@ int main(int argc, char *argv[])
         async>
 </script>
   <span class="copyrights">
-    &copy; 2019 狗娃子. All Rights Reserved
+    &copy; 2020 狗娃子. All Rights Reserved
   </span>
 </footer>
 

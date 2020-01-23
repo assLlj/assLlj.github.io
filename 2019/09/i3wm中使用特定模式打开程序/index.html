@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.58.2 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.62.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="狗娃子">
 <meta name="keywords" content="">
 <meta name="description" content="有时候我们不想某些程序按照平铺方式打开，比如说telegram、网易云音乐，我们希望打开这些应用的时候直接使用悬浮模式(floating)，这时候就需要使用for_window命令。">
@@ -254,18 +254,11 @@
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>有时候我们不想某些程序按照平铺方式打开，比如说telegram、网易云音乐，我们希望打开这些应用的时候直接使用悬浮模式(floating)，这时候就需要使用<code>for_window</code>命令。</p>
-
 <p>在官方的<code>userguide</code>中是这么描述说的：</p>
-
 <p>With the for_window directive, you can let i3 execute any command when it encounters a specific window. This can be used to set windows to floating or to change their border style, for example.</p>
-
 <p>Syntax:</p>
-
 <pre><code>for_window &lt;criteria&gt; &lt;command&gt;
-</code></pre>
-
-<p>Examples:</p>
-
+</code></pre><p>Examples:</p>
 <pre><code># enable floating mode for all XTerm windows
 for_window [class=&quot;XTerm&quot;] floating enable
 
@@ -276,22 +269,12 @@ for_window [class=&quot;urxvt&quot;] border pixel 1
 # makes the window floating as soon as I change
 # directory to ~/work
 for_window [title=&quot;x200: ~/work&quot;] floating enable
-</code></pre>
-
-<p>更多细节可以查看 <a href="https://i3wm.org/docs/userguide.html#for_window">for_window</a></p>
-
+</code></pre><p>更多细节可以查看 <a href="https://i3wm.org/docs/userguide.html#for_window">for_window</a></p>
 <p>比如说我们想让telegram打开的时候直接是悬浮模式(floating),我们可以在配置文件(~/.config/i3/config)中加上这么一句：</p>
-
 <pre><code>for_window [class=&quot;TelegramDesktop&quot;instance=&quot;telegram-desktop&quot;] floating enable
-</code></pre>
-
-<p>class表示窗口类，instance表示窗口实例，如果不清楚的话，可以先打开程序，然后在终端输入</p>
-
+</code></pre><p>class表示窗口类，instance表示窗口实例，如果不清楚的话，可以先打开程序，然后在终端输入</p>
 <pre><code>$ xprop
-</code></pre>
-
-<p>然后选中那个程序，终端就会输出这个窗口的信息，以telegram为例：</p>
-
+</code></pre><p>然后选中那个程序，终端就会输出这个窗口的信息，以telegram为例：</p>
 <pre><code>_NET_WM_ICON_NAME(UTF8_STRING) = 
 XdndAware(ATOM) = BITMAP
 WM_NAME(STRING) = &quot;Telegram (13550)&quot;
@@ -314,10 +297,7 @@ WM_NORMAL_HINTS(WM_SIZE_HINTS):
 		program specified minimum size: 380 by 480
 		window gravity: Static
 
-</code></pre>
-
-<p>找到WM_CLASS(STRING) = &ldquo;telegram-desktop&rdquo;, &ldquo;TelegramDesktop&rdquo;</p>
-
+</code></pre><p>找到WM_CLASS(STRING) = &ldquo;telegram-desktop&rdquo;, &ldquo;TelegramDesktop&rdquo;</p>
 <p>第一个代表实例(instance), 第二个代表类(class)</p>
               
             </div>
@@ -409,7 +389,7 @@ WM_NORMAL_HINTS(WM_SIZE_HINTS):
         async>
 </script>
   <span class="copyrights">
-    &copy; 2019 狗娃子. All Rights Reserved
+    &copy; 2020 狗娃子. All Rights Reserved
   </span>
 </footer>
 
