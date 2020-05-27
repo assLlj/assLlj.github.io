@@ -2,68 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 狗娃子的博客</title>
-    <link>https://blog.stdout.vip/tags/</link>
+    <link>https://assllj.github.io/tags/</link>
     <description>Recent content in Tags on 狗娃子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 09 Sep 2019 22:44:51 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.stdout.vip/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://assllj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>arch</title>
-      <link>https://blog.stdout.vip/tags/arch/</link>
-      <pubDate>Mon, 09 Sep 2019 22:44:51 +0800</pubDate>
-      
-      <guid>https://blog.stdout.vip/tags/arch/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>i3wm</title>
-      <link>https://blog.stdout.vip/tags/i3wm/</link>
-      <pubDate>Mon, 09 Sep 2019 22:44:51 +0800</pubDate>
-      
-      <guid>https://blog.stdout.vip/tags/i3wm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://blog.stdout.vip/tags/linux/</link>
-      <pubDate>Mon, 09 Sep 2019 22:44:51 +0800</pubDate>
-      
-      <guid>https://blog.stdout.vip/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>vim</title>
-      <link>https://blog.stdout.vip/tags/vim/</link>
-      <pubDate>Fri, 09 Aug 2019 12:58:19 +0800</pubDate>
-      
-      <guid>https://blog.stdout.vip/tags/vim/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>xorg</title>
-      <link>https://blog.stdout.vip/tags/xorg/</link>
-      <pubDate>Fri, 09 Aug 2019 12:58:19 +0800</pubDate>
-      
-      <guid>https://blog.stdout.vip/tags/xorg/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>键盘</title>
-      <link>https://blog.stdout.vip/tags/%E9%94%AE%E7%9B%98/</link>
-      <pubDate>Fri, 09 Aug 2019 12:58:19 +0800</pubDate>
-      
-      <guid>https://blog.stdout.vip/tags/%E9%94%AE%E7%9B%98/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>

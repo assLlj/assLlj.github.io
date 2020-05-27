@@ -2,23 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 狗娃子的博客</title>
-    <link>https://blog.stdout.vip/categories/</link>
+    <link>https://assllj.github.io/categories/</link>
     <description>Recent content in Categories on 狗娃子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 09 Sep 2019 22:44:51 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.stdout.vip/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://assllj.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>随便写写</title>
-      <link>https://blog.stdout.vip/categories/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/</link>
-      <pubDate>Mon, 09 Sep 2019 22:44:51 +0800</pubDate>
-      
-      <guid>https://blog.stdout.vip/categories/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
