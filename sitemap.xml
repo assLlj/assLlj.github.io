@@ -2,83 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://assllj.github.io/ccf/201403-1/</loc>
-    <lastmod>2019-09-13T22:22:18+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://assllj.github.io/ccf/</loc>
-    <lastmod>2019-09-13T22:22:18+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://assllj.github.io/</loc>
-    <lastmod>2019-09-13T22:22:18+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://assllj.github.io/ccf/201312-3/</loc>
-    <lastmod>2019-09-13T20:35:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://assllj.github.io/ccf/201312-2/</loc>
-    <lastmod>2019-09-13T20:28:36+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://assllj.github.io/ccf/201312-1/</loc>
-    <lastmod>2019-09-13T20:23:34+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://assllj.github.io/ccf/201409-2/</loc>
-    <lastmod>2019-09-13T18:31:04+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://assllj.github.io/ccf/201903-1/</loc>
-    <lastmod>2019-09-13T18:20:49+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://assllj.github.io/ccf/201409-1/</loc>
-    <lastmod>2019-09-13T13:58:41+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://assllj.github.io/brush_problem/</loc>
-    <lastmod>2019-09-10T22:44:10+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://assllj.github.io/ccf/201403-2/</loc>
-    <lastmod>2019-09-10T22:20:54+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://assllj.github.io/about/</loc>
     <priority>0</priority>
   </url>
@@ -91,6 +14,12 @@
   
   <url>
     <loc>https://assllj.github.io/tags/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://assllj.github.io/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
