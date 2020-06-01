@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on 狗娃子的博客</title>
-    <link>https://gouwazhi.github.io/tags/</link>
-    <description>Recent content in Tags on 狗娃子的博客</description>
+    <title>tags on 狗娃子的博客</title>
+    <link>https://gouwazhi.github.io/tags/tags/</link>
+    <description>Recent content in tags on 狗娃子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Jan 2018 22:40:30 +0800</lastBuildDate>
     
-	<atom:link href="https://gouwazhi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gouwazhi.github.io/tags/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>tags</title>
-      <link>https://gouwazhi.github.io/tags/tags/</link>
+      <title>Hello World</title>
+      <link>https://gouwazhi.github.io/post/test/</link>
       <pubDate>Mon, 01 Jan 2018 22:40:30 +0800</pubDate>
       
-      <guid>https://gouwazhi.github.io/tags/tags/</guid>
+      <guid>https://gouwazhi.github.io/post/test/</guid>
       <description></description>
     </item>
     
