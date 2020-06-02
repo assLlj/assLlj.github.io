@@ -6,10 +6,19 @@
     <description>Recent content on 狗娃子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jan 2018 22:40:30 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jun 2020 21:14:04 +0800</lastBuildDate>
     
 	<atom:link href="https://gouwazhi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>给树莓派安装最新Golang</title>
+      <link>https://gouwazhi.github.io/hide/raspberrypi/</link>
+      <pubDate>Tue, 02 Jun 2020 21:14:04 +0800</pubDate>
+      
+      <guid>https://gouwazhi.github.io/hide/raspberrypi/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Hello World</title>
