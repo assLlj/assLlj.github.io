@@ -6,10 +6,19 @@
     <description>Recent content on 狗娃子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Jun 2020 21:14:04 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2020 13:48:55 +0800</lastBuildDate>
     
 	<atom:link href="https://gouwazhi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>openWRT上配置openvpn客户端</title>
+      <link>https://gouwazhi.github.io/hide/openvpn_on_openwrt/</link>
+      <pubDate>Wed, 03 Jun 2020 13:48:55 +0800</pubDate>
+      
+      <guid>https://gouwazhi.github.io/hide/openvpn_on_openwrt/</guid>
+      <description>安装openvpn opkg update # 或者openvpn openvpn-polarssl opkg install openvpn-ssl 配置 复制配置文件 mv my_openvpn.ovpn /etc/openvpn/. 创建新接口 vim /etc/config/network 添加： config interface &amp;#39;my_openvpn&amp;#39; option proto &amp;#39;none&amp;#39; option ifname &amp;#39;tun0&amp;#39; 创建新的Firewwall Zone vim</description>
+    </item>
     
     <item>
       <title>给树莓派安装最新Golang</title>

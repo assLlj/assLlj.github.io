@@ -2,43 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://gouwazhi.github.io/tags/cross-compile/</loc>
-    <lastmod>2020-06-02T21:14:04+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://gouwazhi.github.io/tags/go/</loc>
-    <lastmod>2020-06-02T21:14:04+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://gouwazhi.github.io/hide/</loc>
-    <lastmod>2020-06-02T21:14:04+08:00</lastmod>
+    <lastmod>2020-06-03T13:48:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://gouwazhi.github.io/tags/raspberrypi/</loc>
-    <lastmod>2020-06-02T21:14:04+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://gouwazhi.github.io/tags/</loc>
-    <lastmod>2020-06-02T21:14:04+08:00</lastmod>
+    <loc>https://gouwazhi.github.io/hide/openvpn_on_openwrt/</loc>
+    <lastmod>2020-06-03T13:48:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://gouwazhi.github.io/</loc>
-    <lastmod>2020-06-02T21:14:04+08:00</lastmod>
+    <lastmod>2020-06-03T13:48:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -73,6 +52,13 @@
   
   <url>
     <loc>https://gouwazhi.github.io/post/</loc>
+    <lastmod>2018-01-01T22:40:30+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://gouwazhi.github.io/tags/</loc>
     <lastmod>2018-01-01T22:40:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
