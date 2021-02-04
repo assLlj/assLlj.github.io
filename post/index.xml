@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 狗娃子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jan 2018 22:40:30 +0800</lastBuildDate><atom:link href="https://gouwazhi.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Feb 2019 20:30:31 +0800</lastBuildDate><atom:link href="https://gouwazhi.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安卓</title>
+      <link>https://gouwazhi.github.io/post/hide_android_virtual_keyboard/</link>
+      <pubDate>Mon, 04 Feb 2019 20:30:31 +0800</pubDate>
+      
+      <guid>https://gouwazhi.github.io/post/hide_android_virtual_keyboard/</guid>
+      <description>&lt;p&gt;安卓相关问题&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Hello World</title>
       <link>https://gouwazhi.github.io/post/hello/</link>
