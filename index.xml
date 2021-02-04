@@ -6,11 +6,7 @@
     <description>Recent content on 狗娃子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jun 2020 13:48:55 +0800</lastBuildDate>
-    
-	<atom:link href="https://gouwazhi.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 03 Jun 2020 13:48:55 +0800</lastBuildDate><atom:link href="https://gouwazhi.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>openWRT上配置openvpn客户端</title>
       <link>https://gouwazhi.github.io/hide/openvpn_on_openwrt/</link>
@@ -27,6 +23,15 @@
       
       <guid>https://gouwazhi.github.io/hide/raspberrypi/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Gentoo之旅</title>
+      <link>https://gouwazhi.github.io/post/20200922/</link>
+      <pubDate>Sun, 22 Sep 2019 20:18:09 +0800</pubDate>
+      
+      <guid>https://gouwazhi.github.io/post/20200922/</guid>
+      <description>&lt;p&gt;记录一下安装Gentoo的过程、Gentoo的使用以及遇到的问题&lt;/p&gt;</description>
     </item>
     
     <item>

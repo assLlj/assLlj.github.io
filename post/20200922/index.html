@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Gentoo之旅 - 狗娃子的博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="狗娃子" /><meta name="description" content="记录一下安装Gentoo的过程、Gentoo的使用以及遇到的问题
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.78.1 with theme even" />
+
+
+<link rel="canonical" href="https://gouwazhi.github.io/post/20200922/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.564ac3b9fe418028b13effcb81f82fb70606e5f489f3b2b054656e6613d843d0.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Gentoo之旅" />
+<meta property="og:description" content="记录一下安装Gentoo的过程、Gentoo的使用以及遇到的问题" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gouwazhi.github.io/post/20200922/" />
+<meta property="article:published_time" content="2019-09-22T20:18:09+08:00" />
+<meta property="article:modified_time" content="2019-09-22T20:18:09+08:00" />
+<meta itemprop="name" content="Gentoo之旅">
+<meta itemprop="description" content="记录一下安装Gentoo的过程、Gentoo的使用以及遇到的问题">
+<meta itemprop="datePublished" content="2019-09-22T20:18:09+08:00" />
+<meta itemprop="dateModified" content="2019-09-22T20:18:09+08:00" />
+<meta itemprop="wordCount" content="1702">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Gentoo之旅"/>
+<meta name="twitter:description" content="记录一下安装Gentoo的过程、Gentoo的使用以及遇到的问题"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Just for Fun !</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Just for Fun !</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Gentoo之旅</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-09-22 </span>
+        
+          <span class="more-meta"> 1702 words </span>
+          <span class="more-meta"> 4 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#磁盘">磁盘</a></li>
+    <li><a href="#stage3">stage3</a>
+      <ul>
+        <li><a href="#下载stage3">下载stage3</a></li>
+        <li><a href="#解压stage3">解压stage3</a></li>
+        <li><a href="#配置编译选项">配置编译选项</a></li>
+      </ul>
+    </li>
+    <li><a href="#安装基本系统">安装基本系统</a>
+      <ul>
+        <li><a href="#配置源">配置源</a></li>
+        <li><a href="#复制dns信息">复制DNS信息</a></li>
+        <li><a href="#挂载必要的文件系统">挂载必要的文件系统</a></li>
+        <li><a href="#chroot">Chroot</a></li>
+        <li><a href="#挂载boot分区">挂载boot分区</a></li>
+        <li><a href="#配置portage">配置Portage</a></li>
+        <li><a href="#配置use">配置USE</a></li>
+        <li><a href="#时区语言">时区语言</a></li>
+      </ul>
+    </li>
+    <li><a href="#配置内核">配置内核</a></li>
+    <li><a href="#配置系统">配置系统</a>
+      <ul>
+        <li><a href="#fstab">fstab</a></li>
+      </ul>
+    </li>
+    <li><a href="#安装软件">安装软件</a></li>
+    <li><a href="#use">USE</a></li>
+    <li><a href="#qemu">QEMU</a></li>
+    <li><a href="#可能出现的问题">可能出现的问题</a>
+      <ul>
+        <li><a href="#无线网卡驱动问题">无线网卡驱动问题</a></li>
+        <li><a href="#使用rustup替代portage管理rust">使用rustup替代portage管理rust</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>记录一下安装Gentoo的过程、Gentoo的使用以及遇到的问题</p>
+<h1 id="目录">目录</h1>
+<p><a href="#%E5%AE%89%E8%A3%85">安装</a></p>
+<ul>
+<li><a href="#%E7%A3%81%E7%9B%98">磁盘</a></li>
+<li><a href="#stage3">Stage3</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85%E5%9F%BA%E6%9C%AC%E7%B3%BB%E7%BB%9F">安装基本系统</a></li>
+</ul>
+<h1 id="安装">安装</h1>
+<hr>
+<p>Gentoo的安装和Arch其实没有太大区别，照着Wiki走基本没有太大问题。</p>
+<p>由于破船本身已经装了一个Arch了，为了方便查看wiki我选择直接在Arch上把Gentoo安装到另一块ssd上面。</p>
+<h2 id="磁盘">磁盘</h2>
+<p>破船装了两块ssd，所以我准备把Gentoo安装另一块未使用的ssd(/dev/nvme0n1)上</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo fdisk /dev/nvme0n1
+</code></pre></div><p>创建三个分区，如下：</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Device             Start        End   Sectors  Size Type
+/dev/nvme0n1p1      2048    1050623   1048576  512M EFI System
+/dev/nvme0n1p2   1050624  944769023 943718400  450G Linux filesystem
+/dev/nvme0n1p3 944769024 1000215182  55446159 26.4G Linux swap
+</code></pre></div><p>选择文件系统</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo mkfs.fat -F 32 /dev/nvme0n1p1
+$ sudo mkfs.btrfs /dev/nvme0n1p2
+$ sudo mkswap /dev/nvme0n1p3
+$ sudo swapon /dev/nvme0n1p3
+</code></pre></div><p>然后挂载到Arch上</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo mkdir /mnt/gentoo
+$ sudo mount /dev/nvme0n1p2 /mnt/gentoo
+</code></pre></div><h2 id="stage3">stage3</h2>
+<p>磁盘准备好了之后就是安装stage3</p>
+<p>stage包有multilib和no-multilib两种，后者是纯64位，按喜好选择，我选择了no-multilib。</p>
+<h3 id="下载stage3">下载stage3</h3>
+<p>stage3包在各个镜像站的<code>gentoo/releases/amd64/autobuilds/</code>下可以找到，由于我想使用systemd而不是默认的OpenRC，所以选择了这个stage3包</p>
+<p><em><strong>current-stage3-amd64-systemd/stage3-amd64-systemd-20200920T214503Z.tar.xz</strong></em></p>
+<p>把stage3包下载到/mnt/gentoo目录下</p>
+<h3 id="解压stage3">解压stage3</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cd /mnt/gentoo/
+(/mnt/gentoo)$ sudo tar vxpf stage3-amd64-systemd-20200920T214503Z.tar.xz --xattrs-include=&#39;*.*&#39; --numeric-owner
+</code></pre></div><h3 id="配置编译选项">配置编译选项</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo &#34;echo MAKEOPTS=\&#34;-j9\&#34;&#34; &gt;&gt; /mnt/gentoo/etc/portage/make.conf
+</code></pre></div><h2 id="安装基本系统">安装基本系统</h2>
+<h3 id="配置源">配置源</h3>
+<ul>
+<li>源代码源</li>
+</ul>
+<p>在 <code>/etc/portage/make.conf</code> 中添加或修改:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">GENTOO_MIRRORS=&#34;https://mirrors.ustc.edu.cn/gentoo/&#34;
+</code></pre></div><ul>
+<li>ebulid</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo mkdir /mnt/gentoo/etc/portage/repos.conf
+</code></pre></div><p>在 <code>/etc/portage/repos.conf/gentoo.conf</code> 中添加或修改:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[DEFAULT]
+main-repo = gentoo
+
+[gentoo]
+location = /usr/portage
+sync-type = rsync
+sync-uri = rsync://rsync.mirrors.ustc.edu.cn/gentoo-portage/
+auto-sync = yes
+</code></pre></div><h3 id="复制dns信息">复制DNS信息</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo cp --dereference /etc/resolv.conf /mnt/gentoo/etc/
+</code></pre></div><h3 id="挂载必要的文件系统">挂载必要的文件系统</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo mount --types proc /proc /mnt/gentoo/proc
+$ sudo mount --rbind /sys /mnt/gentoo/sys
+$ sudo mount --make-rslave /mnt/gentoo/sys
+$ sudo mount --rbind /dev /mnt/gentoo/dev
+$ sudo mount --make-rslave /mnt/gentoo/dev
+</code></pre></div><h3 id="chroot">Chroot</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo chroot /mnt/gentoo /bin/bash
+root #source /etc/profile
+root #export PS1=&#34;(chroot) ${PS1}&#34;
+</code></pre></div><h3 id="挂载boot分区">挂载boot分区</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># mount /dev/nvme0n1p1 /boot
+</code></pre></div><h3 id="配置portage">配置Portage</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># emerge-webrsync
+# eselect news list
+# eselect news read
+# eselect profile list
+# eselect profile set default/linux/amd64/17.1/systemd
+# emerge --ask --verbose --update --deep --newuse @world
+</code></pre></div><h3 id="配置use">配置USE</h3>
+<p>在 <code>/etc/portage/make.conf</code> 中添加或修改:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">USE=&#34;X alsa pulseaudio udev dbus&#34;                                                          
+L10N=&#34;en-US zh-CN en zh&#34;
+</code></pre></div><h3 id="时区语言">时区语言</h3>
+<ul>
+<li>选择时区</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># echo &#34;Asia/Shanghai&#34; &gt; /etc/timezone
+# emerge --config sys-libs/timezone-data
+</code></pre></div><ul>
+<li>配置地区</li>
+</ul>
+<p>编辑 <code>/etc/locale.gen</code> ,添加:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">en_US.UTF-8 UTF-8
+zh_CN.UTF-8 UTF-8
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># locale-gen
+# eselect locale list
+# eselect locale set *
+</code></pre></div><p>重新加载环境:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># env-update &amp;&amp; source /etc/profile &amp;&amp; export PS1=&#34;(chroot) ${PS1}&#34;
+</code></pre></div><h2 id="配置内核">配置内核</h2>
+<p>Gentoo官方内核Stable版一般都不太新，最好是使用Test版</p>
+<p>在<code>/etc/portage/package.accept_keywords</code>加入:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">sys-kernel/gentoo-sources ~amd64
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># emerge -av gentoo-sources
+# cd /usr/src/linux
+# make localyesconfig
+# make -j9
+# make modules_install
+# make install
+# genkernel --install initramfs
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># emerge --ask --verbose grub
+# mkdir /boot/efi
+# grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Gentoo
+# grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># emerge --ask --verbose sudo
+# passwd
+# useradd -m -g users -s /bin/bash gouwazi
+# passwd gouwazi
+# gpasswd -a gouwazi wheel
+# chmod u+w /etc/sudoers
+# echo &#39;gouwazi ALL=(ALL) ALL&#39; &gt;&gt; /etc/sudoers
+</code></pre></div><h2 id="配置系统">配置系统</h2>
+<h3 id="fstab">fstab</h3>
+<p>编辑<code>/etc/fstab</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">/dev/nvme0n1p1          /boot           vfat            rw,relatime,fmask=0022,dmask=0022,codepage=435,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro 0 2
+/dev/nvme0n1p2          /               btrfs           noatime         0 1
+/dev/nvme0n1p3          none            swap            sw              0 0
+</code></pre></div><h2 id="安装软件">安装软件</h2>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># emerge --ask --verbose sddm polybar xorg dev-vcs/git zsh feh picom copyq networkmanager nm-applet 
+# emerge -av fcitx fcitx-qt5
+# emerge -av fontawesome google-chrome blueman net-im/telegram-desktop
+# emerge -av copyq proxychains shadowsocks-libev
+# gentoolkit(equery) 
+# source-han-sans fcitx-sunpinyin 
+# nodejs yarn clang
+# go neofetch flameshot
+# htop
+</code></pre></div><h2 id="use">USE</h2>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">x11-misc/polybar i3wm mpd network
+</code></pre></div><h2 id="qemu">QEMU</h2>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">qemu-img create -f raw Windows10 60G
+qemu-system-x86_64 -cdrom /mnt/hdd/镜像/cn_windows_10_business_edition_version_1809_updated_sept_2018_x64_dvd_84ac403f.iso -boot order=d -drive file=Windows10,format=raw -m 8G -smp cores=4,threads=2,sockets=1 -usb -device usb-tablet -enable-kvm
+qemu-system-x86_64 -boot menu=on -drive file=Windows10,format=raw -m 8192 -smp 4 -enable-kvm
+qemu-system-x86_64 -boot menu=on -drive file=Windows10,format=raw,cache=none -m 8192 -smp 8 -enable-kvm -cpu host,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time
+</code></pre></div><h2 id="可能出现的问题">可能出现的问题</h2>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">BTF: .tmp_vmlinux.btf: pahole (pahole) is not available
+Failed to generate BTF for vmlinux
+Try to disable CONFIG_DEBUG_INFO_BTF
+make: *** [Makefile:1106: vmlinux] Error 1
+</code></pre></div><p>解决: 安装dwarves包</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">* IMPORTANT: 2 config files in &#39;/etc/portage&#39; need updating.
+ * See the CONFIGURATION FILES section of the emerge
+ * man page to learn how to update config files.
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">#etc-update
+</code></pre></div><p>输入-3</p>
+<h3 id="无线网卡驱动问题">无线网卡驱动问题</h3>
+<p>安装完Gentoo进入系统发现WIFI用不了，以为是interface没有启用</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ip link
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: enp4s0f1: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000
+    link/ether 80:fa:5b:36:93:55 brd ff:ff:ff:ff:ff:ff
+</code></pre></div><p>没有无线的interface，第一反应以为是内核没启用<code>cfg80211</code>和<code>mac80211</code>,然后看了一下，启用了</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ dmesg | grep iwlwifi
+[    1.909478] iwlwifi 0000:03:00.0: enabling device (0000 -&gt; 0002)
+[    1.910924] iwlwifi 0000:03:00.0: Direct firmware load for iwlwifi-7265D-29.ucode failed with error -2
+[    1.910937] iwlwifi 0000:03:00.0: Direct firmware load for iwlwifi-7265D-28.ucode failed with error -2
+[    1.910948] iwlwifi 0000:03:00.0: Direct firmware load for iwlwifi-7265D-27.ucode failed with error -2
+[    1.910959] iwlwifi 0000:03:00.0: Direct firmware load for iwlwifi-7265D-26.ucode failed with error -2
+[    1.910971] iwlwifi 0000:03:00.0: Direct firmware load for iwlwifi-7265D-25.ucode failed with error -2
+[    1.910981] iwlwifi 0000:03:00.0: Direct firmware load for iwlwifi-7265D-24.ucode failed with error -2
+[    1.910992] iwlwifi 0000:03:00.0: Direct firmware load for iwlwifi-7265D-23.ucode failed with error -2
+[    1.911003] iwlwifi 0000:03:00.0: Direct firmware load for iwlwifi-7265D-22.ucode failed with error -2
+[    1.911004] iwlwifi 0000:03:00.0: no suitable firmware found!
+[    1.911025] iwlwifi 0000:03:00.0: minimum version required: iwlwifi-7265D-22
+[    1.911046] iwlwifi 0000:03:00.0: maximum version supported: iwlwifi-7265D-29
+[    1.911068] iwlwifi 0000:03:00.0: check git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
+</code></pre></div><p>无线驱动没有加载，看最后一行，以为是firmware的问题，然后重装也没啥用，然后查了一下wiki的<code>iwlwifi</code>条目，终于发现了问题</p>
+<blockquote>
+<p>For systems using udev or systemd, it is imperative to configure the kernel to load binary blobs. In this case the wireless card&rsquo;s firmware is the firmware that needs loaded. More information on configuring the kernel in this manner can be found in the following thread on the Gentoo forums: FW_LOADER_USER_HELPER_FALLBACK.</p>
+</blockquote>
+<p>因为我是使用systemd的，所以需要在内核中配置去加载无线网卡驱动，参考这里<a href="https://forums.gentoo.org/viewtopic-t-1001638.html">讨论</a>
+<a href="https://www.intel.com/content/www/us/en/support/articles/000005511/network-and-i-o/wireless.html">https://www.intel.com/content/www/us/en/support/articles/000005511/network-and-i-o/wireless.html</a></p>
+<p><img src="/images/kernel-firmware-loader.png" alt="pic alt" title="opt title"></p>
+<h3 id="使用rustup替代portage管理rust">使用rustup替代portage管理rust</h3>
+<p>参考<a href="https://laumann.xyz/gentoo/2018/05/01/gentoo-package-provided.html">这篇文章</a></p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">狗娃子</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-09-22
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/hello/">
+            <span class="next-text nav-default">Hello World</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:assheadlld@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.twitter.com" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/gouwazhi" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.bilibili.com" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://gouwazhi.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2021
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">狗娃子</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

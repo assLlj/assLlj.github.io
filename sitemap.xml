@@ -30,6 +30,20 @@
   </url>
   
   <url>
+    <loc>https://gouwazhi.github.io/post/20200922/</loc>
+    <lastmod>2019-09-22T20:18:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://gouwazhi.github.io/post/</loc>
+    <lastmod>2019-09-22T20:18:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://gouwazhi.github.io/categories/</loc>
     <lastmod>2018-01-01T22:40:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -45,13 +59,6 @@
   
   <url>
     <loc>https://gouwazhi.github.io/post/hello/</loc>
-    <lastmod>2018-01-01T22:40:30+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://gouwazhi.github.io/post/</loc>
     <lastmod>2018-01-01T22:40:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
